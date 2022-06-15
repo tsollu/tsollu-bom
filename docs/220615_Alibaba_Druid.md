@@ -1,12 +1,12 @@
 # Druid Spring Boot Starter
 
-Druid 是一个 JDBC 组件库，包含数据库连接池、SQL Parser 等组件，被大量业务和技术产品使用或集成，经历过最严苛线上业务场景考验，是你值得信赖的技术产品。Druid Spring Boot Starter 用于帮助你在 Spring Boot 项目中轻松集成 Druid 数据库连接池和监控。
+Alibaba Druid 是一个 JDBC 组件库，包含数据库连接池、SQL Parser 等组件，被大量业务和技术产品使用或集成，经历过严苛的线上业务场景考验，是值得信赖的技术产品。Druid Spring Boot Starter 用于帮助你在 Spring Boot 项目中轻松集成 Druid 数据库连接池和监控。
 
 https://github.com/alibaba/druid
 
 ## 快速使用
 
-1）在你的 Spring Boot 项目中添加依赖配置（使用 Kaddo 框架不需要指定版本号）：
+1）在你的 Spring Boot 项目中添加依赖配置（引入 Kaddo 框架不需要指定版本号）：
 
 ```
 <dependency>
@@ -21,29 +21,55 @@ https://github.com/alibaba/druid
 ```
 ## Spring DruidDataSource Configuration
 # spring.datasource.druid.enable=true
-# spring.datasource.druid.name=DS01
+# spring.datasource.druid.name=DataSource-1
 # spring.datasource.druid.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.datasource.druid.url=jdbc:mysql://localhost:3306/dbname?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&autoReconnectForPools=true&noAccessToProcedureBodies=true&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
 spring.datasource.druid.username=root
 spring.datasource.druid.password=123456
-spring.datasource.druid.initial-size=8
-spring.datasource.druid.min-idle=8
-spring.datasource.druid.max-active=64
+spring.datasource.druid.initial-size=10
+spring.datasource.druid.min-idle=10
+spring.datasource.druid.max-active=100
 spring.datasource.druid.max-wait=6000
 spring.datasource.druid.test-while-idle=true
 spring.datasource.druid.test-on-borrow=false
 spring.datasource.druid.test-on-return=false
 spring.datasource.druid.validation-query=select 1
-spring.datasource.druid.time-between-eviction-runs-millis=6000
+spring.datasource.druid.time-between-eviction-runs-millis=30000
 spring.datasource.druid.min-evictable-idle-time-millis=600000
 spring.datasource.druid.max-evictable-idle-time-millis=900000
 spring.datasource.druid.keep-alive=true
-spring.datasource.druid.filter=stat
+```
+
+3）Druid 支持根据 url 来自动探测 JDBC 驱动，已在 `druid-xxx.jar/META-INF/druid-driver.properties` 属性文件中定义。
+
+```
+jdbc:derby:=org.apache.derby.jdbc.EmbeddedDriver	 
+jdbc:mysql:=com.mysql.jdbc.Driver
+jdbc:log4jdbc:=net.sf.log4jdbc.DriverSpy
+jdbc:oracle:=oracle.jdbc.driver.OracleDriver
+jdbc:microsoft:=com.microsoft.jdbc.sqlserver.SQLServerDriver	 
+jdbc:jtds:=net.sourceforge.jtds.jdbc.Driver	 
+jdbc:postgresql:=org.postgresql.Driver	 
+jdbc:fake:=com.alibaba.druid.mock.MockDriver	 
+jdbc:hsqldb:=org.hsqldb.jdbcDriver	 
+jdbc:db2:=COM.ibm.db2.jdbc.app.DB2Driver
+jdbc:sqlite:=org.sqlite.JDBC	 
+jdbc:ingres:=com.ingres.jdbc.IngresDriver	 
+jdbc:h2:=org.h2.Driver	 
+jdbc:mckoi:=com.mckoi.JDBCDriver
+jdbc:clickhouse:=ru.yandex.clickhouse.ClickHouseDriver
+jdbc:highgo:=com.highgo.jdbc.Driver
+```
+
+如果未能自动探测 JDBC 驱动，则需指定驱动类：
+
+```
+spring.datasource.druid.driver-class-name=com.mysql.cj.jdbc.Driver
 ```
 
 ## 连接池配置
 
-Druid Spring Boot Starter 配置属性的名称完全遵照 Druid，你可以通过 Spring Boot 配置文件来配置 Druid 数据库连接池和监控，如果没有配置则使用默认值。
+Druid Spring Boot Starter 配置属性的名称完全遵照 Druid，你可以通过 Spring Boot 配置文件来配置 Druid 数据库连接池和监控。
 
 - JDBC 配置：
 
@@ -59,6 +85,7 @@ spring.datasource.druid.driver-class-name= #或 spring.datasource.driver-class-n
 
 ```
 # 启动 Druid 连接池，默认开启
+# 多数据源配置时，该参数不生效
 spring.datasource.druid.enable=true
 
 # 指定驱动类名，默认从 URL 中自动探测
@@ -111,22 +138,22 @@ spring.datasource.druid.default-catalog=
 # 是否设置默认连接只读，默认未设置
 spring.datasource.druid.default-read-only=true
 
-#指定连接的事务的默认隔离级别，默认未设置。
-#-1 数据库默认隔离级别
-#1 未提交读
-#2 读写提交
-#4 可重复读
-#8 串行化
+# 指定连接的事务的默认隔离级别，默认未设置。
+# -1 数据库默认隔离级别
+# 1 未提交读
+# 2 读写提交
+# 4 可重复读
+# 8 串行化
 spring.datasource.druid.default-transaction-isolation=
 
 # 当创建连接池时，创建失败后是否立即抛异常，默认值：false
 spring.datasource.druid.fail-fast=false
 
 # 设置过滤器别名，多个使用英文逗号隔开，默认值：default
-# 如果数据库有较好的监控管理，生产环境不推荐使用。
+# 生产环境不建议使用其他过滤器。
 spring.datasource.druid.filters=stat
 
-# 开启线程初始化异常则抛出异常，默认值：true
+# 初始化异常则抛出异常，默认值：true
 spring.datasource.druid.init-exception-throw=true
 
 # 初始化全局变量，默认值：false
@@ -137,7 +164,7 @@ spring.datasource.druid.init-variants=false
 
 # 初始化连接池大小，默认值：0
 # 建议与 minIdle 大小保持一致
-spring.datasource.druid.initial-size=8
+spring.datasource.druid.initial-size=10
 
 # 开启 keepAlive 操作，默认值：false
 # 打开 keepAlive 之后的效果
@@ -153,7 +180,7 @@ spring.datasource.druid.keep-alive-between-time-millis=120000
 spring.datasource.druid.login-timeout=
 
 # 设置最大连接数，默认值：8
-spring.datasource.druid.max-active=64
+spring.datasource.druid.max-active=100
 
 # 最大创建任务数，默认值：3
 spring.datasource.druid.max-create-task-count=3
@@ -164,10 +191,8 @@ spring.datasource.druid.max-evictable-idle-time-millis=1800000
 # 最大打开的 prepared-statement 数量，默认值：-1（无限制）
 spring.datasource.druid.max-open-prepared-statements=-1
 
-spring.datasource.druid.max-pool-prepared-statement-per-connection-size=10
-
 # 设置最大等待时间，默认值：-1（单位毫秒）
-spring.datasource.druid.max-wait=30000
+spring.datasource.druid.max-wait=6000
 
 # 允许的最大线程等待数，默认值：-1（无限制）
 spring.datasource.druid.max-wait-thread-count=-1
@@ -176,7 +201,7 @@ spring.datasource.druid.max-wait-thread-count=-1
 spring.datasource.druid.min-evictable-idle-time-millis=1800000
 
 # 设置最小连接数，默认值：0
-spring.datasource.druid.min-idle=8
+spring.datasource.druid.min-idle=10
 
 # 指定连接池名称，未设置则随机生成：`"DataSource-" + System.identityHashCode(this);`
 spring.datasource.druid.name=DataSource-1
@@ -196,8 +221,13 @@ spring.datasource.druid.phy-max-use-count=-1
 # 物理超时时间，默认值：-1（无限制，单位毫秒）
 spring.datasource.druid.phy-timeout-millis=-1
 
-# 打开 PSCache，并指定每个连接上 PSCache 的大小。oracle 设为 true，mysql 设为false。分库分表较多推荐设置为 false，默认值：false
+# oracle 设为 true，mysql 设为 false。分库分表较多推荐设置为 false，默认值：false
 spring.datasource.druid.pool-prepared-statements=false
+
+# 打开PSCache，并且指定每个连接上PSCache的大小，默认值：10
+# poolPreparedStatements 默认为 false，属性文件中将 poolPreparedStatements 设置为 true，则该值生效。
+# 若属性文件中设置该值且大于0时，poolPreparedStatements 会自动设置为 true。
+spring.datasource.druid.max-pool-prepared-statement-per-connection-size=10
 
 # 查询超时时间，默认值：0（无限制，单位秒）
 spring.datasource.druid.query-timeout=0
@@ -214,20 +244,20 @@ spring.datasource.druid.share-prepared-statements=false
 # 从连接池借用连接时，是否测试该连接，默认值：false
 spring.datasource.druid.test-on-borrow=false
 
-# 申请连接的时候检测，如果空闲时间大于 timeBetweenEvictionRunsMillis，执行 validationQuery 检测连接是否有效。默认值：false
-spring.datasource.druid.test-on-return=true
+# 申请连接时检测，如果空闲时间大于 timeBetweenEvictionRunsMillis，执行 validationQuery 检测连接是否有效。默认值：false
+spring.datasource.druid.test-on-return=false
 
-# 归还连接时会执行 validationQuery 检测连接是否有效，开启会降低性能，默认值：true
-spring.datasource.druid.test-while-idle=false
+# 归还连接时会执行 validationQuery 检测连接是否有效，默认值：true
+spring.datasource.druid.test-while-idle=true
 
 # 指定两次错误连接的最大时间间隔，默认值：500毫秒
 spring.datasource.druid.time-between-connect-error-millis=500
 
 # 既作为检测的间隔时间又作为 testWhileIdel 执行的依据即此值决定是否空闲，因此此值一定要设置合理。
 # 即一个空闲线程，最大的生成时间，检测需要关闭的空闲连接。默认值：60000毫秒
-spring.datasource.druid.time-between-eviction-runs-millis=60000
+spring.datasource.druid.time-between-eviction-runs-millis=30000
 
-# 事务查询超时时间，默认值：0（<=0 时取 query-timeout 的值）
+# 事务查询超时时间，默认值：0（小于或等于 0 时取 query-timeout 的值）
 spring.datasource.druid.transaction-query-timeout=0
 
 # 事务时间阈值，默认值：0（单位毫秒）
@@ -242,12 +272,11 @@ spring.datasource.druid.use-oracle-implicit-cache=true
 # 指定连接的有效检查类，默认未设置
 spring.datasource.druid.valid-connection-checker=
 
-# 用来检测连接是否有效的 SQL 必须是一个查询语句，spring.datasource.druid.test-on-return 设置 true 才能用。默认未设置
-# mysql、oracle 中为 select 1 from dual，其他也可以设置为 select 1
-spring.datasource.druid.validation-query=select 1 from dual
+# 用来检测连接是否有效的 SQL 必须是一个查询语句，默认未设
+spring.datasource.druid.validation-query=select 1
 
 # 检测连接是否有效的超时时间，默认值：-1（单位秒）
-spring.datasource.druid.validation-query-timeout=1
+spring.datasource.druid.validation-query-timeout=-1
 ```
 
 ## 过滤器配置
@@ -274,8 +303,8 @@ druid.filters.haRandomValidator=com.alibaba.druid.pool.ha.selector.RandomDataSou
 
 ```
 # 设置过滤器别名，多个使用英文逗号隔开，默认值：default
-# 如果数据库有较好的监控管理，生产环境不推荐使用。
-spring.datasource.druid.filters=stat,wall
+# 生产环境不建议使用其他过滤器。
+spring.datasource.druid.filters=stat
 ```
 
 ### StatViewServlet
@@ -396,3 +425,83 @@ spring.datasource.druid.connection-properties=config.decrypt=true
 ```
 
 ## 多数据源配置
+
+Spring Boot 2.X 版本不再支持配置继承，多数据源的话每个数据源的所有配置都需要单独配置，否则配置不会生效。
+
+1）添加多数据配置：
+
+```
+## Spring DruidDataSource Configuration
+# spring.datasource.druid.one.name=DataSource-1
+# spring.datasource.druid.one.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.druid.one.url=jdbc:mysql://localhost:3306/dbname1?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&autoReconnectForPools=true&noAccessToProcedureBodies=true&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
+spring.datasource.druid.one.username=root
+spring.datasource.druid.one.password=123456
+spring.datasource.druid.one.initial-size=10
+spring.datasource.druid.one.min-idle=10
+spring.datasource.druid.one.max-active=100
+spring.datasource.druid.one.max-wait=6000
+spring.datasource.druid.one.test-while-idle=true
+spring.datasource.druid.one.test-on-borrow=false
+spring.datasource.druid.one.test-on-return=false
+spring.datasource.druid.one.validation-query=select 1
+spring.datasource.druid.one.time-between-eviction-runs-millis=30000
+spring.datasource.druid.one.min-evictable-idle-time-millis=600000
+spring.datasource.druid.one.max-evictable-idle-time-millis=900000
+spring.datasource.druid.one.keep-alive=true
+
+
+## Spring DruidDataSource Configuration
+# spring.datasource.druid.two.name=DataSource-1
+# spring.datasource.druid.two.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.druid.two.url=jdbc:mysql://localhost:3306/dbname2?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&autoReconnectForPools=true&noAccessToProcedureBodies=true&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
+spring.datasource.druid.two.username=root
+spring.datasource.druid.two.password=123456
+spring.datasource.druid.two.initial-size=10
+spring.datasource.druid.two.min-idle=10
+spring.datasource.druid.two.max-active=100
+spring.datasource.druid.two.max-wait=6000
+spring.datasource.druid.two.test-while-idle=true
+spring.datasource.druid.two.test-on-borrow=false
+spring.datasource.druid.two.test-on-return=false
+spring.datasource.druid.two.validation-query=select 1
+spring.datasource.druid.two.time-between-eviction-runs-millis=30000
+spring.datasource.druid.two.min-evictable-idle-time-millis=600000
+spring.datasource.druid.two.max-evictable-idle-time-millis=900000
+spring.datasource.druid.two.keep-alive=true
+```
+
+2）创建多数据源：
+
+```
+@Primary
+@Bean
+@ConfigurationProperties("spring.datasource.druid.one")
+public DruidDataSource dataSourceOne() {
+	return DruidDataSourceBuilder.create().build();
+}
+
+@Bean
+@ConfigurationProperties("spring.datasource.druid.two")
+public DruidDataSource dataSourceTwo() {
+	return DruidDataSourceBuilder.create().build();
+}
+```
+
+3）使用多数据源：
+
+```
+@Autowired
+private DruidDataSource dataSourceOne;
+
+@Autowired
+@Qualifier("dataSourceTwo")
+private DruidDataSource dataSourceTwo;
+```
+
+配置多数据源的注意事项：
+
+- 配置多数据源时，最好通过 @Primary 指定默认数据源。
+- Druid 创建数据源对象时，建议使用 DruidDataSource 代替 DataSource。
+- Druid 创建数据源对象时，注意创建 Bean 的方法名，最好通过 @Bean("dataSourceOne") 来指定数据源对象的名称。
+- 多数据源通常结合 ORM 框架一起使用，具体可参考 Kaddo 框架的 ORM 配置。
