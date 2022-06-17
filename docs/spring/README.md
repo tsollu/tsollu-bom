@@ -1,6 +1,6 @@
 # Spring Projects
 
-From configuration to security, web apps to big data¡ªwhatever the infrastructure needs of your application may be, there is a Spring Project to help you build it. Start small and use just what you need¡ªSpring is modular by design.
+From configuration to security, web apps to big dataâ€”whatever the infrastructure needs of your application may be, there is a Spring Project to help you build it. Start small and use just what you needâ€”Spring is modular by design.
 
 - [Spring Tools 4](https://spring.io/tools)
 - [Spring Initializr](https://start.spring.io/)
