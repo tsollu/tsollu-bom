@@ -115,7 +115,7 @@ Kaddo BOM (基于 Spring Boot 和 Spring Cloud) 项目集成的第三方库的�
 
 ## 依赖版本
 
-Spring Boot 的依赖版本清单可查看文档：https://docs.spring.io/spring-boot/docs/current/reference/html/dependency-versions.html
+Spring Boot 的依赖版本清单可查看文档：[Dependency Versions](https://docs.spring.io/spring-boot/docs/current/reference/html/dependency-versions.html)
 
 Kaddo BOM 的依赖版本清单如下：
 
