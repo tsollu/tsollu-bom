@@ -4,9 +4,9 @@
 
 ## 开发环境
 
-Kaddo BOM 的开发环境与 Spring Boot 完全一致。[System Requirements](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started.system-requirements)
+Kaddo BOM 的开发环境与 [Spring Boot System Requirements](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started.system-requirements) 完全一致。
 
-1) 构建工具
+### 构建工具
 
 | Build Tool | Version |
 | --- | --- |
@@ -14,27 +14,30 @@ Kaddo BOM 的开发环境与 Spring Boot 完全一致。[System Requirements](ht
 | Maven | 3.5+ |
 | Gradle | 6.8.x, 6.9.x, and 7.x |
 
-2) Servlet Containers
+### Servlet Containers
 
 Spring Boot 支持下列嵌入式容器：
 
-| Build Tool | Version |
+| Name | Servlet Version |
 | --- | --- |
-| Java | 1.8+ |
-| Maven | 3.5+ |
-| Gradle | 6.8.x, 6.9.x, and 7.x |
+| Tomcat 9.0 | 4.0 |
+| Jetty 9.4 | 3.1 |
+| Jetty 10.0 | 4.0 |
+| Undertow 2.0 | 4.0 |
 
 ### Maven
 
 ```
 <parent>
-	<groupId>com.kaddo</groupId>
-	<artifactId>kaddo-dependencies</artifactId>
-	<version>${kaddo-framework.version}</version>
-	<relativePath/>
+  <groupId>com.kaddo</groupId>
+  <artifactId>kaddo-dependencies</artifactId>
+  <version>${kaddo-framework.version}</version>
+  <relativePath/>
 </parent>
 ```
 
 ## 组件
 
 ## 使用文档
+
+
