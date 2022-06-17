@@ -6,7 +6,7 @@
 
 Kaddo BOM 的开发环境与 [Spring Boot System Requirements](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started.system-requirements) 完全一致。
 
-### 构建工具
+### Build Tools
 
 | Build Tool | Version |
 | --- | --- |
