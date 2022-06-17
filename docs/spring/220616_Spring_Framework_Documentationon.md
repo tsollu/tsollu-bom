@@ -64,8 +64,7 @@ Spring MVC, WebSocket, SockJS, STOMP Messaging.
 - [HTTP Caching](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-caching)
 - [View Technologies](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-view)
 - [MVC Config](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-config)
-- [REST Clients](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#webmvc-client)
-- RestTemplate - WebClient
+- [REST Clients](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#webmvc-client) - RestTemplate & WebClient
 - [Testing](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#testing)
 - [WebSockets](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#websocket)
 
@@ -99,4 +98,4 @@ Spring properties.
 
 ## [Wiki](https://github.com/spring-projects/spring-framework/wiki)
 
-What¡¯s New, Upgrade Notes, Supported Versions, and other cross-version information.
+Whatâ€™s New, Upgrade Notes, Supported Versions, and other cross-version information.
