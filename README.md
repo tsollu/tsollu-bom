@@ -112,3 +112,32 @@ Kaddo BOM (基于 Spring Boot 和 Spring Cloud) 项目集成的第三方库的�
   <guava.version>31.0.1-jre</guava.version>
 </properties>
 ```
+
+## 依赖版本
+
+Spring Boot 的依赖版本清单可查看文档：https://docs.spring.io/spring-boot/docs/current/reference/html/dependency-versions.html
+
+Kaddo BOM 的依赖版本清单如下：
+
+| Group ID | Artifact ID | Version | Version Property  | Documentation |
+| --- | --- | --- | --- | --- |
+| org.springframework.boot | spring-boot-starter-parent | 2.6.8 | spring-boot.version | [Spring Boot](https://spring.io/projects/spring-boot) |
+| org.springframework.cloud | spring-cloud-dependencies | 2021.0.3 | spring-cloud.version | [Spring Cloud](https://spring.io/projects/spring-cloud) |
+| org.redisson | redisson-spring-boot-starter | 3.17.3 | redisson.version | [Redisson](https://github.com/redisson/redisson) |
+|  |  |  |  |  |
+| com.alibaba | druid-spring-boot-starter | 1.2.9 | alibaba-druid.version | [Druid](https://github.com/alibaba/druid) |
+| com.alibaba | fastjson | 1.2.83 | alibaba-fastjson.version | [Fastjson](https://github.com/alibaba/fastjson) |
+| com.ctrip.framework.apollo | apollo-client | 2.0.0 | apollo-client.version | [ApolloConfig](https://www.apolloconfig.com/) |
+| org.bouncycastle | bcpkix-jdk15on | 1.70 | bouncycastle.version | [Bouncy Castle Crypto](https://github.com/open-keychain/bouncycastle) |
+| org.bouncycastle | bcprov-jdk15to18 | 1.70 | bouncycastle.version | [Bouncy Castle Crypto](https://github.com/open-keychain/bouncycastle) |
+| com.google.guava | guava | 31.1-jre | guava.version | [Guava](https://github.com/google/guava) |
+| cn.hutool | hutool-all | 5.8.2 | hutool.version | [Hutool](https://hutool.cn/) |
+| org.mybatis.spring.boot | mybatis-spring-boot-starter | 2.2.2 | mybatis-springboot.version | [MyBatis Spring-Boot-Starter](https://github.com/mybatis/spring-boot-starter) |
+| com.github.pagehelper | pagehelper-spring-boot-starter | 1.4.2 | mybatis-pagehelper.version | [PageHelper Spring-Boot-Starter](https://github.com/pagehelper/pagehelper-spring-boot) |
+| com.baomidou | mybatis-plus-boot-starter | 3.5.2 | mybatis-plus.version | [MyBatis-Plus](https://baomidou.com/) |
+| org.zalando | problem-spring-web | 0.27.1 | problem-spring-web.version | [Zalando Problem](https://github.com/zalando/problem/) |
+| org.zalando | problem-spring-webflux | 0.27.1 | problem-spring-webflux.version | [Zalando Problem](https://github.com/zalando/problem/) |
+| com.squareup.retrofit2 | retrofit | 2.9.0 | retrofit2.version | [Retrofit](https://square.github.io/retrofit/) |
+| com.squareup.retrofit2 | converter-jackson | 2.9.0 | retrofit2.version | [Retrofit](https://square.github.io/retrofit/) |
+| org.springdoc | springdoc-openapi-ui | 1.6.9 | springdoc.version | [SpringDoc](https://springdoc.org/) |
+|  |  |  |  |  |
