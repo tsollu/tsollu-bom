@@ -9,15 +9,16 @@ Spring Boot 2.x 将其作为默认的连接池组件，项目中添加 `spring-boot-starter-jdbc` 
 1）在你的 Spring Boot 项目中添加依赖配置：
 
 ```
-<!-- JDBC -->
 <dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-jdbc</artifactId>
+    <groupId>com.kaddo</groupId>
+    <artifactId>kaddo-components-datasource</artifactId>
+	<version>${kaddo-framework.version}</version>
 </dependency>
 ```
 
 以下常用的 ORM 组件中已经包含了 JDBC 依赖，不需要重复引入：
 
+- spring-boot-starter-data-jdbc
 - spring-boot-starter-data-jpa
 - mybatis-spring-boot-starter
 - mybatis-plus-boot-starter
@@ -138,11 +139,6 @@ spring.datasource.two.hikari.pool-name=HikaraPool-2
 2）创建多数据源：
 
 ```
-@SuppressWarnings("unchecked")
-protected static <T> T createDataSource(DataSourceProperties properties, Class<? extends DataSource> type) {
-	return (T) properties.initializeDataSourceBuilder().type(type).build();
-}
-
 @Bean
 @Primary
 @ConfigurationProperties("spring.datasource.one")
@@ -154,11 +150,7 @@ public DataSourceProperties dataSourcePropertiesOne() {
 @Primary
 @ConfigurationProperties("spring.datasource.one.hikari")
 public HikariDataSource dataSourceOne(DataSourceProperties properties) {
-	HikariDataSource dataSource = createDataSource(properties, HikariDataSource.class);
-	if (StringUtils.hasText(properties.getName())) {
-		dataSource.setPoolName(properties.getName());
-	}
-	return dataSource;
+	return HikariDataSourceBuilder.createDataSource(properties);
 }
 
 @Bean
@@ -170,11 +162,7 @@ public DataSourceProperties dataSourcePropertiesTwo() {
 @Bean
 @ConfigurationProperties("spring.datasource.two.hikari")
 public HikariDataSource dataSourceTwo(@Qualifier("dataSourcePropertiesTwo") DataSourceProperties properties) {
-	HikariDataSource dataSource = createDataSource(properties, HikariDataSource.class);
-	if (StringUtils.hasText(properties.getName())) {
-		dataSource.setPoolName(properties.getName());
-	}
-	return dataSource;
+	return HikariDataSourceBuilder.createDataSource(properties);
 }
 ```
 
