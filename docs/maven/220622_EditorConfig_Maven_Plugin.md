@@ -6,6 +6,11 @@ EditorConfig 帮助开发人员在不同的编辑器和 IDE 之间定义和维�
 
 [editorconfig-maven-plugin](https://ec4j.github.io/editorconfig-maven-plugin/index.html) is a Maven plugin for checking whether project files comply with format rules defined in [.editorconfig](https://editorconfig.org/) files and eventually also for fixing the violations.
 
+官方文档：
+
+- [EditorConfig](https://editorconfig.org/)
+- [editorconfig-maven-plugin](https://ec4j.github.io/editorconfig-maven-plugin/index.html)
+
 ## 快速使用
 
 1）在你的 Spring Boot 项目根目录中添加 `.editorconfig` 文件：
