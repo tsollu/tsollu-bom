@@ -1,16 +1,19 @@
 # EditorConfig Maven Plugin
 
-EditorConfig °ïÖú¿ª·¢ÈËÔ±ÔÚ²»Í¬µÄ±à¼­Æ÷ºÍ IDE Ö®¼ä¶¨ÒåºÍÎ¬»¤Ò»ÖÂµÄ±àÂëÑùÊ½¡£
-
----
+EditorConfig å¸®åŠ©å¼€å‘äººå‘˜åœ¨ä¸åŒçš„ç¼–è¾‘å™¨å’Œ IDE ä¹‹é—´å®šä¹‰å’Œç»´æŠ¤ä¸€è‡´çš„ç¼–ç æ ·å¼ã€‚
 
 [EditorConfig](https://editorconfig.org/) helps maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs. The EditorConfig project consists of **a file format** for defining coding styles and a collection of **text editor plugins** that enable editors to read the file format and adhere to defined styles. EditorConfig files are easily readable and they work nicely with version control systems.
 
 [editorconfig-maven-plugin](https://ec4j.github.io/editorconfig-maven-plugin/index.html) is a Maven plugin for checking whether project files comply with format rules defined in [.editorconfig](https://editorconfig.org/) files and eventually also for fixing the violations.
 
-## ¿ìËÙÊ¹ÓÃ
+å®˜æ–¹æ–‡æ¡£ï¼š
 
-1£©ÔÚÄãµÄ Spring Boot ÏîÄ¿¸ùÄ¿Â¼ÖĞÌí¼Ó `.editorconfig` ÎÄ¼ş£º
+- [EditorConfig](https://editorconfig.org/)
+- [editorconfig-maven-plugin](https://ec4j.github.io/editorconfig-maven-plugin/index.html)
+
+## å¿«é€Ÿä½¿ç”¨
+
+1ï¼‰åœ¨ä½ çš„ Spring Boot é¡¹ç›®æ ¹ç›®å½•ä¸­æ·»åŠ  `.editorconfig` æ–‡ä»¶ï¼š
 
 ```
 # EditorConfig helps developers define and maintain consistent
@@ -35,57 +38,56 @@ insert_final_newline = true
 trim_trailing_whitespace = false
 ```
 
-2£©¼¯³É²å¼ş¹ÜÀí£º
+2ï¼‰åœ¨ä½ çš„ Spring Boot é¡¹ç›®ä¸­é›†æˆæ’ä»¶ç®¡ç†ï¼ˆKaddo-æ¡†æ¶å·²é›†æˆæ’ä»¶ç®¡ç†ï¼Œå¼€å‘è€…å¯ä»¥è·³è¿‡ï¼‰ï¼š
 
 ```
 <build>
-	<pluginManagement>
-		<plugins>
-			<plugin>
-				<groupId>org.ec4j.maven</groupId>
-				<artifactId>editorconfig-maven-plugin</artifactId>
-				<version>0.1.1</version>
-				<executions>
-					<execution>
-						<id>check</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<excludes>
-						<!-- Note that maven submodule directories and many non-source file patterns are excluded by default -->
-						<!-- see https://github.com/ec4j/editorconfig-maven-plugin/blob/master/ec4j-lint-api/src/main/java/org/ec4j/maven/lint/api/Constants.java#L37 -->
-						<!-- You can exclude further files from processing: -->
-						<!-- <exclude>src/main/**/*.whatever</exclude> -->
-					</excludes>
-					<!-- All files are included by default: -->
-					<!-- <includes> -->
-					<!--   <include>**</include> -->
-					<!-- </includes> -->
-				</configuration>
-			</plugin>
-		</plugins>
-	</pluginManagement>
+  <pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.ec4j.maven</groupId>
+        <artifactId>editorconfig-maven-plugin</artifactId>
+        <version>${editorconfig-maven-plugin.version}</version>
+        <executions>
+          <execution>
+            <id>check</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <excludes>
+            <!-- Note that maven submodule directories and many non-source file patterns are excluded by default -->
+            <!-- You can exclude further files from processing: -->
+            <!-- <exclude>src/main/**/*.whatever</exclude> -->
+          </excludes>
+          <!-- All files are included by default: -->
+          <!-- <includes> -->
+          <!--   <include>**</include> -->
+          <!-- </includes> -->
+        </configuration>
+      </plugin>
+    </plugins>
+  </pluginManagement>
 </build>
 ```
 
-3£©ÔÚÏîÄ¿ÖĞÊ¹ÓÃ£¨Kaddo-¿ò¼ÜÒÑ¼¯³É²å¼ş¹ÜÀí£¬Ê¹ÓÃ¸ü¼Ó·½±ã£©£º
+3ï¼‰åœ¨ä½ çš„ Spring Boot é¡¹ç›®ä¸­ä½¿ç”¨æ’ä»¶ï¼ˆKaddo-æ¡†æ¶å·²é›†æˆæ’ä»¶ç®¡ç†ï¼Œä½¿ç”¨æ›´åŠ æ–¹ä¾¿ï¼‰ï¼š
 
 ```
 <build>
-	<plugins>
-		<plugin>
-			<groupId>org.ec4j.maven</groupId>
-			<artifactId>editorconfig-maven-plugin</artifactId>
-		</plugin>
-	</plugins>
+  <plugins>
+    <plugin>
+      <groupId>org.ec4j.maven</groupId>
+      <artifactId>editorconfig-maven-plugin</artifactId>
+    </plugin>
+  </plugins>
 </build>
 ```
 
-4£©Ö´ĞĞÃüÁî£º
+4ï¼‰æ‰§è¡Œå‘½ä»¤ï¼ˆä¼šè‡ªåŠ¨å¤„ç†ä»£ç æ ¼å¼ï¼‰ï¼š
 
 ```
 mvn editorconfig:format
