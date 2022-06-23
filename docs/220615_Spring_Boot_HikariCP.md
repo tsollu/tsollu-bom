@@ -1,29 +1,29 @@
 # Spring Boot HikariCP
 
-[HikariCP](https://github.com/brettwooldridge/HikariCP) ÊÇÒ»¸ö¸ßĞÔÄÜµÄ JDBC Á¬½Ó³Ø×é¼ş¡£
+[HikariCP](https://github.com/brettwooldridge/HikariCP) æ˜¯ä¸€ä¸ªé«˜æ€§èƒ½çš„ JDBC è¿æ¥æ± ç»„ä»¶ã€‚
 
-Spring Boot 2.x ½«Æä×÷ÎªÄ¬ÈÏµÄÁ¬½Ó³Ø×é¼ş£¬ÏîÄ¿ÖĞÌí¼Ó `spring-boot-starter-jdbc` »ò `spring-boot-starter-data-jpa`  Ä£¿éºó£¬HikariCP ÒÀÀµ»á±»×Ô¶¯ÒıÈë¡£
+Spring Boot 2.x å°†å…¶ä½œä¸ºé»˜è®¤çš„è¿æ¥æ± ç»„ä»¶ï¼Œé¡¹ç›®ä¸­æ·»åŠ  `spring-boot-starter-jdbc` æˆ– `spring-boot-starter-data-jpa`  æ¨¡å—åï¼ŒHikariCP ä¾èµ–ä¼šè¢«è‡ªåŠ¨å¼•å…¥ã€‚
 
-## ¿ìËÙÊ¹ÓÃ
+## å¿«é€Ÿä½¿ç”¨
 
-1£©ÔÚÄãµÄ Spring Boot ÏîÄ¿ÖĞÌí¼ÓÒÀÀµÅäÖÃ£º
+1ï¼‰åœ¨ä½ çš„ Spring Boot é¡¹ç›®ä¸­æ·»åŠ ä¾èµ–é…ç½®ï¼š
 
 ```
 <dependency>
     <groupId>com.kaddo</groupId>
     <artifactId>kaddo-components-datasource</artifactId>
-	<version>${kaddo-framework.version}</version>
+    <version>${kaddo.version}</version>
 </dependency>
 ```
 
-ÒÔÏÂ³£ÓÃµÄ ORM ×é¼şÖĞÒÑ¾­°üº¬ÁË JDBC ÒÀÀµ£¬²»ĞèÒªÖØ¸´ÒıÈë£º
+ä»¥ä¸‹å¸¸ç”¨çš„ ORM ç»„ä»¶ä¸­å·²ç»åŒ…å«äº† JDBC ä¾èµ–ï¼Œä¸éœ€è¦é‡å¤å¼•å…¥ï¼š
 
 - spring-boot-starter-data-jdbc
 - spring-boot-starter-data-jpa
 - mybatis-spring-boot-starter
 - mybatis-plus-boot-starter
 
-2£©Ìí¼ÓÊı¾İÔ´ÅäÖÃ£º
+2ï¼‰æ·»åŠ æ•°æ®æºé…ç½®ï¼š
 
 ```
 ## Spring HikaraDataSource Configuration
@@ -41,72 +41,72 @@ spring.datasource.hikari.minimum-idle=10
 spring.datasource.hikari.pool-name=HikaraPool-1
 ```
 
-## Á¬½Ó³ØÅäÖÃ
+## è¿æ¥æ± é…ç½®
 
-1£©ÔÚ Spring Boot ÏîÄ¿ÖĞ£¬Ò»¸ö¼òµ¥µÄ Spring DataSource ÅäÖÃ£¬Í¨³£Ö»ĞèÒªÉèÖÃÊı¾İ¿âÁ¬½Ó¡¢ÓÃ»§ÃûºÍÃÜÂëÈı¸ö²ÎÊı¡£
+1ï¼‰åœ¨ Spring Boot é¡¹ç›®ä¸­ï¼Œä¸€ä¸ªç®€å•çš„ Spring DataSource é…ç½®ï¼Œé€šå¸¸åªéœ€è¦è®¾ç½®æ•°æ®åº“è¿æ¥ã€ç”¨æˆ·åå’Œå¯†ç ä¸‰ä¸ªå‚æ•°ã€‚
 
 ```
 ## Spring DataSourceProperties
 
-# ÉèÖÃÁ¬½Ó³ØÀàĞÍ£¬Ä¬ÈÏ×Ô¶¯»ñÈ¡£¨¿ÉÑ¡£©
+# è®¾ç½®è¿æ¥æ± ç±»å‹ï¼Œé»˜è®¤è‡ªåŠ¨è·å–ï¼ˆå¯é€‰ï¼‰
 spring.datasource.type=com.zaxxer.hikari.HikariDataSource
 
-# ÉèÖÃÊı¾İ¿âÇı¶¯£¬Ä¬ÈÏ×Ô¶¯»ñÈ¡£¨¿ÉÑ¡£©
+# è®¾ç½®æ•°æ®åº“é©±åŠ¨ï¼Œé»˜è®¤è‡ªåŠ¨è·å–ï¼ˆå¯é€‰ï¼‰
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
-# Éú³ÉÎ¨Ò»µÄÊı¾İÔ´Ãû³Æ£¬ÉèÖÃÓë·ñ£¬¶¼»áÓÅÏÈÈ¡ name µÄÖµ£¨¿ÉÑ¡£©
+# ç”Ÿæˆå”¯ä¸€çš„æ•°æ®æºåç§°ï¼Œè®¾ç½®ä¸å¦ï¼Œéƒ½ä¼šä¼˜å…ˆå– name çš„å€¼ï¼ˆå¯é€‰ï¼‰
 spring.datasource.generate-unique-name=true
 
-# ÉèÖÃÊı¾İÔ´Ãû³Æ£¬Ä¬ÈÏ»áÉú³ÉÎ¨Ò»µÄÊı¾İÔ´Ãû³Æ£¬Èç£ºHikariPool-1£¨¿ÉÑ¡£©
+# è®¾ç½®æ•°æ®æºåç§°ï¼Œé»˜è®¤ä¼šç”Ÿæˆå”¯ä¸€çš„æ•°æ®æºåç§°ï¼Œå¦‚ï¼šHikariPool-1ï¼ˆå¯é€‰ï¼‰
 spring.datasource.name=HikariCP-1
 
-# ÉèÖÃÊı¾İ¿âÁ¬½Ó£¨±ØÑ¡£©
+# è®¾ç½®æ•°æ®åº“è¿æ¥ï¼ˆå¿…é€‰ï¼‰
 spring.datasource.url=jdbc:mysql://localhost:3306/dbname?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&autoReconnectForPools=true&noAccessToProcedureBodies=true&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
 
-# ÉèÖÃÊı¾İ¿âÓÃ»§Ãû£¨±ØÑ¡£©
+# è®¾ç½®æ•°æ®åº“ç”¨æˆ·åï¼ˆå¿…é€‰ï¼‰
 spring.datasource.username=root
 
-# ÉèÖÃÊı¾İ¿âÃÜÂë£¨±ØÑ¡£©
+# è®¾ç½®æ•°æ®åº“å¯†ç ï¼ˆå¿…é€‰ï¼‰
 spring.datasource.password=123456
 ```
 
-2£©ÔÚ Spring Boot ÏîÄ¿ÖĞ£¬ Spring DataSource »áÊ¹ÓÃÄ¬ÈÏµÄÅäÖÃÆôÓÃ HikaraCP Êı¾İ¿âÁ¬½Ó³Ø¡£ÎÒÃÇÒ²¿ÉÒÔÍ¨¹ıÊôĞÔÎÄ¼şÀ´ÓÅ»¯ HikariCP µÄÅäÖÃÏî£¬ÓÈÆäÊÇÁ¬½Ó³Ø´óĞ¡µÄÉèÖÃ¡£
+2ï¼‰åœ¨ Spring Boot é¡¹ç›®ä¸­ï¼Œ Spring DataSource ä¼šä½¿ç”¨é»˜è®¤çš„é…ç½®å¯ç”¨ HikaraCP æ•°æ®åº“è¿æ¥æ± ã€‚æˆ‘ä»¬ä¹Ÿå¯ä»¥é€šè¿‡å±æ€§æ–‡ä»¶æ¥ä¼˜åŒ– HikariCP çš„é…ç½®é¡¹ï¼Œå°¤å…¶æ˜¯è¿æ¥æ± å¤§å°çš„è®¾ç½®ã€‚
 
 ```
 ## Spring HikariConfig
 
-# ÊÂÎñ×Ô¶¯Ìá½» - Ä¬ÈÏÖµ£ºtrue
+# äº‹åŠ¡è‡ªåŠ¨æäº¤ - é»˜è®¤å€¼ï¼štrue
 spring.datasource.hikari.auto-commit=true
 
-# Á¬½Ó²âÊÔ²éÑ¯ - Using the JDBC4 <code>Connection.isValid()</code> method to test connection validity can be more efficient on some databases and is recommended.
-# Èç¹ûÄãµÄÇı¶¯³ÌĞòÖ§³ÖJDBC4£¬Ç¿ÁÒ½¨Òé²»ÒªÉèÖÃ´ËÊôĞÔ¡£
+# è¿æ¥æµ‹è¯•æŸ¥è¯¢ - Using the JDBC4 <code>Connection.isValid()</code> method to test connection validity can be more efficient on some databases and is recommended.
+# å¦‚æœä½ çš„é©±åŠ¨ç¨‹åºæ”¯æŒJDBC4ï¼Œå¼ºçƒˆå»ºè®®ä¸è¦è®¾ç½®æ­¤å±æ€§ã€‚
 spring.datasource.hikari.connection-test-query=select 1
 
-# Á¬½Ó³¬Ê±Ê±¼ä - Ä¬ÈÏÖµ£º30Ãë¡£
+# è¿æ¥è¶…æ—¶æ—¶é—´ - é»˜è®¤å€¼ï¼š30ç§’ã€‚
 spring.datasource.hikari.connection-timeout=30000
 
-# Á¬½Ó³ØÖĞÔÊĞíÏĞÖÃµÄ×î³¤Ê±¼ä - Ä¬ÈÏÖµ£º10·ÖÖÓ
+# è¿æ¥æ± ä¸­å…è®¸é—²ç½®çš„æœ€é•¿æ—¶é—´ - é»˜è®¤å€¼ï¼š10åˆ†é’Ÿ
 spring.datasource.hikari.idle-timeout=600000
 
-# Ò»¸öÁ¬½ÓÉúÃüÊ±³¤£¨ºÁÃë£©£¬³¬Ê±¶øÃ»±»Ê¹ÓÃÔò±»ÊÍ·Å - Ä¬ÈÏÖµ£º30·ÖÖÓ
+# ä¸€ä¸ªè¿æ¥ç”Ÿå‘½æ—¶é•¿ï¼ˆæ¯«ç§’ï¼‰ï¼Œè¶…æ—¶è€Œæ²¡è¢«ä½¿ç”¨åˆ™è¢«é‡Šæ”¾ - é»˜è®¤å€¼ï¼š30åˆ†é’Ÿ
 spring.datasource.hikari.max-lifetime=1800000
 
-# Á¬½Ó³ØÖĞÔÊĞíµÄ×î´óÁ¬½ÓÊı£¬°üÀ¨ÏĞÖÃºÍÊ¹ÓÃÖĞµÄÁ¬½Ó - Ä¬ÈÏÖµ£º10
+# è¿æ¥æ± ä¸­å…è®¸çš„æœ€å¤§è¿æ¥æ•°ï¼ŒåŒ…æ‹¬é—²ç½®å’Œä½¿ç”¨ä¸­çš„è¿æ¥ - é»˜è®¤å€¼ï¼š10
 spring.datasource.hikari.maximum-pool-size=100
 
-# Á¬½Ó³ØÖĞÔÊĞíµÄ×îĞ¡¿ÕÏĞÁ¬½ÓÊı - Ä¬ÈÏÖµ£º10¡£
+# è¿æ¥æ± ä¸­å…è®¸çš„æœ€å°ç©ºé—²è¿æ¥æ•° - é»˜è®¤å€¼ï¼š10ã€‚
 spring.datasource.hikari.minimum-idle=10
 
-# Á¬½Ó±»²âÊÔ»î¶¯µÄ×î³¤Ê±¼ä - Ä¬ÈÏÖµ£º5Ãë¡£
+# è¿æ¥è¢«æµ‹è¯•æ´»åŠ¨çš„æœ€é•¿æ—¶é—´ - é»˜è®¤å€¼ï¼š5ç§’ã€‚
 spring.datasource.hikari.validation-timeout=5000
 
-# Ö¸¶¨Á¬½Ó³ØµÄÃû³Æ - Ä¬ÈÏ×Ô¶¯Éú³É
+# æŒ‡å®šè¿æ¥æ± çš„åç§° - é»˜è®¤è‡ªåŠ¨ç”Ÿæˆ
 spring.datasource.hikari.pool-name=HikaraPool-1
 ```
 
-## ¶àÊı¾İÔ´ÅäÖÃ
+## å¤šæ•°æ®æºé…ç½®
 
-1£©Ìí¼Ó¶àÊı¾İÔ´ÅäÖÃ£º
+1ï¼‰æ·»åŠ å¤šæ•°æ®æºé…ç½®ï¼š
 
 ```
 ## Spring HikaraDataSource Configuration
@@ -136,7 +136,7 @@ spring.datasource.two.hikari.minimum-idle=10
 spring.datasource.two.hikari.pool-name=HikaraPool-2
 ```
 
-2£©´´½¨¶àÊı¾İÔ´£º
+2ï¼‰åˆ›å»ºå¤šæ•°æ®æºï¼š
 
 ```
 @Bean
@@ -150,7 +150,7 @@ public DataSourceProperties dataSourcePropertiesOne() {
 @Primary
 @ConfigurationProperties("spring.datasource.one.hikari")
 public HikariDataSource dataSourceOne(DataSourceProperties properties) {
-	return HikariDataSourceBuilder.createDataSource(properties);
+	return KaddoDataSourceBuilder.createHikariDataSource(properties);
 }
 
 @Bean
@@ -162,11 +162,11 @@ public DataSourceProperties dataSourcePropertiesTwo() {
 @Bean
 @ConfigurationProperties("spring.datasource.two.hikari")
 public HikariDataSource dataSourceTwo(@Qualifier("dataSourcePropertiesTwo") DataSourceProperties properties) {
-	return HikariDataSourceBuilder.createDataSource(properties);
+	return KaddoDataSourceBuilder.createHikariDataSource(properties);
 }
 ```
 
-3£©Ê¹ÓÃ¶àÊı¾İÔ´£º
+3ï¼‰ä½¿ç”¨å¤šæ•°æ®æºï¼š
 
 ```
 @Autowired
@@ -177,10 +177,10 @@ private HikariDataSource dataSourceOne;
 private HikariDataSource dataSourceTwo;
 ```
 
-ÅäÖÃ¶àÊı¾İÔ´µÄ×¢ÒâÊÂÏî£º
+é…ç½®å¤šæ•°æ®æºçš„æ³¨æ„äº‹é¡¹ï¼š
 
-* ÅäÖÃ¶àÊı¾İÔ´Ê±£¬×îºÃÍ¨¹ı @Primary Ö¸¶¨Ä¬ÈÏÊı¾İÔ´¡£
-* ´´½¨Êı¾İÔ´¶ÔÏóÊ±£¬½¨ÒéÊ¹ÓÃ HikariDataSource ´úÌæ DataSource¡£
-* ´´½¨Êı¾İÔ´¶ÔÏóÊ±£¬×¢ÒâÍ¨¹ı @Qualifier("dataSourcePropertiesTwo") À´Ö¸¶¨Êı¾İÔ´µÄÅäÖÃÊôĞÔ¶ÔÏó¡£
-* ´´½¨Êı¾İÔ´¶ÔÏóÊ±£¬×¢Òâ´´½¨ Bean µÄ·½·¨Ãû£¬×îºÃÍ¨¹ı @Bean("dataSourceOne") À´Ö¸¶¨Êı¾İÔ´¶ÔÏóµÄÃû³Æ¡£
-* ¶àÊı¾İÔ´Í¨³£½áºÏ ORM ¿ò¼ÜÒ»ÆğÊ¹ÓÃ£¬¾ßÌå¿É²Î¿¼ Kaddo ¿ò¼ÜµÄ ORM ÅäÖÃ¡£
+* é…ç½®å¤šæ•°æ®æºæ—¶ï¼Œæœ€å¥½é€šè¿‡ @Primary æŒ‡å®šé»˜è®¤æ•°æ®æºã€‚
+* åˆ›å»ºæ•°æ®æºå¯¹è±¡æ—¶ï¼Œå»ºè®®ä½¿ç”¨ HikariDataSource ä»£æ›¿ DataSourceã€‚
+* åˆ›å»ºæ•°æ®æºå¯¹è±¡æ—¶ï¼Œæ³¨æ„é€šè¿‡ @Qualifier("dataSourcePropertiesTwo") æ¥æŒ‡å®šæ•°æ®æºçš„é…ç½®å±æ€§å¯¹è±¡ã€‚
+* åˆ›å»ºæ•°æ®æºå¯¹è±¡æ—¶ï¼Œæ³¨æ„åˆ›å»º Bean çš„æ–¹æ³•åï¼Œæœ€å¥½é€šè¿‡ @Bean("dataSourceOne") æ¥æŒ‡å®šæ•°æ®æºå¯¹è±¡çš„åç§°ã€‚
+* å¤šæ•°æ®æºé€šå¸¸ç»“åˆ ORM æ¡†æ¶ä¸€èµ·ä½¿ç”¨ï¼Œå…·ä½“å¯å‚è€ƒ Kaddo æ¡†æ¶çš„ ORM é…ç½®ã€‚
