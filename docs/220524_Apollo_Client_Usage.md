@@ -19,14 +19,14 @@ Java 客户端不依赖任何框架，能够运行于所有 Java 运行时环境
 <dependency>
   <groupId>com.kaddo</groupId>
   <artifactId>kaddo-components-apollo</artifactId>
-  <version>${kaddo-framework.version}</version>
+  <version>${kaddo.version}</version>
 </dependency>
 ```
 
 2）添加配置参数：
 
 ```
-## Apollo Config
+## Apollo Configuration
 # 多环境时，需要通过启动参数来指定配置环境：-Denv=DEV
 app.id=YOUR-APP-ID
 apollo.bootstrap.enabled=true
