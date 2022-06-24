@@ -265,6 +265,7 @@ IPage<UserVo> selectPageVo(IPage<?> page, Integer state);
 MyPage selectPageVo(MyPage page);
 // or
 List<UserVo> selectPageVo(IPage<UserVo> page, Integer state);
+// IPage<Board> page = new Page();
 ```
 
 ```
@@ -273,6 +274,6 @@ List<UserVo> selectPageVo(IPage<UserVo> page, Integer state);
 </select>
 ```
 
-- 如果返回类型是 IPage 则入参的 IPage 不能为null,因为 返回的IPage == 入参的IPage
-- 如果返回类型是 List 则入参的 IPage 可以为 null(为 null 则不分页),但需要你手动 入参的IPage.setRecords(返回的 List);
-- 如果 xml 需要从 page 里取值,需要 `page.属性` 获取
+- 如果返回类型是 IPage 则入参的 IPage 不能为 null，因为返回的 IPage 即入参的 IPage。
+- 如果返回类型是 List 则入参的 IPage 可以为 null，但需要你手动处理分页 IPage.setRecords(返回的 List);
+- 如果 xml 需要从 page 里取值，需要使用 `page.属性` 获取，也可以通过 @Param("page") 注解自定义。
