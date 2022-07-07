@@ -1,4 +1,4 @@
-# Spring Boot Documentation
+Ôªø# Spring Boot Documentation
 
 https://spring.io/projects/spring-boot
 
@@ -139,7 +139,7 @@ Installing the CLI, Using the CLI, Configuring the CLI, and more.
 
 Maven Plugin, Gradle Plugin, Antlib, and more.
 
-## [°∞How-to°± Guides](https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html)
+## [‚ÄúHow-to‚Äù Guides](https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html)
 
 Application Development, Configuration, Embedded Servers, Data Access, and many more.
 
@@ -167,5 +167,5 @@ Application Development, Configuration, Embedded Servers, Data Access, and many 
 - [Configuration Metadata](https://docs.spring.io/spring-boot/docs/current/reference/html/configuration-metadata.html) - Metadata that you can use to describe configuration properties.
 - [Auto-configuration Classes](https://docs.spring.io/spring-boot/docs/current/reference/html/auto-configuration-classes.html) - Auto-configuration classes provided by Spring Boot.
 - [Test Auto-configuration Annotations](https://docs.spring.io/spring-boot/docs/current/reference/html/test-auto-configuration.html) - Test auto-configuration annotations that you can use to test slices of your application.
-- [Executable Jars](https://docs.spring.io/spring-boot/docs/current/reference/html/test-auto-configuration.html) - Spring Boot°Øs executable jars, their launchers, and their format.
+- [Executable Jars](https://docs.spring.io/spring-boot/docs/current/reference/html/test-auto-configuration.html) - Spring Boot‚Äôs executable jars, their launchers, and their format.
 - [Dependency Versions](https://docs.spring.io/spring-boot/docs/current/reference/html/dependency-versions.html) - Details of the dependencies that are managed by Spring Boot.

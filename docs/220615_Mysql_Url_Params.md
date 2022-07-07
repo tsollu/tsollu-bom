@@ -1,33 +1,33 @@
-# MySQL URL Á¬½Ó²ÎÊıÉèÖÃ
+# MySQL URL è¿æ¥å‚æ•°è®¾ç½®
 
-MySQL URL Á¬½Ó¿ÉÒÔĞ¯´ø²ÎÊı£¬Í¨ÓÃÅäÖÃÄ£°åÈçÏÂ£º
+MySQL URL è¿æ¥å¯ä»¥æºå¸¦å‚æ•°ï¼Œé€šç”¨é…ç½®æ¨¡æ¿å¦‚ä¸‹ï¼š
 
 ```
-# Í¨¹ıURLÉèÖÃÁ¬½Ó²ÎÊı
+# é€šè¿‡URLè®¾ç½®è¿æ¥å‚æ•°
 spring.datasource.url=jdbc:mysql://localhost:3306/dbname?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&autoReconnectForPools=true&failOverReadOnly=false&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
 ```
 
-## ²ÎÊıËµÃ÷
+## å‚æ•°è¯´æ˜
 
-ÒÔÏÂÊÇ²¿·Ö±È½Ï³£ÓÃµÄ²ÎÊı¡£
+ä»¥ä¸‹æ˜¯éƒ¨åˆ†æ¯”è¾ƒå¸¸ç”¨çš„å‚æ•°ã€‚
 
 ### serverTimezone
 
-ÉèÖÃÊ±Çø¡£
+è®¾ç½®æ—¶åŒºã€‚
 
-MySQL¸ß°æ±¾ÖĞÈç¹û²»ÉèÖÃ¿ÉÄÜ»áÓĞÎÊÌâ¡£UTC±íÊ¾È«Çò±ê×¼Ê±¼ä£¬¹úÄÚ½¨ÒéÊ¹ÓÃÖĞ¹ú±ê×¼Ê±¼ä£º
+MySQLé«˜ç‰ˆæœ¬ä¸­å¦‚æœä¸è®¾ç½®å¯èƒ½ä¼šæœ‰é—®é¢˜ã€‚UTCè¡¨ç¤ºå…¨çƒæ ‡å‡†æ—¶é—´ï¼Œå›½å†…å»ºè®®ä½¿ç”¨ä¸­å›½æ ‡å‡†æ—¶é—´ï¼š
 
 ```
-# ÉÏº£Ê±¼ä
+# ä¸Šæµ·æ—¶é—´
 serverTimezone=Asia/Shanghai
 
-# ±±¾©Ê±¼ä¶«°ËÇø
+# åŒ—äº¬æ—¶é—´ä¸œå…«åŒº
 serverTimezone=GMT%2B8
 ```
 
 ### characterEncoding
 
-ÉèÖÃ×Ö·û¼¯µÄ±àÂëÀàĞÍ¡£
+è®¾ç½®å­—ç¬¦é›†çš„ç¼–ç ç±»å‹ã€‚
 
 ```
 characterEncoding=utf-8
@@ -35,7 +35,7 @@ characterEncoding=utf-8
 
 ### useUnicode
 
-ÊÇ·ñÊ¹ÓÃ±àÂë¼¯¡£
+æ˜¯å¦ä½¿ç”¨ç¼–ç é›†ã€‚
 
 ```
 useUnicode=true
@@ -43,20 +43,20 @@ useUnicode=true
 
 ### autoReconnect
 
-µ±Êı¾İ¿âÁ¬½ÓÖĞ¶ÏÊ±£¬ÊÇ·ñ×Ô¶¯ÖØĞÂÁ¬½Ó£¿È±Ê¡Îª false¡£
+å½“æ•°æ®åº“è¿æ¥ä¸­æ–­æ—¶ï¼Œæ˜¯å¦è‡ªåŠ¨é‡æ–°è¿æ¥ï¼Ÿç¼ºçœä¸º falseã€‚
 
 ```
 autoReconnect=true
 ```
 
-¹ØÁªµÄÁ½¸ö²ÎÊı£º
+å…³è”çš„ä¸¤ä¸ªå‚æ•°ï¼š
 
-- maxReconnects£ºµ± autoReconnect ÉèÖÃÎª true Ê±£¬ÖØÊÔÁ¬½ÓµÄ´ÎÊı£¬È±Ê¡Îª 3 ´Î¡£
-- initialTimeout£ºµ± autoReconnect ÉèÖÃÎª true Ê±£¬Á½´ÎÖØÁ¬Ö®¼äµÄÊ±¼ä¼ä¸ô£¬È±Ê¡Îª 2 Ãë¡£
+- maxReconnectsï¼šå½“ autoReconnect è®¾ç½®ä¸º true æ—¶ï¼Œé‡è¯•è¿æ¥çš„æ¬¡æ•°ï¼Œç¼ºçœä¸º 3 æ¬¡ã€‚
+- initialTimeoutï¼šå½“ autoReconnect è®¾ç½®ä¸º true æ—¶ï¼Œä¸¤æ¬¡é‡è¿ä¹‹é—´çš„æ—¶é—´é—´éš”ï¼Œç¼ºçœä¸º 2 ç§’ã€‚
 
 ### autoReconnectForPools
 
-ÊÇ·ñÊ¹ÓÃÕë¶ÔÊı¾İ¿âÁ¬½Ó³ØµÄÖØÁ¬²ßÂÔ¡£È±Ê¡Îª false¡£
+æ˜¯å¦ä½¿ç”¨é’ˆå¯¹æ•°æ®åº“è¿æ¥æ± çš„é‡è¿ç­–ç•¥ã€‚ç¼ºçœä¸º falseã€‚
 
 ```
 autoReconnectForPools=true
@@ -64,9 +64,9 @@ autoReconnectForPools=true
 
 ### failOverReadOnly
 
-×Ô¶¯ÖØÁ¬³É¹¦ºó£¬Á¬½ÓÊÇ·ñÉèÖÃÎªÖ»¶Á£¿È±Ê¡Îª true¡£
+è‡ªåŠ¨é‡è¿æˆåŠŸåï¼Œè¿æ¥æ˜¯å¦è®¾ç½®ä¸ºåªè¯»ï¼Ÿç¼ºçœä¸º trueã€‚
 
-µ± autoReconnect ÉèÖÃÎª true Ê±£¬½¨Òé½«´Ë²ÎÊıÉèÖÃÎª false¡£
+å½“ autoReconnect è®¾ç½®ä¸º true æ—¶ï¼Œå»ºè®®å°†æ­¤å‚æ•°è®¾ç½®ä¸º falseã€‚
 
 ```
 failOverReadOnly=false
@@ -74,18 +74,18 @@ failOverReadOnly=false
 
 ### noAccessToProcedureBodies
 
-JDBC µ÷ÓÃ´æ´¢¹ı³ÌÊ±ĞèÒªÓĞ show create procudure È¨ÏŞ»òÊÇÓĞ±í mysql.proc µÄ select µÄÈ¨ÏŞ£¬¿ÉÒÔÌí¼Ó¸Ã²ÎÊı¡£È±Ê¡Îª false¡£
+JDBC è°ƒç”¨å­˜å‚¨è¿‡ç¨‹æ—¶éœ€è¦æœ‰ show create procudure æƒé™æˆ–æ˜¯æœ‰è¡¨ mysql.proc çš„ select çš„æƒé™ï¼Œå¯ä»¥æ·»åŠ è¯¥å‚æ•°ã€‚ç¼ºçœä¸º falseã€‚
 
 ```
 noAccessToProcedureBodies=true
 ```
 
-ÕâÑù×ö»á´æÔÚÒ»Ğ©Ó°Ïì£º
+è¿™æ ·åšä¼šå­˜åœ¨ä¸€äº›å½±å“ï¼š
 
-- µ÷ÓÃ´æ´¢¹ı³ÌÊ±£¬½«Ã»ÓĞÀàĞÍ¼ì²é£¬ÉèÎª×Ö·û´®ÀàĞÍ£¬²¢ÇÒËùÓĞµÄ²ÎÊıÉèÎª in ÀàĞÍ£¬µ«ÊÇÔÚµ÷ÓÃ registerOutParameter Ê±£¬²»Å×³öÒì³£¡£
-- ´æ´¢¹ı³ÌµÄ²éÑ¯½á¹ûÎŞ·¨Ê¹ÓÃ getXXX(String parameterName) µÄĞÎÊ½»ñÈ¡£¬Ö»ÄÜÍ¨¹ı getXXX(int parameterIndex) µÄ·½Ê½»ñÈ¡¡£
+- è°ƒç”¨å­˜å‚¨è¿‡ç¨‹æ—¶ï¼Œå°†æ²¡æœ‰ç±»å‹æ£€æŸ¥ï¼Œè®¾ä¸ºå­—ç¬¦ä¸²ç±»å‹ï¼Œå¹¶ä¸”æ‰€æœ‰çš„å‚æ•°è®¾ä¸º in ç±»å‹ï¼Œä½†æ˜¯åœ¨è°ƒç”¨ registerOutParameter æ—¶ï¼Œä¸æŠ›å‡ºå¼‚å¸¸ã€‚
+- å­˜å‚¨è¿‡ç¨‹çš„æŸ¥è¯¢ç»“æœæ— æ³•ä½¿ç”¨ getXXX(String parameterName) çš„å½¢å¼è·å–ï¼Œåªèƒ½é€šè¿‡ getXXX(int parameterIndex) çš„æ–¹å¼è·å–ã€‚
 
-¸üºÃµÄ·½Ê½ÊÇ£º¸ø MySQL ÆÕÍ¨ÓÃ»§ÊÚÓèÏàÓ¦µÄÈ¨ÏŞ¡£
+æ›´å¥½çš„æ–¹å¼æ˜¯ï¼šç»™ MySQL æ™®é€šç”¨æˆ·æˆäºˆç›¸åº”çš„æƒé™ã€‚
 
 ```
 grant select on mysql.proc to 'user'@%;
@@ -93,7 +93,7 @@ grant select on mysql.proc to 'user'@%;
 
 ### useSSL
 
-MySQL¸ß°æ±¾Ö§³ÖÊÇ·ñÊ¹ÓÃ useSSL£¬È±Ê¡Îª true¡£
+MySQLé«˜ç‰ˆæœ¬æ”¯æŒæ˜¯å¦ä½¿ç”¨ useSSLï¼Œç¼ºçœä¸º trueã€‚
 
 ```
 useSSL=true
@@ -101,10 +101,10 @@ useSSL=true
 
 ### allowMultiQueries
 
-È±Ê¡Îª false¡£
+ç¼ºçœä¸º falseã€‚
 
-1. ¿ÉÒÔÔÚ SQL Óï¾äºóĞ¯´ø·ÖºÅ£¬ÊµÏÖ¶àÓï¾äÖ´ĞĞ¡£
-2. ¿ÉÒÔÖ´ĞĞÅú´¦Àí£¬Í¬Ê±·¢³ö¶à¸ö SQL Óï¾ä¡£
+1. å¯ä»¥åœ¨ SQL è¯­å¥åæºå¸¦åˆ†å·ï¼Œå®ç°å¤šè¯­å¥æ‰§è¡Œã€‚
+2. å¯ä»¥æ‰§è¡Œæ‰¹å¤„ç†ï¼ŒåŒæ—¶å‘å‡ºå¤šä¸ª SQL è¯­å¥ã€‚
 
 ```
 allowMultiQueries=true
@@ -112,7 +112,7 @@ allowMultiQueries=true
 
 ### zeroDateTimeBehavior
 
-datetime ×Ö¶ÎµÄÖµÈ«²¿Îª 0 Ê±µÄ´¦Àí·½Ê½¡£
+datetime å­—æ®µçš„å€¼å…¨éƒ¨ä¸º 0 æ—¶çš„å¤„ç†æ–¹å¼ã€‚
 
 ```
 zeroDateTimeBehavior=convertToNull

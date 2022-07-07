@@ -1,12 +1,12 @@
 # MyBatis-Plus
 
-[MyBatis-Plus](https://baomidou.com/) ÊÇÒ»¸ö MyBatis µÄÔöÇ¿¹¤¾ß£¬ÔÚ MyBatis µÄ»ù´¡ÉÏÖ»×öÔöÇ¿²»×ö¸Ä±ä£¬Îª¼ò»¯¿ª·¢¡¢Ìá¸ßĞ§ÂÊ¶øÉú¡£
+[MyBatis-Plus](https://baomidou.com/) æ˜¯ä¸€ä¸ª MyBatis çš„å¢å¼ºå·¥å…·ï¼Œåœ¨ MyBatis çš„åŸºç¡€ä¸Šåªåšå¢å¼ºä¸åšæ”¹å˜ï¼Œä¸ºç®€åŒ–å¼€å‘ã€æé«˜æ•ˆç‡è€Œç”Ÿã€‚
 
-kaddo-components-mybatis-plus Ä£¿éÎ¬»¤ÁËÒ»Ì×½ÏÎª³£ÓÃµÄ MyBatis-Plus ÅäÖÃ£¬Ö§³ÖÔÚÏîÄ¿¿ª·¢ÖĞ¿ìËÙ¹¹½¨ºÍÊ¹ÓÃ¡£
+kaddo-components-mybatis-plus æ¨¡å—ç»´æŠ¤äº†ä¸€å¥—è¾ƒä¸ºå¸¸ç”¨çš„ MyBatis-Plus é…ç½®ï¼Œæ”¯æŒåœ¨é¡¹ç›®å¼€å‘ä¸­å¿«é€Ÿæ„å»ºå’Œä½¿ç”¨ã€‚
 
-## ¿ìËÙ¿ªÊ¼
+## å¿«é€Ÿå¼€å§‹
 
-1£©ÔÚÄãµÄ Spring Boot ÏîÄ¿ÖĞÌí¼Ó Maven ÒÀÀµ£º
+1ï¼‰åœ¨ä½ çš„ Spring Boot é¡¹ç›®ä¸­æ·»åŠ  Maven ä¾èµ–ï¼š
 
 ```
 <dependency> 
@@ -16,7 +16,7 @@ kaddo-components-mybatis-plus Ä£¿éÎ¬»¤ÁËÒ»Ì×½ÏÎª³£ÓÃµÄ MyBatis-Plus ÅäÖÃ£¬Ö§³ÖÔÚ
 </dependency>
 ```
 
-2£©È»ºó£¬¸ù¾İÊı¾İ¿âÑ¡ÔñÇı¶¯£¬ÒÔ H2 Êı¾İ¿âÎªÀı£º
+2ï¼‰ç„¶åï¼Œæ ¹æ®æ•°æ®åº“é€‰æ‹©é©±åŠ¨ï¼Œä»¥ H2 æ•°æ®åº“ä¸ºä¾‹ï¼š
 
 ```
 <dependency>
@@ -26,7 +26,7 @@ kaddo-components-mybatis-plus Ä£¿éÎ¬»¤ÁËÒ»Ì×½ÏÎª³£ÓÃµÄ MyBatis-Plus ÅäÖÃ£¬Ö§³ÖÔÚ
 </dependency>
 ```
 
-3£©ÔÚ `application.properties` ÅäÖÃÎÄ¼şÖĞÌí¼Ó H2 Êı¾İ¿âµÄÏà¹ØÅäÖÃ£º
+3ï¼‰åœ¨ `application.properties` é…ç½®æ–‡ä»¶ä¸­æ·»åŠ  H2 æ•°æ®åº“çš„ç›¸å…³é…ç½®ï¼š
 
 ```
 # DataSource Configuration
@@ -38,7 +38,7 @@ spring.datasource.username=root
 spring.datasource.password=test
 ```
 
-4£©ÔÚ `application.properties` ÅäÖÃÎÄ¼şÖĞÌí¼Ó MyBatis-Plus ÅäÖÃ£º
+4ï¼‰åœ¨ `application.properties` é…ç½®æ–‡ä»¶ä¸­æ·»åŠ  MyBatis-Plus é…ç½®ï¼š
 
 ```
 ## MyBatis-Plus Configuration
@@ -51,7 +51,7 @@ mybatis-plus.configuration.default-statement-timeout=30
 mybatis-plus.configuration.cache-enabled=true
 ```
 
-5£©ÔÚ Spring Boot Æô¶¯ÀàÖĞÌí¼Ó `@MapperScan` ×¢½â£¬É¨Ãè Mapper ÎÄ¼ş¼Ğ£º
+5ï¼‰åœ¨ Spring Boot å¯åŠ¨ç±»ä¸­æ·»åŠ  `@MapperScan` æ³¨è§£ï¼Œæ‰«æ Mapper æ–‡ä»¶å¤¹ï¼š
 
 ```
 @SpringBootApplication
@@ -65,7 +65,7 @@ public class Application {
 }
 ```
 
-6£©±àĞ´ÊµÌåÀàºÍÊı¾İ²ã¶ÔÏó£º
+6ï¼‰ç¼–å†™å®ä½“ç±»å’Œæ•°æ®å±‚å¯¹è±¡ï¼š
 
 ```
 @Data
@@ -77,7 +77,7 @@ public class User {
 }
 ```
 
-±àĞ´ Mapper °üÏÂµÄ `UserMapper` ½Ó¿Ú£º
+ç¼–å†™ Mapper åŒ…ä¸‹çš„ `UserMapper` æ¥å£ï¼š
 
 ```
 @Mapper
@@ -86,7 +86,7 @@ public interface UserMapper extends BaseMapper<User> {
 }
 ```
 
-7£©¿ªÊ¼Ê¹ÓÃ£º
+7ï¼‰å¼€å§‹ä½¿ç”¨ï¼š
 
 ```
 @SpringBootTest
@@ -106,65 +106,65 @@ public class SampleTest {
 }
 ```
 
-## ÅäÖÃÏê½â
+## é…ç½®è¯¦è§£
 
-MyBatis µÄÅäÖÃÎÄ¼ş°üº¬ÁË»áÉîÉîÓ°Ïì MyBatis ĞĞÎªµÄÉèÖÃºÍÊôĞÔĞÅÏ¢¡£¹Ù·½ÅäÖÃÎÄµµ£ºhttps://mybatis.org/mybatis-3/zh/configuration.html
+MyBatis çš„é…ç½®æ–‡ä»¶åŒ…å«äº†ä¼šæ·±æ·±å½±å“ MyBatis è¡Œä¸ºçš„è®¾ç½®å’Œå±æ€§ä¿¡æ¯ã€‚å®˜æ–¹é…ç½®æ–‡æ¡£ï¼šhttps://mybatis.org/mybatis-3/zh/configuration.html
 
 ```
 ## MyBatis-Plus Configuration
-# Ö¸¶¨ MyBatis XML ÅäÖÃÎÄ¼şµÄÎ»ÖÃ£¬Ä¬ÈÏÎ´ÉèÖÃ¡£
-# ×¢Òâ£ºSpring Boot ÏîÄ¿²»Ö§³Ö config-location ºÍ configuration.* Í¬Ê±³öÏÖ£¬Òò´Ë²»ÍÆ¼öÊ¹ÓÃ¸ÃÊôĞÔ¡£
+# æŒ‡å®š MyBatis XML é…ç½®æ–‡ä»¶çš„ä½ç½®ï¼Œé»˜è®¤æœªè®¾ç½®ã€‚
+# æ³¨æ„ï¼šSpring Boot é¡¹ç›®ä¸æ”¯æŒ config-location å’Œ configuration.* åŒæ—¶å‡ºç°ï¼Œå› æ­¤ä¸æ¨èä½¿ç”¨è¯¥å±æ€§ã€‚
 mybatis-plus.config-location=classpath*:mybatis-config.xml
 
-# MyBatis Mapper Ëù¶ÔÓ¦µÄ XML ÎÄ¼şÎ»ÖÃ£¬¸æËß Mapper Ëù¶ÔÓ¦µÄ XML ÎÄ¼şÎ»ÖÃ¡£
-# Ä¬ÈÏÖµ£ºclasspath*:/mapper/**/*.xml£¬¶à¸öÓÃÓ¢ÎÄ¶ººÅ·Ö¸ô¡£
+# MyBatis Mapper æ‰€å¯¹åº”çš„ XML æ–‡ä»¶ä½ç½®ï¼Œå‘Šè¯‰ Mapper æ‰€å¯¹åº”çš„ XML æ–‡ä»¶ä½ç½®ã€‚
+# é»˜è®¤å€¼ï¼šclasspath*:/mapper/**/*.xmlï¼Œå¤šä¸ªç”¨è‹±æ–‡é€—å·åˆ†éš”ã€‚
 mybatis-plus.mapper-locations=classpath*:/mapper/**/*.xml
 
-# MyBaits ±ğÃû°üÉ¨ÃèÂ·¾¶£¬Í¨¹ı¸ÃÊôĞÔ¿ÉÒÔ¸ø°üÖĞµÄÀà×¢²á±ğÃû£¬Ä¬ÈÏÎ´ÉèÖÃ¡£
-# Ò²¿ÉÒÔÊ¹ÓÃ×¢½â @Alias("author") À´Ö¸¶¨ÀàµÄ±ğÃû¡£
+# MyBaits åˆ«ååŒ…æ‰«æè·¯å¾„ï¼Œé€šè¿‡è¯¥å±æ€§å¯ä»¥ç»™åŒ…ä¸­çš„ç±»æ³¨å†Œåˆ«åï¼Œé»˜è®¤æœªè®¾ç½®ã€‚
+# ä¹Ÿå¯ä»¥ä½¿ç”¨æ³¨è§£ @Alias("author") æ¥æŒ‡å®šç±»çš„åˆ«åã€‚
 mybatis-plus.type-aliases-package=com.baomidou.mybatisplus.samples.quickstart.model
 
-# TypeHandler É¨ÃèÂ·¾¶£¬Èç¹ûÅäÖÃÁË¸ÃÊôĞÔ£¬SqlSessionFactoryBean »á°Ñ¸Ã°üÏÂÃæµÄÀà×¢²áÎª¶ÔÓ¦µÄ TypeHandler¡£
-# Í¨³£ÓÃÓÚ×Ô¶¨ÒåÀàĞÍ×ª»»£¬Ä¬ÈÏÎ´ÉèÖÃ¡£
+# TypeHandler æ‰«æè·¯å¾„ï¼Œå¦‚æœé…ç½®äº†è¯¥å±æ€§ï¼ŒSqlSessionFactoryBean ä¼šæŠŠè¯¥åŒ…ä¸‹é¢çš„ç±»æ³¨å†Œä¸ºå¯¹åº”çš„ TypeHandlerã€‚
+# é€šå¸¸ç”¨äºè‡ªå®šä¹‰ç±»å‹è½¬æ¢ï¼Œé»˜è®¤æœªè®¾ç½®ã€‚
 mybatis-plus.type-handlers-package=
 
-# Æô¶¯Ê±ÊÇ·ñ¼ì²é MyBatis XML ÎÄ¼şµÄ´æÔÚ£¬Ä¬ÈÏ²»¼ì²é¡£
+# å¯åŠ¨æ—¶æ˜¯å¦æ£€æŸ¥ MyBatis XML æ–‡ä»¶çš„å­˜åœ¨ï¼Œé»˜è®¤ä¸æ£€æŸ¥ã€‚
 mybatis-plus.check-config-location=false
 
-# Í¨¹ı¸ÃÊôĞÔ¿ÉÖ¸¶¨ MyBatis µÄÖ´ĞĞÆ÷£¬MyBatis µÄÖ´ĞĞÆ÷×Ü¹²ÓĞÈıÖÖ£º
-# ExecutorType.SIMPLE£º¸ÃÖ´ĞĞÆ÷ÀàĞÍ²»×öÌØÊâµÄÊÂÇé£¬ÎªÃ¿¸öÓï¾äµÄÖ´ĞĞ´´½¨Ò»¸öĞÂµÄÔ¤´¦ÀíÓï¾ä£¨PreparedStatement£©
-# ExecutorType.REUSE£º¸ÃÖ´ĞĞÆ÷ÀàĞÍ»á¸´ÓÃÔ¤´¦ÀíÓï¾ä£¨PreparedStatement£©
-# ExecutorType.BATCH£º¸ÃÖ´ĞĞÆ÷ÀàĞÍ»áÅúÁ¿Ö´ĞĞËùÓĞµÄ¸üĞÂÓï¾ä
-# Ä¬ÈÏÖµ£ºSIMPLE
+# é€šè¿‡è¯¥å±æ€§å¯æŒ‡å®š MyBatis çš„æ‰§è¡Œå™¨ï¼ŒMyBatis çš„æ‰§è¡Œå™¨æ€»å…±æœ‰ä¸‰ç§ï¼š
+# ExecutorType.SIMPLEï¼šè¯¥æ‰§è¡Œå™¨ç±»å‹ä¸åšç‰¹æ®Šçš„äº‹æƒ…ï¼Œä¸ºæ¯ä¸ªè¯­å¥çš„æ‰§è¡Œåˆ›å»ºä¸€ä¸ªæ–°çš„é¢„å¤„ç†è¯­å¥ï¼ˆPreparedStatementï¼‰
+# ExecutorType.REUSEï¼šè¯¥æ‰§è¡Œå™¨ç±»å‹ä¼šå¤ç”¨é¢„å¤„ç†è¯­å¥ï¼ˆPreparedStatementï¼‰
+# ExecutorType.BATCHï¼šè¯¥æ‰§è¡Œå™¨ç±»å‹ä¼šæ‰¹é‡æ‰§è¡Œæ‰€æœ‰çš„æ›´æ–°è¯­å¥
+# é»˜è®¤å€¼ï¼šSIMPLE
 mybatis-plus.executor-type=SIMPLE
 
-# ÊÇ·ñ¿ªÆô×Ô¶¯ÍÕ·åÃüÃû¹æÔò£¨camel case£©Ó³Éä£¬Ä¬ÈÏÖµ£ºtrue
+# æ˜¯å¦å¼€å¯è‡ªåŠ¨é©¼å³°å‘½åè§„åˆ™ï¼ˆcamel caseï¼‰æ˜ å°„ï¼Œé»˜è®¤å€¼ï¼štrue
 mybatis-plus.configuration.map-underscore-to-camel-case=true
 
-# Ä¬ÈÏÃ¶¾Ù´¦ÀíÀà£¬Èç¹ûÅäÖÃÁË¸ÃÊôĞÔ£¬Ã¶¾Ù½«Í³Ò»Ê¹ÓÃÖ¸¶¨´¦ÀíÆ÷½øĞĞ´¦Àí¡£
-# Ä¬ÈÏÎª´æ´¢Ã¶¾ÙÀàµÄÃû³Æ¡£
+# é»˜è®¤æšä¸¾å¤„ç†ç±»ï¼Œå¦‚æœé…ç½®äº†è¯¥å±æ€§ï¼Œæšä¸¾å°†ç»Ÿä¸€ä½¿ç”¨æŒ‡å®šå¤„ç†å™¨è¿›è¡Œå¤„ç†ã€‚
+# é»˜è®¤ä¸ºå­˜å‚¨æšä¸¾ç±»çš„åç§°ã€‚
 mybatis-plus.configuration.default-enum-type-handler=org.apache.ibatis.type.EnumTypeHandler
 
-# MyBatis ×Ô¶¯Ó³Éä²ßÂÔ£¬Í¨¹ı¸ÃÅäÖÃ¿ÉÖ¸¶¨ MyBatis ÊÇ·ñ²¢ÇÒÈçºÎÀ´×Ô¶¯Ó³ÉäÊı¾İ±í×Ö¶ÎÓë¶ÔÏóµÄÊôĞÔ£¬×Ü¹²ÓĞ 3 ÖÖ¿ÉÑ¡Öµ£º
-# AutoMappingBehavior.NONE£º²»ÆôÓÃ×Ô¶¯Ó³Éä
-# AutoMappingBehavior.PARTIAL£ºÖ»¶Ô·ÇÇ¶Ì×µÄ resultMap ½øĞĞ×Ô¶¯Ó³Éä
-# AutoMappingBehavior.FULL£º¶ÔËùÓĞµÄ resultMap ¶¼½øĞĞ×Ô¶¯Ó³Éä
-# Ä¬ÈÏÖµ£ºPARTIAL
+# MyBatis è‡ªåŠ¨æ˜ å°„ç­–ç•¥ï¼Œé€šè¿‡è¯¥é…ç½®å¯æŒ‡å®š MyBatis æ˜¯å¦å¹¶ä¸”å¦‚ä½•æ¥è‡ªåŠ¨æ˜ å°„æ•°æ®è¡¨å­—æ®µä¸å¯¹è±¡çš„å±æ€§ï¼Œæ€»å…±æœ‰ 3 ç§å¯é€‰å€¼ï¼š
+# AutoMappingBehavior.NONEï¼šä¸å¯ç”¨è‡ªåŠ¨æ˜ å°„
+# AutoMappingBehavior.PARTIALï¼šåªå¯¹éåµŒå¥—çš„ resultMap è¿›è¡Œè‡ªåŠ¨æ˜ å°„
+# AutoMappingBehavior.FULLï¼šå¯¹æ‰€æœ‰çš„ resultMap éƒ½è¿›è¡Œè‡ªåŠ¨æ˜ å°„
+# é»˜è®¤å€¼ï¼šPARTIAL
 mybatis-plus.configuration.auto-mapping-behavior=PARTIAL
 
-# ¿ªÆô Mybatis ¶ş¼¶»º´æ£¬Ä¬ÈÏÖµ£ºtrue¡£
+# å¼€å¯ Mybatis äºŒçº§ç¼“å­˜ï¼Œé»˜è®¤å€¼ï¼štrueã€‚
 mybatis-plus.configuration.cache-enabled=true
 
-# ÎªÇı¶¯µÄ½á¹û¼¯»ñÈ¡ÊıÁ¿£¨fetchSize£©ÉèÖÃÒ»¸ö½¨ÒéÖµ¡£´Ë²ÎÊıÖ»¿ÉÒÔÔÚ²éÑ¯ÉèÖÃÖĞ±»¸²¸Ç¡£
+# ä¸ºé©±åŠ¨çš„ç»“æœé›†è·å–æ•°é‡ï¼ˆfetchSizeï¼‰è®¾ç½®ä¸€ä¸ªå»ºè®®å€¼ã€‚æ­¤å‚æ•°åªå¯ä»¥åœ¨æŸ¥è¯¢è®¾ç½®ä¸­è¢«è¦†ç›–ã€‚
 mybatis-plus.configuration.default-fetch-size=100
 
-# ÉèÖÃ³¬Ê±Ê±¼ä£¬Ëü¾ö¶¨Êı¾İ¿âÇı¶¯µÈ´ıÊı¾İ¿âÏìÓ¦µÄÃëÊı¡£
+# è®¾ç½®è¶…æ—¶æ—¶é—´ï¼Œå®ƒå†³å®šæ•°æ®åº“é©±åŠ¨ç­‰å¾…æ•°æ®åº“å“åº”çš„ç§’æ•°ã€‚
 mybatis-plus.configuration.default-statement-timeout=30
 ```
 
-## ×¢½â
+## æ³¨è§£
 
-MyBatis-Plus Ìá¹©ÁËÒ»Ğ©×¢½â£¬½ö¹©²Î¿¼£ºhttps://baomidou.com/pages/223848/
+MyBatis-Plus æä¾›äº†ä¸€äº›æ³¨è§£ï¼Œä»…ä¾›å‚è€ƒï¼šhttps://baomidou.com/pages/223848/
 
 - @TableName
 - @TableId
@@ -177,29 +177,29 @@ MyBatis-Plus Ìá¹©ÁËÒ»Ğ©×¢½â£¬½ö¹©²Î¿¼£ºhttps://baomidou.com/pages/223848/
 - @InterceptorIgnore
 - @OrderBy
 
-## ºËĞÄ¹¦ÄÜ
+## æ ¸å¿ƒåŠŸèƒ½
 
-Ê¹ÓÃ MyBatis-Plus Ìá¹©µÄÔöÇ¿¹¦ÄÜÊ±£¬Ê×ÏÈÒª¶Ô MyBatis-Plus ÓĞÒ»¶¨µÄÁË½â£¬·ñÔò»¹ÊÇÀÏÀÏÊµÊµÓÃ MyBatis µÄÔ­Éú¹¦ÄÜ¡£
+ä½¿ç”¨ MyBatis-Plus æä¾›çš„å¢å¼ºåŠŸèƒ½æ—¶ï¼Œé¦–å…ˆè¦å¯¹ MyBatis-Plus æœ‰ä¸€å®šçš„äº†è§£ï¼Œå¦åˆ™è¿˜æ˜¯è€è€å®å®ç”¨ MyBatis çš„åŸç”ŸåŠŸèƒ½ã€‚
 
-> MyBatis-Plus Ìá¹©µÄÔöÇ¿¹¦ÄÜ¾ßÓĞÒ»¶¨µÄ±ãÀûĞÔ£¬ÈÔÈ»ÍÆ¼öÊ¹ÓÃ MyBatis XML ÅäÖÃµÄ·½Ê½£¬ÕâÑù SQL ¹ÜÀí¸ü¼ÓÇåÎú¡£
+> MyBatis-Plus æä¾›çš„å¢å¼ºåŠŸèƒ½å…·æœ‰ä¸€å®šçš„ä¾¿åˆ©æ€§ï¼Œä»ç„¶æ¨èä½¿ç”¨ MyBatis XML é…ç½®çš„æ–¹å¼ï¼Œè¿™æ · SQL ç®¡ç†æ›´åŠ æ¸…æ™°ã€‚
 
-1£©CRUD ½Ó¿Ú
+1ï¼‰CRUD æ¥å£
 
-- IService<T>: Service CRUD ½Ó¿Ú
-- BaseMapper<T>: Mapper CRUD ½Ó¿Ú
-- ActiveRecord Ä£Ê½£¬ÔÚ¼Ì³Ğ BaseMapper<T> ½Ó¿Úºó£¬ÊµÌåÀà¼Ì³Ğ Model<T> ¼´¿É½øĞĞ CRUD ²Ù×÷¡£
+- IService<T>: Service CRUD æ¥å£
+- BaseMapper<T>: Mapper CRUD æ¥å£
+- ActiveRecord æ¨¡å¼ï¼Œåœ¨ç»§æ‰¿ BaseMapper<T> æ¥å£åï¼Œå®ä½“ç±»ç»§æ‰¿ Model<T> å³å¯è¿›è¡Œ CRUD æ“ä½œã€‚
 
-2£©Ìõ¼ş¹¹ÔìÆ÷
+2ï¼‰æ¡ä»¶æ„é€ å™¨
 
 - AbstractWrapper
 - QueryWrapper
 - UpdateWrapper
 
-3£©Ö÷¼ü²ßÂÔ
+3ï¼‰ä¸»é”®ç­–ç•¥
 
-**Ö÷¼üÉú³É²ßÂÔ±ØĞëÊ¹ÓÃ INPUT**
+**ä¸»é”®ç”Ÿæˆç­–ç•¥å¿…é¡»ä½¿ç”¨ INPUT**
 
-ÄÚÖÃÖ§³Ö£º
+å†…ç½®æ”¯æŒï¼š
 
 * DB2KeyGenerator
 * H2KeyGenerator
@@ -207,7 +207,7 @@ MyBatis-Plus Ìá¹©ÁËÒ»Ğ©×¢½â£¬½ö¹©²Î¿¼£ºhttps://baomidou.com/pages/223848/
 * OracleKeyGenerator
 * PostgreKeyGenerator
 
-Èç¹ûÄÚÖÃÖ§³Ö²»Âú×ãÄãµÄĞèÇó£¬¿ÉÊµÏÖ IKeyGenerator ½Ó¿ÚÀ´½øĞĞÀ©Õ¹.
+å¦‚æœå†…ç½®æ”¯æŒä¸æ»¡è¶³ä½ çš„éœ€æ±‚ï¼Œå¯å®ç° IKeyGenerator æ¥å£æ¥è¿›è¡Œæ‰©å±•.
 
 ```
 @KeySequence(value = "SEQ_ORACLE_STRING_KEY", clazz = String.class)
@@ -219,15 +219,15 @@ public class YourEntity {
 }
 ```
 
-## À©Õ¹
+## æ‰©å±•
 
-·Ç±ØÒª²»Ê¹ÓÃ¡£
+éå¿…è¦ä¸ä½¿ç”¨ã€‚
 
-## ²å¼ş
+## æ’ä»¶
 
-MyBatis-Plus Ìá¹©ÁË¶à¸ö²å¼ş£¬¿É²é¿´¹Ù·½ÎÄµµ£ºhttps://baomidou.com/pages/2976a3/
+MyBatis-Plus æä¾›äº†å¤šä¸ªæ’ä»¶ï¼Œå¯æŸ¥çœ‹å®˜æ–¹æ–‡æ¡£ï¼šhttps://baomidou.com/pages/2976a3/
 
-kaddo-components-mybatis-plus Ä£¿éÌá¹©ÁËÒ»¸ö²å¼şµÄÄ¬ÈÏÅäÖÃ£º
+kaddo-components-mybatis-plus æ¨¡å—æä¾›äº†ä¸€ä¸ªæ’ä»¶çš„é»˜è®¤é…ç½®ï¼š
 
 ```
 @Configuration(proxyBeanMethods = false)
@@ -235,20 +235,20 @@ kaddo-components-mybatis-plus Ä£¿éÌá¹©ÁËÒ»¸ö²å¼şµÄÄ¬ÈÏÅäÖÃ£º
 public class KaddoMybatisPlusAutoConfiguration {
 
     /**
-     * Ä¬ÈÏµÄ MyBatis-Plus ²å¼şÅäÖÃ£¬²»Âú×ãĞèÇó¿ÉÒÔÔÚÏîÄ¿ÖĞÖØĞÂÅäÖÃ£¬²é¿´ MyBatis-Plus ¹Ù·½ÎÄµµÁË½â¸ü¶àÏêÇé¡£
+     * é»˜è®¤çš„ MyBatis-Plus æ’ä»¶é…ç½®ï¼Œä¸æ»¡è¶³éœ€æ±‚å¯ä»¥åœ¨é¡¹ç›®ä¸­é‡æ–°é…ç½®ï¼ŒæŸ¥çœ‹ MyBatis-Plus å®˜æ–¹æ–‡æ¡£äº†è§£æ›´å¤šè¯¦æƒ…ã€‚
      */
     @Bean
     @ConditionalOnMissingBean(MybatisPlusInterceptor.class)
     public MybatisPlusInterceptor mybatisPlusInterceptor() {
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
-        // ·ÖÒ³²å¼ş£¨µ¥Ò³·ÖÒ³ÌõÊıÏŞÖÆ5000Ìõ - Ä¬ÈÏÎŞÏŞÖÆ£©
+        // åˆ†é¡µæ’ä»¶ï¼ˆå•é¡µåˆ†é¡µæ¡æ•°é™åˆ¶5000æ¡ - é»˜è®¤æ— é™åˆ¶ï¼‰
         PaginationInnerInterceptor paginationInnerInterceptor = new PaginationInnerInterceptor();
         paginationInnerInterceptor.setMaxLimit(5000L);
         interceptor.addInnerInterceptor(paginationInnerInterceptor);
-        // ÀÖ¹ÛËø²å¼ş£¨ÔÚÊµÌåÀàµÄ×Ö¶ÎÉÏ¼ÓÉÏ @Version ×¢½â£©
+        // ä¹è§‚é”æ’ä»¶ï¼ˆåœ¨å®ä½“ç±»çš„å­—æ®µä¸ŠåŠ ä¸Š @Version æ³¨è§£ï¼‰
         OptimisticLockerInnerInterceptor optimisticLockerInnerInterceptor = new OptimisticLockerInnerInterceptor();
         interceptor.addInnerInterceptor(optimisticLockerInnerInterceptor);
-        // ·ÀÈ«±í¸üĞÂÓëÉ¾³ı²å¼ş£¨Õë¶Ô update ºÍ delete Óï¾ä£¬×èÖ¹¶ñÒâµÄÈ«±í¸üĞÂºÍÉ¾³ı£©
+        // é˜²å…¨è¡¨æ›´æ–°ä¸åˆ é™¤æ’ä»¶ï¼ˆé’ˆå¯¹ update å’Œ delete è¯­å¥ï¼Œé˜»æ­¢æ¶æ„çš„å…¨è¡¨æ›´æ–°å’Œåˆ é™¤ï¼‰
         BlockAttackInnerInterceptor blockAttackInnerInterceptor = new BlockAttackInnerInterceptor();
         interceptor.addInnerInterceptor(blockAttackInnerInterceptor);
         return interceptor;
@@ -257,7 +257,7 @@ public class KaddoMybatisPlusAutoConfiguration {
 }
 ```
 
-### ·ÖÒ³²å¼şµÄÊ¹ÓÃ
+### åˆ†é¡µæ’ä»¶çš„ä½¿ç”¨
 
 ```
 IPage<UserVo> selectPageVo(IPage<?> page, Integer state);
@@ -274,6 +274,6 @@ List<UserVo> selectPageVo(IPage<UserVo> page, Integer state);
 </select>
 ```
 
-- Èç¹û·µ»ØÀàĞÍÊÇ IPage ÔòÈë²ÎµÄ IPage ²»ÄÜÎª null£¬ÒòÎª·µ»ØµÄ IPage ¼´Èë²ÎµÄ IPage¡£
-- Èç¹û·µ»ØÀàĞÍÊÇ List ÔòÈë²ÎµÄ IPage ¿ÉÒÔÎª null£¬µ«ĞèÒªÄãÊÖ¶¯´¦Àí·ÖÒ³ IPage.setRecords(·µ»ØµÄ List);
-- Èç¹û xml ĞèÒª´Ó page ÀïÈ¡Öµ£¬ĞèÒªÊ¹ÓÃ `page.ÊôĞÔ` »ñÈ¡£¬Ò²¿ÉÒÔÍ¨¹ı @Param("page") ×¢½â×Ô¶¨Òå¡£
+- å¦‚æœè¿”å›ç±»å‹æ˜¯ IPage åˆ™å…¥å‚çš„ IPage ä¸èƒ½ä¸º nullï¼Œå› ä¸ºè¿”å›çš„ IPage å³å…¥å‚çš„ IPageã€‚
+- å¦‚æœè¿”å›ç±»å‹æ˜¯ List åˆ™å…¥å‚çš„ IPage å¯ä»¥ä¸º nullï¼Œä½†éœ€è¦ä½ æ‰‹åŠ¨å¤„ç†åˆ†é¡µ IPage.setRecords(è¿”å›çš„ List);
+- å¦‚æœ xml éœ€è¦ä» page é‡Œå–å€¼ï¼Œéœ€è¦ä½¿ç”¨ `page.å±æ€§` è·å–ï¼Œä¹Ÿå¯ä»¥é€šè¿‡ @Param("page") æ³¨è§£è‡ªå®šä¹‰ã€‚

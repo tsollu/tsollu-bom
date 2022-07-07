@@ -1,2 +1,40 @@
 site_name: iKaddo
-theme: readthedocs
+
+# https://squidfunk.github.io/mkdocs-material
+theme:
+    name: material
+    highlightjs: true
+    language: zh
+    hljs_languages:
+        - yaml
+        - rust
+    palette:
+        scheme: default
+        primary: indigo
+        accent: red
+    font:
+        text: Roboto
+        code: Roboto Mono
+    features:
+        - navigation.instant
+        - navigation.tracking
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - navigation.sections
+        - navigation.expand
+        - header.autohide
+
+plugins:
+    - search
+
+markdown_extensions:
+    - abbr
+    - admonition
+    - attr_list
+    - toc:
+        permalink: "#"
+        baselevel: 2
+        separator: "_"
+
+nav:
+  - '首页': 'index.md'

@@ -1,16 +1,16 @@
 # MyBatis Spring Boot Starter
 
-MyBatis ÊÇÒ»¿îÓÅĞãµÄ³Ö¾Ã²ã¿ò¼Ü£¬ËüÖ§³Ö×Ô¶¨Òå SQL¡¢´æ´¢¹ı³ÌÒÔ¼°¸ß¼¶Ó³Éä¡£MyBatis Ãâ³ıÁË¼¸ºõËùÓĞµÄ JDBC ´úÂëÒÔ¼°ÉèÖÃ²ÎÊıºÍ»ñÈ¡½á¹û¼¯µÄ¹¤×÷¡£MyBatis ¿ÉÒÔÍ¨¹ı¼òµ¥µÄ XML »ò×¢½âÀ´ÅäÖÃºÍÓ³ÉäÔ­Ê¼ÀàĞÍ¡¢½Ó¿ÚºÍ Java POJO£¨Plain Old Java Objects£¬ÆÕÍ¨ÀÏÊ½ Java ¶ÔÏó£©ÎªÊı¾İ¿âÖĞµÄ¼ÇÂ¼¡£
+MyBatis æ˜¯ä¸€æ¬¾ä¼˜ç§€çš„æŒä¹…å±‚æ¡†æ¶ï¼Œå®ƒæ”¯æŒè‡ªå®šä¹‰ SQLã€å­˜å‚¨è¿‡ç¨‹ä»¥åŠé«˜çº§æ˜ å°„ã€‚MyBatis å…é™¤äº†å‡ ä¹æ‰€æœ‰çš„ JDBC ä»£ç ä»¥åŠè®¾ç½®å‚æ•°å’Œè·å–ç»“æœé›†çš„å·¥ä½œã€‚MyBatis å¯ä»¥é€šè¿‡ç®€å•çš„ XML æˆ–æ³¨è§£æ¥é…ç½®å’Œæ˜ å°„åŸå§‹ç±»å‹ã€æ¥å£å’Œ Java POJOï¼ˆPlain Old Java Objectsï¼Œæ™®é€šè€å¼ Java å¯¹è±¡ï¼‰ä¸ºæ•°æ®åº“ä¸­çš„è®°å½•ã€‚
 
 https://mybatis.org/mybatis-3/zh/index.html
 
-[MyBatis-Spring-Boot-Starter](https://github.com/mybatis/spring-boot-starter/blob/master/mybatis-spring-boot-autoconfigure/src/site/zh/markdown/index.md) ¿ÉÒÔ°ïÖúÄã¸ü¿ìµØÔÚ [Spring Boot](https://spring.io/projects/spring-boot) Ö®ÉÏ¹¹½¨ MyBatis Ó¦ÓÃ¡£
+[MyBatis-Spring-Boot-Starter](https://github.com/mybatis/spring-boot-starter/blob/master/mybatis-spring-boot-autoconfigure/src/site/zh/markdown/index.md) å¯ä»¥å¸®åŠ©ä½ æ›´å¿«åœ°åœ¨ [Spring Boot](https://spring.io/projects/spring-boot) ä¹‹ä¸Šæ„å»º MyBatis åº”ç”¨ã€‚
 
-[MyBatis-PageHelper](https://github.com/pagehelper/Mybatis-PageHelper) ÊÇ MyBatis ×î·½±ãµÄ·ÖÒ³²å¼ş¡£
+[MyBatis-PageHelper](https://github.com/pagehelper/Mybatis-PageHelper) æ˜¯ MyBatis æœ€æ–¹ä¾¿çš„åˆ†é¡µæ’ä»¶ã€‚
 
-## ¿ìËÙ¿ªÊ¼
+## å¿«é€Ÿå¼€å§‹
 
-1£©ÔÚÄãµÄ Spring Boot ÏîÄ¿ÖĞÌí¼Ó Maven ÒÀÀµ£º
+1ï¼‰åœ¨ä½ çš„ Spring Boot é¡¹ç›®ä¸­æ·»åŠ  Maven ä¾èµ–ï¼š
 
 ```
 <dependency> 
@@ -20,7 +20,7 @@ https://mybatis.org/mybatis-3/zh/index.html
 </dependency>
 ```
 
-2£©È»ºó£¬¸ù¾İÊı¾İ¿âÑ¡ÔñÇı¶¯£¬ÒÔ H2 Êı¾İ¿âÎªÀı£º
+2ï¼‰ç„¶åï¼Œæ ¹æ®æ•°æ®åº“é€‰æ‹©é©±åŠ¨ï¼Œä»¥ H2 æ•°æ®åº“ä¸ºä¾‹ï¼š
 
 ```
 <dependency>
@@ -30,7 +30,7 @@ https://mybatis.org/mybatis-3/zh/index.html
 </dependency>
 ```
 
-3£©ÔÚ `application.properties` ÅäÖÃÎÄ¼şÖĞÌí¼Ó H2 Êı¾İ¿âµÄÏà¹ØÅäÖÃ£º
+3ï¼‰åœ¨ `application.properties` é…ç½®æ–‡ä»¶ä¸­æ·»åŠ  H2 æ•°æ®åº“çš„ç›¸å…³é…ç½®ï¼š
 
 ```
 # DataSource Configuration
@@ -42,7 +42,7 @@ spring.datasource.username=root
 spring.datasource.password=test
 ```
 
-4£©ÔÚ `application.properties` ÅäÖÃÎÄ¼şÖĞÌí¼Ó MyBatis ÅäÖÃ£¨ÅäÖÃ²ÎÊıÓë MyBatis-Plus »ù±¾Ò»Ñù£¬MyBatis ¹Ù·½ÅäÖÃÎÄµµ£º[https://mybatis.org/mybatis-3/zh/configuration.html](https://mybatis.org/mybatis-3/zh/configuration.html)£©£º
+4ï¼‰åœ¨ `application.properties` é…ç½®æ–‡ä»¶ä¸­æ·»åŠ  MyBatis é…ç½®ï¼ˆé…ç½®å‚æ•°ä¸ MyBatis-Plus åŸºæœ¬ä¸€æ ·ï¼ŒMyBatis å®˜æ–¹é…ç½®æ–‡æ¡£ï¼š[https://mybatis.org/mybatis-3/zh/configuration.html](https://mybatis.org/mybatis-3/zh/configuration.html)ï¼‰ï¼š
 
 ```
 ## MyBatis Configuration
@@ -55,7 +55,7 @@ mybatis.configuration.default-statement-timeout=30
 mybatis.configuration.cache-enabled=true
 ```
 
-5£©ÔÚ Spring Boot Æô¶¯ÀàÖĞÌí¼Ó `@MapperScan` ×¢½â£¬É¨Ãè Mapper ÎÄ¼ş¼Ğ£º
+5ï¼‰åœ¨ Spring Boot å¯åŠ¨ç±»ä¸­æ·»åŠ  `@MapperScan` æ³¨è§£ï¼Œæ‰«æ Mapper æ–‡ä»¶å¤¹ï¼š
 
 ```
 @SpringBootApplication
@@ -69,7 +69,7 @@ public class SampleMybatisApplication {
 }
 ```
 
-6£©±àĞ´Êı¾İ²ã¶ÔÏó£¬¼ÙÉèÎÒÃÇÓĞÏÂÃæµÄ mapper £º
+6ï¼‰ç¼–å†™æ•°æ®å±‚å¯¹è±¡ï¼Œå‡è®¾æˆ‘ä»¬æœ‰ä¸‹é¢çš„ mapper ï¼š
 
 ```
 @Mapper
@@ -81,7 +81,7 @@ public interface CityMapper {
 }
 ```
 
-7£©ÄãÖ»ĞèÒª´´½¨Ò»¸ö Spring boot Ó¦ÓÃ£¬ÏñÏÂÃæÕâÑù£¬½« mapper ×¢Èë½øÈ¥£¨ Spring 4.3 ÒÔÉÏ¿ÉÓÃ£©¡£
+7ï¼‰ä½ åªéœ€è¦åˆ›å»ºä¸€ä¸ª Spring boot åº”ç”¨ï¼Œåƒä¸‹é¢è¿™æ ·ï¼Œå°† mapper æ³¨å…¥è¿›å»ï¼ˆ Spring 4.3 ä»¥ä¸Šå¯ç”¨ï¼‰ã€‚
 
 ```
 @SpringBootApplication
@@ -106,17 +106,17 @@ public class SampleMybatisApplication implements CommandLineRunner {
 }
 ```
 
-## ÈçºÎÊ¹ÓÃ·ÖÒ³²å¼ş
+## å¦‚ä½•ä½¿ç”¨åˆ†é¡µæ’ä»¶
 
-ÍÆ¼öÒÔÏÂĞ´·¨£¬¸ü¶à²é¿´¹Ù·½ÎÄµµ£ºhttps://github.com/pagehelper/Mybatis-PageHelper/blob/master/wikis/zh/HowToUse.md
+æ¨èä»¥ä¸‹å†™æ³•ï¼Œæ›´å¤šæŸ¥çœ‹å®˜æ–¹æ–‡æ¡£ï¼šhttps://github.com/pagehelper/Mybatis-PageHelper/blob/master/wikis/zh/HowToUse.md
 
 ```
-// Mapper½Ó¿Ú·½Ê½µÄµ÷ÓÃ£¬ÍÆ¼öÕâÖÖÊ¹ÓÃ·½Ê½¡£
+// Mapperæ¥å£æ–¹å¼çš„è°ƒç”¨ï¼Œæ¨èè¿™ç§ä½¿ç”¨æ–¹å¼ã€‚
 PageHelper.startPage(1, 10);
 List<User> list = userMapper.selectIf(1);
 
-// ISelect ½Ó¿Ú·½Ê½
-// jdk6,7ÓÃ·¨£¬´´½¨½Ó¿Ú
+// ISelect æ¥å£æ–¹å¼
+// jdk6,7ç”¨æ³•ï¼Œåˆ›å»ºæ¥å£
 Page<User> page = PageHelper.startPage(1, 10).doSelectPage(new ISelect() {
     @Override
     public void doSelect() {
@@ -124,10 +124,10 @@ Page<User> page = PageHelper.startPage(1, 10).doSelectPage(new ISelect() {
     }
 });
 
-// jdk8 lambdaÓÃ·¨
+// jdk8 lambdaç”¨æ³•
 Page<User> page = PageHelper.startPage(1, 10).doSelectPage(()-> userMapper.selectGroupBy());
 
-// Ò²¿ÉÒÔÖ±½Ó·µ»Ø PageInfo£¬×¢Òâ doSelectPageInfo ·½·¨ºÍ doSelectPage
+// ä¹Ÿå¯ä»¥ç›´æ¥è¿”å› PageInfoï¼Œæ³¨æ„ doSelectPageInfo æ–¹æ³•å’Œ doSelectPage
 pageInfo = PageHelper.startPage(1, 10).doSelectPageInfo(new ISelect() {
     @Override
     public void doSelect() {
@@ -135,10 +135,10 @@ pageInfo = PageHelper.startPage(1, 10).doSelectPageInfo(new ISelect() {
     }
 });
 
-// ¶ÔÓ¦µÄlambdaÓÃ·¨
+// å¯¹åº”çš„lambdaç”¨æ³•
 pageInfo = PageHelper.startPage(1, 10).doSelectPageInfo(() -> userMapper.selectGroupBy());
 
-// count²éÑ¯£¬·µ»ØÒ»¸ö²éÑ¯Óï¾äµÄcountÊı
+// countæŸ¥è¯¢ï¼Œè¿”å›ä¸€ä¸ªæŸ¥è¯¢è¯­å¥çš„countæ•°
 long total = PageHelper.count(new ISelect() {
     @Override
     public void doSelect() {
@@ -150,47 +150,47 @@ long total = PageHelper.count(new ISelect() {
 total = PageHelper.count(()->userMapper.selectLike(user));
 ```
 
-## ½ø½×Æª - ÅäÖÃ
+## è¿›é˜¶ç¯‡ - é…ç½®
 
 https://mybatis.org/mybatis-3/zh/configuration.html
 
-MyBatis µÄÅäÖÃÎÄ¼ş°üº¬ÁË»áÉîÉîÓ°Ïì MyBatis ĞĞÎªµÄÉèÖÃºÍÊôĞÔĞÅÏ¢¡£ ÅäÖÃÎÄµµµÄ¶¥²ã½á¹¹ÈçÏÂ£º
+MyBatis çš„é…ç½®æ–‡ä»¶åŒ…å«äº†ä¼šæ·±æ·±å½±å“ MyBatis è¡Œä¸ºçš„è®¾ç½®å’Œå±æ€§ä¿¡æ¯ã€‚ é…ç½®æ–‡æ¡£çš„é¡¶å±‚ç»“æ„å¦‚ä¸‹ï¼š
 
-- configuration£¨ÅäÖÃ£©
-- properties£¨ÊôĞÔ£©
-- settings£¨ÉèÖÃ£©
-- typeAliases£¨ÀàĞÍ±ğÃû£©
-- typeHandlers£¨ÀàĞÍ´¦ÀíÆ÷£©
-- objectFactory£¨¶ÔÏó¹¤³§£©
-- plugins£¨²å¼ş£©
-- environments£¨»·¾³ÅäÖÃ£©
-  - environment£¨»·¾³±äÁ¿£©
-  - transactionManager£¨ÊÂÎñ¹ÜÀíÆ÷£©
-  - dataSource£¨Êı¾İÔ´£©
-- databaseIdProvider£¨Êı¾İ¿â³§ÉÌ±êÊ¶£©
-- mappers£¨Ó³ÉäÆ÷£©
+- configurationï¼ˆé…ç½®ï¼‰
+- propertiesï¼ˆå±æ€§ï¼‰
+- settingsï¼ˆè®¾ç½®ï¼‰
+- typeAliasesï¼ˆç±»å‹åˆ«åï¼‰
+- typeHandlersï¼ˆç±»å‹å¤„ç†å™¨ï¼‰
+- objectFactoryï¼ˆå¯¹è±¡å·¥å‚ï¼‰
+- pluginsï¼ˆæ’ä»¶ï¼‰
+- environmentsï¼ˆç¯å¢ƒé…ç½®ï¼‰
+  - environmentï¼ˆç¯å¢ƒå˜é‡ï¼‰
+  - transactionManagerï¼ˆäº‹åŠ¡ç®¡ç†å™¨ï¼‰
+  - dataSourceï¼ˆæ•°æ®æºï¼‰
+- databaseIdProviderï¼ˆæ•°æ®åº“å‚å•†æ ‡è¯†ï¼‰
+- mappersï¼ˆæ˜ å°„å™¨ï¼‰
 
-> ÌáÊ¾£ºÔÚ Spring Boot ÏîÄ¿ÖĞ¼¯³É MyBatis-Spring-Boot-Starter ºó£¬²»ÔÙÒÀÀµ mybatis-config.xml ÅäÖÃÎÄ¼ş£¬ÆäÖĞµÄ´ó²¿·ÖÅäÖÃ¶¼¿ÉÒÔÊ¡ÂÔ£¬µ«ÓĞ±ØÒªÁË½â¡£
+> æç¤ºï¼šåœ¨ Spring Boot é¡¹ç›®ä¸­é›†æˆ MyBatis-Spring-Boot-Starter åï¼Œä¸å†ä¾èµ– mybatis-config.xml é…ç½®æ–‡ä»¶ï¼Œå…¶ä¸­çš„å¤§éƒ¨åˆ†é…ç½®éƒ½å¯ä»¥çœç•¥ï¼Œä½†æœ‰å¿…è¦äº†è§£ã€‚
 
-## ½ø½×Æª - XMLÓ³ÉäÎÄ¼ş
+## è¿›é˜¶ç¯‡ - XMLæ˜ å°„æ–‡ä»¶
 
 https://mybatis.org/mybatis-3/zh/sqlmap-xml.html
 
-MyBatis µÄÕæÕıÇ¿´óÔÚÓÚËüµÄÓï¾äÓ³Éä£¬ÕâÊÇËüµÄÄ§Á¦ËùÔÚ¡£ÓÉÓÚËüµÄÒì³£Ç¿´ó£¬Ó³ÉäÆ÷µÄ XML ÎÄ¼ş¾ÍÏÔµÃÏà¶Ô¼òµ¥¡£Èç¹ûÄÃËü¸ú¾ßÓĞÏàÍ¬¹¦ÄÜµÄ JDBC ´úÂë½øĞĞ¶Ô±È£¬Äã»áÁ¢¼´·¢ÏÖÊ¡µôÁË½«½ü 95% µÄ´úÂë¡£MyBatis ÖÂÁ¦ÓÚ¼õÉÙÊ¹ÓÃ³É±¾£¬ÈÃÓÃ»§ÄÜ¸ü×¨×¢ÓÚ SQL ´úÂë¡£
+MyBatis çš„çœŸæ­£å¼ºå¤§åœ¨äºå®ƒçš„è¯­å¥æ˜ å°„ï¼Œè¿™æ˜¯å®ƒçš„é­”åŠ›æ‰€åœ¨ã€‚ç”±äºå®ƒçš„å¼‚å¸¸å¼ºå¤§ï¼Œæ˜ å°„å™¨çš„ XML æ–‡ä»¶å°±æ˜¾å¾—ç›¸å¯¹ç®€å•ã€‚å¦‚æœæ‹¿å®ƒè·Ÿå…·æœ‰ç›¸åŒåŠŸèƒ½çš„ JDBC ä»£ç è¿›è¡Œå¯¹æ¯”ï¼Œä½ ä¼šç«‹å³å‘ç°çœæ‰äº†å°†è¿‘ 95% çš„ä»£ç ã€‚MyBatis è‡´åŠ›äºå‡å°‘ä½¿ç”¨æˆæœ¬ï¼Œè®©ç”¨æˆ·èƒ½æ›´ä¸“æ³¨äº SQL ä»£ç ã€‚
 
-SQL Ó³ÉäÎÄ¼şÖ»ÓĞºÜÉÙµÄ¼¸¸ö¶¥¼¶ÔªËØ£¨°´ÕÕÓ¦±»¶¨ÒåµÄË³ĞòÁĞ³ö£©£º
+SQL æ˜ å°„æ–‡ä»¶åªæœ‰å¾ˆå°‘çš„å‡ ä¸ªé¡¶çº§å…ƒç´ ï¼ˆæŒ‰ç…§åº”è¢«å®šä¹‰çš„é¡ºåºåˆ—å‡ºï¼‰ï¼š
 
-- resultMap ¨C ÃèÊöÈçºÎ´ÓÊı¾İ¿â½á¹û¼¯ÖĞ¼ÓÔØ¶ÔÏó£¬ÊÇ×î¸´ÔÓÒ²ÊÇ×îÇ¿´óµÄÔªËØ¡£
-- sql ¨C ¿É±»ÆäËüÓï¾äÒıÓÃµÄ¿ÉÖØÓÃÓï¾ä¿é¡£
-- insert ¨C Ó³Éä²åÈëÓï¾ä¡£
-- update ¨C Ó³Éä¸üĞÂÓï¾ä¡£
-- delete ¨C Ó³ÉäÉ¾³ıÓï¾ä¡£
-- select ¨C Ó³Éä²éÑ¯Óï¾ä¡£
+- resultMap â€“ æè¿°å¦‚ä½•ä»æ•°æ®åº“ç»“æœé›†ä¸­åŠ è½½å¯¹è±¡ï¼Œæ˜¯æœ€å¤æ‚ä¹Ÿæ˜¯æœ€å¼ºå¤§çš„å…ƒç´ ã€‚
+- sql â€“ å¯è¢«å…¶å®ƒè¯­å¥å¼•ç”¨çš„å¯é‡ç”¨è¯­å¥å—ã€‚
+- insert â€“ æ˜ å°„æ’å…¥è¯­å¥ã€‚
+- update â€“ æ˜ å°„æ›´æ–°è¯­å¥ã€‚
+- delete â€“ æ˜ å°„åˆ é™¤è¯­å¥ã€‚
+- select â€“ æ˜ å°„æŸ¥è¯¢è¯­å¥ã€‚
 
-**¸ß¼¶½á¹û¼¯Ó³Éä£º**
+**é«˜çº§ç»“æœé›†æ˜ å°„ï¼š**
 
 ```
-<!-- ·Ç³£¸´ÔÓµÄ½á¹ûÓ³Éä -->
+<!-- éå¸¸å¤æ‚çš„ç»“æœæ˜ å°„ -->
 <resultMap id="detailedBlogResultMap" type="Blog">
   <constructor>
     <idArg column="blog_id" javaType="int"/>
@@ -221,7 +221,7 @@ SQL Ó³ÉäÎÄ¼şÖ»ÓĞºÜÉÙµÄ¼¸¸ö¶¥¼¶ÔªËØ£¨°´ÕÕÓ¦±»¶¨ÒåµÄË³ĞòÁĞ³ö£©£º
 </resultMap>
 ```
 
-**1£©¹ØÁª**
+**1ï¼‰å…³è”**
 
 ```
 <resultMap id="blogResult" type="Blog">
@@ -237,7 +237,7 @@ SQL Ó³ÉäÎÄ¼şÖ»ÓĞºÜÉÙµÄ¼¸¸ö¶¥¼¶ÔªËØ£¨°´ÕÕÓ¦±»¶¨ÒåµÄË³ĞòÁĞ³ö£©£º
 </resultMap>
 ```
 
-**2£©¼¯ºÏ**
+**2ï¼‰é›†åˆ**
 
 ```
 <resultMap id="blogResult" type="Blog">
@@ -251,7 +251,7 @@ SQL Ó³ÉäÎÄ¼şÖ»ÓĞºÜÉÙµÄ¼¸¸ö¶¥¼¶ÔªËØ£¨°´ÕÕÓ¦±»¶¨ÒåµÄË³ĞòÁĞ³ö£©£º
 </resultMap>
 ```
 
-**3£©¼ø±ğÆ÷**
+**3ï¼‰é‰´åˆ«å™¨**
 
 ```
 <resultMap id="vehicleResult" type="Vehicle">
@@ -270,27 +270,27 @@ SQL Ó³ÉäÎÄ¼şÖ»ÓĞºÜÉÙµÄ¼¸¸ö¶¥¼¶ÔªËØ£¨°´ÕÕÓ¦±»¶¨ÒåµÄË³ĞòÁĞ³ö£©£º
 </resultMap>
 ```
 
-## ½ø½×Æª - ¶¯Ì¬SQL
+## è¿›é˜¶ç¯‡ - åŠ¨æ€SQL
 
 https://mybatis.org/mybatis-3/zh/dynamic-sql.html
 
-¶¯Ì¬ SQL ÊÇ MyBatis µÄÇ¿´óÌØĞÔÖ®Ò»¡£Èç¹ûÄãÊ¹ÓÃ¹ı JDBC »òÆäËüÀàËÆµÄ¿ò¼Ü£¬ÄãÓ¦¸ÃÄÜÀí½â¸ù¾İ²»Í¬Ìõ¼şÆ´½Ó SQL Óï¾äÓĞ¶àÍ´¿à£¬ÀıÈçÆ´½ÓÊ±ÒªÈ·±£²»ÄÜÍü¼ÇÌí¼Ó±ØÒªµÄ¿Õ¸ñ£¬»¹Òª×¢ÒâÈ¥µôÁĞ±í×îºóÒ»¸öÁĞÃûµÄ¶ººÅ¡£ÀûÓÃ¶¯Ì¬ SQL£¬¿ÉÒÔ³¹µ×°ÚÍÑÕâÖÖÍ´¿à¡£
+åŠ¨æ€ SQL æ˜¯ MyBatis çš„å¼ºå¤§ç‰¹æ€§ä¹‹ä¸€ã€‚å¦‚æœä½ ä½¿ç”¨è¿‡ JDBC æˆ–å…¶å®ƒç±»ä¼¼çš„æ¡†æ¶ï¼Œä½ åº”è¯¥èƒ½ç†è§£æ ¹æ®ä¸åŒæ¡ä»¶æ‹¼æ¥ SQL è¯­å¥æœ‰å¤šç—›è‹¦ï¼Œä¾‹å¦‚æ‹¼æ¥æ—¶è¦ç¡®ä¿ä¸èƒ½å¿˜è®°æ·»åŠ å¿…è¦çš„ç©ºæ ¼ï¼Œè¿˜è¦æ³¨æ„å»æ‰åˆ—è¡¨æœ€åä¸€ä¸ªåˆ—åçš„é€—å·ã€‚åˆ©ç”¨åŠ¨æ€ SQLï¼Œå¯ä»¥å½»åº•æ‘†è„±è¿™ç§ç—›è‹¦ã€‚
 
-Ê¹ÓÃ¶¯Ì¬ SQL ²¢·ÇÒ»¼şÒ×ÊÂ£¬µ«½èÖú¿ÉÓÃÓÚÈÎºÎ SQL Ó³ÉäÓï¾äÖĞµÄÇ¿´óµÄ¶¯Ì¬ SQL ÓïÑÔ£¬MyBatis ÏÔÖøµØÌáÉıÁËÕâÒ»ÌØĞÔµÄÒ×ÓÃĞÔ¡£
+ä½¿ç”¨åŠ¨æ€ SQL å¹¶éä¸€ä»¶æ˜“äº‹ï¼Œä½†å€ŸåŠ©å¯ç”¨äºä»»ä½• SQL æ˜ å°„è¯­å¥ä¸­çš„å¼ºå¤§çš„åŠ¨æ€ SQL è¯­è¨€ï¼ŒMyBatis æ˜¾è‘—åœ°æå‡äº†è¿™ä¸€ç‰¹æ€§çš„æ˜“ç”¨æ€§ã€‚
 
-Èç¹ûÄãÖ®Ç°ÓÃ¹ı JSTL »òÈÎºÎ»ùÓÚÀà XML ÓïÑÔµÄÎÄ±¾´¦ÀíÆ÷£¬Äã¶Ô¶¯Ì¬ SQL ÔªËØ¿ÉÄÜ»á¸Ğ¾õËÆÔøÏàÊ¶¡£ÔÚ MyBatis Ö®Ç°µÄ°æ±¾ÖĞ£¬ĞèÒª»¨Ê±¼äÁË½â´óÁ¿µÄÔªËØ¡£½èÖú¹¦ÄÜÇ¿´óµÄ»ùÓÚ OGNL µÄ±í´ïÊ½£¬MyBatis 3 Ìæ»»ÁËÖ®Ç°µÄ´ó²¿·ÖÔªËØ£¬´ó´ó¾«¼òÁËÔªËØÖÖÀà£¬ÏÖÔÚÒªÑ§Ï°µÄÔªËØÖÖÀà±ÈÔ­À´µÄÒ»°ë»¹ÒªÉÙ¡£
+å¦‚æœä½ ä¹‹å‰ç”¨è¿‡ JSTL æˆ–ä»»ä½•åŸºäºç±» XML è¯­è¨€çš„æ–‡æœ¬å¤„ç†å™¨ï¼Œä½ å¯¹åŠ¨æ€ SQL å…ƒç´ å¯èƒ½ä¼šæ„Ÿè§‰ä¼¼æ›¾ç›¸è¯†ã€‚åœ¨ MyBatis ä¹‹å‰çš„ç‰ˆæœ¬ä¸­ï¼Œéœ€è¦èŠ±æ—¶é—´äº†è§£å¤§é‡çš„å…ƒç´ ã€‚å€ŸåŠ©åŠŸèƒ½å¼ºå¤§çš„åŸºäº OGNL çš„è¡¨è¾¾å¼ï¼ŒMyBatis 3 æ›¿æ¢äº†ä¹‹å‰çš„å¤§éƒ¨åˆ†å…ƒç´ ï¼Œå¤§å¤§ç²¾ç®€äº†å…ƒç´ ç§ç±»ï¼Œç°åœ¨è¦å­¦ä¹ çš„å…ƒç´ ç§ç±»æ¯”åŸæ¥çš„ä¸€åŠè¿˜è¦å°‘ã€‚
 
 * if
 * choose (when, otherwise)
 * trim (where, set)
 * foreach
 
-1£©if - Ê¹ÓÃ¶¯Ì¬ SQL ×î³£¼ûÇé¾°ÊÇ¸ù¾İÌõ¼ş°üº¬ where ×Ó¾äµÄÒ»²¿·Ö¡£
+1ï¼‰if - ä½¿ç”¨åŠ¨æ€ SQL æœ€å¸¸è§æƒ…æ™¯æ˜¯æ ¹æ®æ¡ä»¶åŒ…å« where å­å¥çš„ä¸€éƒ¨åˆ†ã€‚
 
 ```
 <select id="findActiveBlogLike"
      resultType="Blog">
-  SELECT * FROM BLOG WHERE state = ¡®ACTIVE¡¯
+  SELECT * FROM BLOG WHERE state = â€˜ACTIVEâ€™
   <if test="title != null">
     AND title like #{title}
   </if>
@@ -300,12 +300,12 @@ https://mybatis.org/mybatis-3/zh/dynamic-sql.html
 </select>
 ```
 
-2£©choose (when, otherwise)
+2ï¼‰choose (when, otherwise)
 
 ```
 <select id="findActiveBlogLike"
      resultType="Blog">
-  SELECT * FROM BLOG WHERE state = ¡®ACTIVE¡¯
+  SELECT * FROM BLOG WHERE state = â€˜ACTIVEâ€™
   <choose>
     <when test="title != null">
       AND title like #{title}
@@ -320,7 +320,7 @@ https://mybatis.org/mybatis-3/zh/dynamic-sql.html
 </select>
 ```
 
-3£©trim (where, set)
+3ï¼‰trim (where, set)
 
 ```
 <selectid="findActiveBlogLike"
@@ -340,9 +340,9 @@ https://mybatis.org/mybatis-3/zh/dynamic-sql.html
 </select>
 ```
 
-*where* ÔªËØÖ»»áÔÚ×ÓÔªËØ·µ»ØÈÎºÎÄÚÈİµÄÇé¿öÏÂ²Å²åÈë ¡°WHERE¡± ×Ó¾ä¡£¶øÇÒ£¬Èô×Ó¾äµÄ¿ªÍ·Îª ¡°AND¡± »ò ¡°OR¡±£¬*where* ÔªËØÒ²»á½«ËüÃÇÈ¥³ı¡£
+*where* å…ƒç´ åªä¼šåœ¨å­å…ƒç´ è¿”å›ä»»ä½•å†…å®¹çš„æƒ…å†µä¸‹æ‰æ’å…¥ â€œWHEREâ€ å­å¥ã€‚è€Œä¸”ï¼Œè‹¥å­å¥çš„å¼€å¤´ä¸º â€œANDâ€ æˆ– â€œORâ€ï¼Œ*where* å…ƒç´ ä¹Ÿä¼šå°†å®ƒä»¬å»é™¤ã€‚
 
-Èç¹û *where* ÔªËØÓëÄãÆÚÍûµÄ²»Ì«Ò»Ñù£¬ÄãÒ²¿ÉÒÔÍ¨¹ı×Ô¶¨Òå trim ÔªËØÀ´¶¨ÖÆ *where* ÔªËØµÄ¹¦ÄÜ¡£±ÈÈç£¬ºÍ *where* ÔªËØµÈ¼ÛµÄ×Ô¶¨Òå trim ÔªËØÎª£º
+å¦‚æœ *where* å…ƒç´ ä¸ä½ æœŸæœ›çš„ä¸å¤ªä¸€æ ·ï¼Œä½ ä¹Ÿå¯ä»¥é€šè¿‡è‡ªå®šä¹‰ trim å…ƒç´ æ¥å®šåˆ¶ *where* å…ƒç´ çš„åŠŸèƒ½ã€‚æ¯”å¦‚ï¼Œå’Œ *where* å…ƒç´ ç­‰ä»·çš„è‡ªå®šä¹‰ trim å…ƒç´ ä¸ºï¼š
 
 ```
 <trim prefix="WHERE" prefixOverrides="AND |OR ">
@@ -350,7 +350,7 @@ https://mybatis.org/mybatis-3/zh/dynamic-sql.html
 </trim>
 ```
 
-4£©foreach - ¶¯Ì¬ SQL µÄÁíÒ»¸ö³£¼ûÊ¹ÓÃ³¡¾°ÊÇ¶Ô¼¯ºÏ½øĞĞ±éÀú£¨ÓÈÆäÊÇÔÚ¹¹½¨ IN Ìõ¼şÓï¾äµÄÊ±ºò£©¡£
+4ï¼‰foreach - åŠ¨æ€ SQL çš„å¦ä¸€ä¸ªå¸¸è§ä½¿ç”¨åœºæ™¯æ˜¯å¯¹é›†åˆè¿›è¡Œéå†ï¼ˆå°¤å…¶æ˜¯åœ¨æ„å»º IN æ¡ä»¶è¯­å¥çš„æ—¶å€™ï¼‰ã€‚
 
 ```
 <select id="selectPostIn" resultType="domain.blog.Post">
@@ -365,16 +365,16 @@ https://mybatis.org/mybatis-3/zh/dynamic-sql.html
 </select>
 ```
 
-## ½ø½×Æª - JavaAPI
+## è¿›é˜¶ç¯‡ - JavaAPI
 
 https://mybatis.org/mybatis-3/zh/java-api.html
 
-- SqlSession - Ê¹ÓÃ MyBatis µÄÖ÷Òª Java ½Ó¿Ú¾ÍÊÇ SqlSession¡£Äã¿ÉÒÔÍ¨¹ıÕâ¸ö½Ó¿ÚÀ´Ö´ĞĞÃüÁî£¬»ñÈ¡Ó³ÉäÆ÷ÊµÀıºÍ¹ÜÀíÊÂÎñ¡£
-- SqlSessionFactory - SqlSessionFactory ÓĞÁù¸ö·½·¨´´½¨ SqlSession ÊµÀı¡£
+- SqlSession - ä½¿ç”¨ MyBatis çš„ä¸»è¦ Java æ¥å£å°±æ˜¯ SqlSessionã€‚ä½ å¯ä»¥é€šè¿‡è¿™ä¸ªæ¥å£æ¥æ‰§è¡Œå‘½ä»¤ï¼Œè·å–æ˜ å°„å™¨å®ä¾‹å’Œç®¡ç†äº‹åŠ¡ã€‚
+- SqlSessionFactory - SqlSessionFactory æœ‰å…­ä¸ªæ–¹æ³•åˆ›å»º SqlSession å®ä¾‹ã€‚
 
-### ×¢½â
+### æ³¨è§£
 
-MyBatis Ìá¹©ÁËºÍ XML ÅäÖÃµÈÍ¬µÄ×¢½â£¬¸öÈË¾õµÃ»¹ÊÇ XML ÅäÖÃ¸ü¼ÓÖ±¹Û¡££¨²»ÍÆ¼ö£©
+MyBatis æä¾›äº†å’Œ XML é…ç½®ç­‰åŒçš„æ³¨è§£ï¼Œä¸ªäººè§‰å¾—è¿˜æ˜¯ XML é…ç½®æ›´åŠ ç›´è§‚ã€‚ï¼ˆä¸æ¨èï¼‰
 
 - `@CacheNamespace`
 - `@Property`
@@ -400,7 +400,7 @@ MyBatis Ìá¹©ÁËºÍ XML ÅäÖÃµÈÍ¬µÄ×¢½â£¬¸öÈË¾õµÃ»¹ÊÇ XML ÅäÖÃ¸ü¼ÓÖ±¹Û¡££¨²»ÍÆ¼ö£©
 * `@ResultType`
 * `@Flush`
 
-Õâ¸öÀı×ÓÕ¹Ê¾ÁËÈçºÎÊ¹ÓÃ @SelectKey ×¢½âÀ´ÔÚ²åÈëÇ°¶ÁÈ¡Êı¾İ¿âĞòÁĞµÄÖµ£º
+è¿™ä¸ªä¾‹å­å±•ç¤ºäº†å¦‚ä½•ä½¿ç”¨ @SelectKey æ³¨è§£æ¥åœ¨æ’å…¥å‰è¯»å–æ•°æ®åº“åºåˆ—çš„å€¼ï¼š
 
 ```
 @Insert("insert into table3 (id, name) values(#{nameId}, #{name})")

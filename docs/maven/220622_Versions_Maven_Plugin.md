@@ -1,6 +1,6 @@
 # Versions Maven Plugin
 
-ÏîÄ¿°æ±¾ºÅ¹ÜÀí£¬ÓÈÆäÊÇ¶àÄ£¿éÏîÄ¿µÄ°æ±¾ºÅ±ä¸ü¡£Spring Boot ÒÀÀµÖĞÒÑ¾­°üº¬ÁË¸Ã²å¼ş£¬ÎŞĞëÔÙ´ÎÒıÈë¡£
+é¡¹ç›®ç‰ˆæœ¬å·ç®¡ç†ï¼Œå°¤å…¶æ˜¯å¤šæ¨¡å—é¡¹ç›®çš„ç‰ˆæœ¬å·å˜æ›´ã€‚Spring Boot ä¾èµ–ä¸­å·²ç»åŒ…å«äº†è¯¥æ’ä»¶ï¼Œæ— é¡»å†æ¬¡å¼•å…¥ã€‚
 
 ```
 <plugin>
@@ -10,31 +10,31 @@
 </plugin>
 ```
 
-¼¸¸öÖØÒªµÄÃüÁî£º
+å‡ ä¸ªé‡è¦çš„å‘½ä»¤ï¼š
 
 ```
-# ÏÔÊ¾ËùÓĞµÄÒÀÀµ¸üĞÂ
+# æ˜¾ç¤ºæ‰€æœ‰çš„ä¾èµ–æ›´æ–°
 mvn versions:display-dependency-updates
 
-# ÏÔÊ¾ÏîÄ¿µÄ²å¼ş¸üĞÂ
+# æ˜¾ç¤ºé¡¹ç›®çš„æ’ä»¶æ›´æ–°
 mvn versions:display-plugin-updates
 
-# ÏÔÊ¾ÏîÄ¿µÄÊôĞÔ¸üĞÂ
+# æ˜¾ç¤ºé¡¹ç›®çš„å±æ€§æ›´æ–°
 mvn versions:display-property-updates
 
-# ÉèÖÃÏîÄ¿°æ±¾ºÅ
+# è®¾ç½®é¡¹ç›®ç‰ˆæœ¬å·
 mvn versions:set -DnewVersion=1.0.1-SNAPSHOT -DgenerateBackupPoms=true
 
-# ÉèÖÃÊôĞÔ°æ±¾ºÅ
+# è®¾ç½®å±æ€§ç‰ˆæœ¬å·
 mvn versions:set-property -Dproperty=kaddo.version -DnewVersion=1.0.1-SNAPSHOT -DgenerateBackupPoms=true
 
-# ÒÆ³ı pom.xml.versionsBackup ±¸·İÎÄ¼ş
+# ç§»é™¤ pom.xml.versionsBackup å¤‡ä»½æ–‡ä»¶
 mvn versions:commit
 
-# »ùÓÚ pom.xml.versionsBackup ±¸·İÎÄ¼ş»Ø¹ö
+# åŸºäº pom.xml.versionsBackup å¤‡ä»½æ–‡ä»¶å›æ»š
 mvn versions:revert
 ```
 
-¹Ù·½ÎÄµµ£º
+å®˜æ–¹æ–‡æ¡£ï¼š
 
 - [Versions Maven Plugin](https://www.mojohaus.org/versions-maven-plugin/index.html)
