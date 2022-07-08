@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>kaddo-dependencies</artifactId>
+    <packaging>pom</packaging>
+    <name>kaddo-dependencies</name>
+    <description>Kaddo bill of materials</description>
+
+    <parent>
+        <groupId>com.kaddo</groupId>
+        <artifactId>kaddo-parent</artifactId>
+        <version>0.1.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <!-- Dependency versions -->
+    <properties>
+        <!-- Alibaba Druid - https://github.com/alibaba/druid -->
+        <alibaba-druid.version>1.2.11</alibaba-druid.version>
+
+        <!-- Alibaba Fastjson - https://github.com/alibaba/fastjson -->
+        <alibaba-fastjson.version>1.2.83</alibaba-fastjson.version>
+
+        <!-- Apollo Config - https://www.apolloconfig.com/ -->
+        <apollo-client.version>2.0.1</apollo-client.version>
+
+        <!-- Bouncy Castle Crypto APIs - https://github.com/open-keychain/bouncycastle -->
+        <bouncycastle.version>1.70</bouncycastle.version>
+
+        <!-- Google Guava - https://github.com/google/guava -->
+        <guava.version>31.1-jre</guava.version>
+
+        <!-- Hutool - https://hutool.cn/ -->
+        <hutool.version>5.8.3</hutool.version>
+
+        <!-- MyBatis Spring-Boot-Starter - https://github.com/mybatis/spring-boot-starter -->
+        <mybatis-springboot.version>2.2.2</mybatis-springboot.version>
+
+        <!-- PageHelper Spring-Boot-Starter - https://github.com/pagehelper/pagehelper-spring-boot -->
+        <mybatis-pagehelper.version>1.4.3</mybatis-pagehelper.version>
+
+        <!-- MyBatis-Plus - https://baomidou.com/ -->
+        <mybatis-plus.version>3.5.2</mybatis-plus.version>
+
+        <!-- Zalando Problem - https://github.com/zalando/problem/ -->
+        <problem-spring.version>0.27.0</problem-spring.version>
+
+        <!-- Retrofit - https://square.github.io/retrofit/ -->
+        <retrofit2.version>2.9.0</retrofit2.version>
+
+        <!-- SpringDoc OpenAPI - https://springdoc.org/ -->
+        <springdoc.version>1.6.9</springdoc.version>
+    </properties>
+
+    <!-- Dependency Management -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- Kaddo Components built on Spring Boot -->
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-apidoc</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-apollo</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-client</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-crypto</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-datasource</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-dubbo</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-jpa</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-kafka</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-mybatis</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-mybatis-plus</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-oss</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-pulsar</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-redis</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-retrofit</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-rocketmq</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-security</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-sentinel</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-sequence</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-task</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-verifycode</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kaddo</groupId>
+                <artifactId>kaddo-components-web</artifactId>
+                <version>${kaddo.version}</version>
+            </dependency>
+
+            <!-- Alibaba Druid - https://github.com/alibaba/druid -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${alibaba-druid.version}</version>
+            </dependency>
+
+            <!-- Alibaba Fastjson - https://github.com/alibaba/fastjson -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${alibaba-fastjson.version}</version>
+            </dependency>
+
+            <!-- Apollo Config - https://www.apolloconfig.com/ -->
+            <dependency>
+                <groupId>com.ctrip.framework.apollo</groupId>
+                <artifactId>apollo-client</artifactId>
+                <version>${apollo-client.version}</version>
+            </dependency>
+
+            <!-- Bouncy Castle Crypto APIs - https://github.com/open-keychain/bouncycastle -->
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcpkix-jdk15on</artifactId>
+                <version>${bouncycastle.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcprov-jdk15to18</artifactId>
+                <version>${bouncycastle.version}</version>
+            </dependency>
+
+            <!-- Google Guava - https://github.com/google/guava -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <!-- Hutool - https://hutool.cn/ -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <!-- MyBatis Spring-Boot-Starter - https://github.com/mybatis/spring-boot-starter -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-springboot.version}</version>
+            </dependency>
+
+            <!-- MyBatis-Plus - https://baomidou.com/ -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!-- PageHelper Spring-Boot-Starter - https://github.com/pagehelper/pagehelper-spring-boot -->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${mybatis-pagehelper.version}</version>
+            </dependency>
+
+            <!-- Zalando Problem - https://github.com/zalando/problem/ -->
+            <dependency>
+                <groupId>org.zalando</groupId>
+                <artifactId>problem-spring-web</artifactId>
+                <version>${problem-spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.zalando</groupId>
+                <artifactId>problem-spring-webflux</artifactId>
+                <version>${problem-spring.version}</version>
+            </dependency>
+
+            <!-- Retrofit - https://square.github.io/retrofit/ -->
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>retrofit</artifactId>
+                <version>${retrofit2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>converter-jackson</artifactId>
+                <version>${retrofit2.version}</version>
+            </dependency>
+
+            <!-- SpringDoc OpenAPI - https://springdoc.org/ -->
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-ui</artifactId>
+                <version>${springdoc.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

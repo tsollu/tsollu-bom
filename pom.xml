@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.9</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>com.kaddo</groupId>
+    <artifactId>kaddo-parent</artifactId>
+    <version>0.1.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>kaddo-parent</name>
+    <description>Kaddo BOM and server-side library</description>
+    <url>https://gitee.com/Kaddo/kaddo-bom/</url>
+
+    <licenses>
+        <license>
+            <name>Apache License, version 2.0</name>
+            <url>https://gitee.com/Kaddo/kaddo-bom/blob/master/LICENSE.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <organization>
+        <name>Kaddo</name>
+        <url>https://gitee.com/Kaddo/</url>
+    </organization>
+    <developers>
+        <developer>
+            <id>zhycn</id>
+            <name>Qi Zhao Hong</name>
+            <url>https://github.com/zhycn</url>
+            <organization>Kaddo</organization>
+            <organizationUrl>https://gitee.com/Kaddo/</organizationUrl>
+        </developer>
+    </developers>
+
+    <properties>
+        <!-- The kaddo version should be the same as the artifact version above -->
+        <kaddo.version>0.1.1-SNAPSHOT</kaddo.version>
+        <!-- The spring-boot version should be the same as the parent version above -->
+        <spring-boot.version>2.6.9</spring-boot.version>
+        <!-- Spring Cloud - https://spring.io/projects/spring-cloud -->
+        <spring-cloud.version>2021.0.3</spring-cloud.version>
+        <!-- Redisson - https://github.com/redisson/redisson -->
+        <redisson.version>3.17.4</redisson.version>
+
+        <!-- Build properties -->
+        <java.version>1.8</java.version>
+        <maven.version>3.3.9</maven.version>
+
+        <!-- Plugin versions -->
+        <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
+    </properties>
+
+    <scm>
+        <connection>scm:git:https://gitee.com/Kaddo/kaddo-bom/</connection>
+        <url>https://gitee.com/Kaddo/kaddo-bom/</url>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
+    <modules>
+        <module>kaddo-components-apidoc</module>
+        <module>kaddo-components-apollo</module>
+        <module>kaddo-components-client</module>
+        <module>kaddo-components-crypto</module>
+        <module>kaddo-components-datasource</module>
+        <module>kaddo-components-dubbo</module>
+        <module>kaddo-components-jpa</module>
+        <module>kaddo-components-kafka</module>
+        <module>kaddo-components-mybatis</module>
+        <module>kaddo-components-mybatis-plus</module>
+        <module>kaddo-components-oss</module>
+        <module>kaddo-components-pulsar</module>
+        <module>kaddo-components-redis</module>
+        <module>kaddo-components-retrofit</module>
+        <module>kaddo-components-rocketmq</module>
+        <module>kaddo-components-security</module>
+        <module>kaddo-components-sentinel</module>
+        <module>kaddo-components-sequence</module>
+        <module>kaddo-components-task</module>
+        <module>kaddo-components-verifycode</module>
+        <module>kaddo-components-web</module>
+        <module>kaddo-dependencies</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Spring Cloud - https://spring.io/projects/spring-cloud -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- Redisson - https://github.com/redisson/redisson -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
