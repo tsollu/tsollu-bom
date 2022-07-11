@@ -41,6 +41,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://tsollu.github.io/tsollu-bom/tags/</loc>
+         <lastmod>2022-07-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://tsollu.github.io/tsollu-bom/maven/220622_EditorConfig_Maven_Plugin/</loc>
          <lastmod>2022-07-11</lastmod>
          <changefreq>daily</changefreq>
@@ -62,6 +67,11 @@
     </url>
     <url>
          <loc>https://tsollu.github.io/tsollu-bom/spring/220620_Spring_Boot_Documentation/</loc>
+         <lastmod>2022-07-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tsollu.github.io/tsollu-bom/tags/</loc>
          <lastmod>2022-07-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
