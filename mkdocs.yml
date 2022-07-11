@@ -130,5 +130,5 @@ markdown_extensions:
 # Page tree
 nav:
   - 首页: index.md
-  - 编码规约:
+  - 编码规约A:
     - MyBtatis: 220627_MyBatis_Usage.md
