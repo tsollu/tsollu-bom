@@ -1,0 +1,368 @@
+<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Create a branded static site from a set of Markdown files to host the documentation of your Open Source or commercial project"><meta name=author content=Tsollu><link href=https://tsollu.github.io/tsollu-bom/220615_Alibaba_Druid/ rel=canonical><link rel=icon href=../assets/favicon.png><meta name=generator content="mkdocs-1.3.0, mkdocs-material-8.3.9"><title>Druid Spring Boot Starter - Tsollu BOM</title><link rel=stylesheet href=../assets/stylesheets/main.1d29e8d0.min.css><link rel=stylesheet href=../assets/stylesheets/palette.cbb835fc.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style><script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script></head> <body dir=ltr data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=indigo> <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#druid-spring-boot-starter class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <header class=md-header data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Header> <a href=.. title="Tsollu BOM" class="md-header__button md-logo" aria-label="Tsollu BOM" data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 89 89"> <path d=M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z /> <path d=M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z style="fill-opacity: 0.5"/> <path d=M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z /> <path d=M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z style="fill-opacity: 0.25"/> </svg> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> Tsollu BOM </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> Druid Spring Boot Starter </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=indigo aria-label="Switch to dark mode" type=radio name=__palette id=__palette_1> <label class="md-header__button md-icon" title="Switch to dark mode" for=__palette_2 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg> </label> <input class=md-option data-md-color-media data-md-color-scheme=slate data-md-color-primary=indigo data-md-color-accent=indigo aria-label="Switch to light mode" type=radio name=__palette id=__palette_2> <label class="md-header__button md-icon" title="Switch to light mode" for=__palette_1 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg> </label> </form> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg> </label> <nav class=md-search__options aria-label=Search> <a href=javascript:void(0) class="md-search__icon md-icon" aria-label=Share data-clipboard data-clipboard-text data-md-component=search-share tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg> </a> <button type=reset class="md-search__icon md-icon" aria-label=Clear tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg> </button> </nav> <div class=md-search__suggest data-md-component=search-suggest></div> </form> <div class=md-search__output> <div class=md-search__scrollwrap data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list></ol> </div> </div> </div> </div> </div> <div class=md-header__source> <a href=https://github.com/tsollu/tsollu-bom title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg> </div> <div class=md-source__repository> tsollu/tsollu-bom </div> </a> </div> </nav> </header> <div class=md-container data-md-component=container> <nav class=md-tabs aria-label=Tabs data-md-component=tabs> <div class="md-tabs__inner md-grid"> <ul class=md-tabs__list> <li class=md-tabs__item> <a href=.. class=md-tabs__link> 首页 </a> </li> </ul> </div> </nav> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--lifted" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=.. title="Tsollu BOM" class="md-nav__button md-logo" aria-label="Tsollu BOM" data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 89 89"> <path d=M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z /> <path d=M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z style="fill-opacity: 0.5"/> <path d=M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z /> <path d=M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z style="fill-opacity: 0.25"/> </svg> </a> Tsollu BOM </label> <div class=md-nav__source> <a href=https://github.com/tsollu/tsollu-bom title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg> </div> <div class=md-source__repository> tsollu/tsollu-bom </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=.. class=md-nav__link> 首页 </a> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=sidebar data-md-type=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#_1 class=md-nav__link> 快速使用 </a> </li> <li class=md-nav__item> <a href=#_2 class=md-nav__link> 连接池配置 </a> </li> <li class=md-nav__item> <a href=#_3 class=md-nav__link> 过滤器配置 </a> <nav class=md-nav aria-label=过滤器配置> <ul class=md-nav__list> <li class=md-nav__item> <a href=#statviewservlet class=md-nav__link> StatViewServlet </a> </li> <li class=md-nav__item> <a href=#webstatfilter class=md-nav__link> WebStatFilter </a> </li> <li class=md-nav__item> <a href=#statfilter class=md-nav__link> StatFilter </a> </li> <li class=md-nav__item> <a href=#wallfilter class=md-nav__link> WallFilter </a> </li> <li class=md-nav__item> <a href=#logfilter class=md-nav__link> LogFilter </a> </li> <li class=md-nav__item> <a href=#encodingconvertfilter class=md-nav__link> EncodingConvertFilter </a> </li> <li class=md-nav__item> <a href=#configfilter class=md-nav__link> ConfigFilter </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#_4 class=md-nav__link> 多数据源配置 </a> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <a href=https://github.com/tsollu/tsollu-bom/edit/master/docs/220615_Alibaba_Druid.md title="Edit this page" class="md-content__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg> </a> <h1 id=druid-spring-boot-starter>Druid Spring Boot Starter<a class=headerlink href=#druid-spring-boot-starter title="Permanent link">&para;</a></h1> <p>Alibaba Druid 是一个 JDBC 组件库，包含数据库连接池、SQL Parser 等组件，被大量业务和技术产品使用或集成，经历过严苛的线上业务场景考验，是值得信赖的技术产品。Druid Spring Boot Starter 用于帮助你在 Spring Boot 项目中轻松集成 Druid 数据库连接池和监控。</p> <p><a href=https://github.com/alibaba/druid>https://github.com/alibaba/druid</a></p> <h2 id=_1>快速使用<a class=headerlink href=#_1 title="Permanent link">&para;</a></h2> <p>1）在你的 Spring Boot 项目中添加依赖配置（引入 Kaddo 框架不需要指定版本号）：</p> <div class=highlight><pre><span></span><code><a id=__codelineno-0-1 name=__codelineno-0-1 href=#__codelineno-0-1></a>&lt;dependency&gt;
+<a id=__codelineno-0-2 name=__codelineno-0-2 href=#__codelineno-0-2></a>   &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+<a id=__codelineno-0-3 name=__codelineno-0-3 href=#__codelineno-0-3></a>   &lt;artifactId&gt;druid-spring-boot-starter&lt;/artifactId&gt;
+<a id=__codelineno-0-4 name=__codelineno-0-4 href=#__codelineno-0-4></a>   &lt;version&gt;${alibaba-druid.version}&lt;/version&gt;
+<a id=__codelineno-0-5 name=__codelineno-0-5 href=#__codelineno-0-5></a>&lt;/dependency&gt;
+</code></pre></div> <p>2）添加数据源配置：</p> <div class=highlight><pre><span></span><code><a id=__codelineno-1-1 name=__codelineno-1-1 href=#__codelineno-1-1></a>## Spring DruidDataSource Configuration
+<a id=__codelineno-1-2 name=__codelineno-1-2 href=#__codelineno-1-2></a># spring.datasource.druid.enable=true
+<a id=__codelineno-1-3 name=__codelineno-1-3 href=#__codelineno-1-3></a># spring.datasource.druid.name=DataSource-1
+<a id=__codelineno-1-4 name=__codelineno-1-4 href=#__codelineno-1-4></a># spring.datasource.druid.driver-class-name=com.mysql.cj.jdbc.Driver
+<a id=__codelineno-1-5 name=__codelineno-1-5 href=#__codelineno-1-5></a>spring.datasource.druid.url=jdbc:mysql://localhost:3306/dbname?serverTimezone=Asia/Shanghai&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true&amp;autoReconnectForPools=true&amp;noAccessToProcedureBodies=true&amp;allowMultiQueries=true&amp;zeroDateTimeBehavior=convertToNull
+<a id=__codelineno-1-6 name=__codelineno-1-6 href=#__codelineno-1-6></a>spring.datasource.druid.username=root
+<a id=__codelineno-1-7 name=__codelineno-1-7 href=#__codelineno-1-7></a>spring.datasource.druid.password=123456
+<a id=__codelineno-1-8 name=__codelineno-1-8 href=#__codelineno-1-8></a>spring.datasource.druid.initial-size=10
+<a id=__codelineno-1-9 name=__codelineno-1-9 href=#__codelineno-1-9></a>spring.datasource.druid.min-idle=10
+<a id=__codelineno-1-10 name=__codelineno-1-10 href=#__codelineno-1-10></a>spring.datasource.druid.max-active=100
+<a id=__codelineno-1-11 name=__codelineno-1-11 href=#__codelineno-1-11></a>spring.datasource.druid.max-wait=6000
+<a id=__codelineno-1-12 name=__codelineno-1-12 href=#__codelineno-1-12></a>spring.datasource.druid.test-while-idle=true
+<a id=__codelineno-1-13 name=__codelineno-1-13 href=#__codelineno-1-13></a>spring.datasource.druid.test-on-borrow=false
+<a id=__codelineno-1-14 name=__codelineno-1-14 href=#__codelineno-1-14></a>spring.datasource.druid.test-on-return=false
+<a id=__codelineno-1-15 name=__codelineno-1-15 href=#__codelineno-1-15></a>spring.datasource.druid.validation-query=select 1
+<a id=__codelineno-1-16 name=__codelineno-1-16 href=#__codelineno-1-16></a>spring.datasource.druid.time-between-eviction-runs-millis=30000
+<a id=__codelineno-1-17 name=__codelineno-1-17 href=#__codelineno-1-17></a>spring.datasource.druid.min-evictable-idle-time-millis=600000
+<a id=__codelineno-1-18 name=__codelineno-1-18 href=#__codelineno-1-18></a>spring.datasource.druid.max-evictable-idle-time-millis=900000
+<a id=__codelineno-1-19 name=__codelineno-1-19 href=#__codelineno-1-19></a>spring.datasource.druid.keep-alive=true
+</code></pre></div> <p>3）Druid 支持根据 url 来自动探测 JDBC 驱动，已在 <code>druid-xxx.jar/META-INF/druid-driver.properties</code> 属性文件中定义。</p> <div class=highlight><pre><span></span><code><a id=__codelineno-2-1 name=__codelineno-2-1 href=#__codelineno-2-1></a>jdbc:derby:=org.apache.derby.jdbc.EmbeddedDriver     
+<a id=__codelineno-2-2 name=__codelineno-2-2 href=#__codelineno-2-2></a>jdbc:mysql:=com.mysql.jdbc.Driver
+<a id=__codelineno-2-3 name=__codelineno-2-3 href=#__codelineno-2-3></a>jdbc:log4jdbc:=net.sf.log4jdbc.DriverSpy
+<a id=__codelineno-2-4 name=__codelineno-2-4 href=#__codelineno-2-4></a>jdbc:oracle:=oracle.jdbc.driver.OracleDriver
+<a id=__codelineno-2-5 name=__codelineno-2-5 href=#__codelineno-2-5></a>jdbc:microsoft:=com.microsoft.jdbc.sqlserver.SQLServerDriver     
+<a id=__codelineno-2-6 name=__codelineno-2-6 href=#__codelineno-2-6></a>jdbc:jtds:=net.sourceforge.jtds.jdbc.Driver  
+<a id=__codelineno-2-7 name=__codelineno-2-7 href=#__codelineno-2-7></a>jdbc:postgresql:=org.postgresql.Driver   
+<a id=__codelineno-2-8 name=__codelineno-2-8 href=#__codelineno-2-8></a>jdbc:fake:=com.alibaba.druid.mock.MockDriver     
+<a id=__codelineno-2-9 name=__codelineno-2-9 href=#__codelineno-2-9></a>jdbc:hsqldb:=org.hsqldb.jdbcDriver   
+<a id=__codelineno-2-10 name=__codelineno-2-10 href=#__codelineno-2-10></a>jdbc:db2:=COM.ibm.db2.jdbc.app.DB2Driver
+<a id=__codelineno-2-11 name=__codelineno-2-11 href=#__codelineno-2-11></a>jdbc:sqlite:=org.sqlite.JDBC     
+<a id=__codelineno-2-12 name=__codelineno-2-12 href=#__codelineno-2-12></a>jdbc:ingres:=com.ingres.jdbc.IngresDriver    
+<a id=__codelineno-2-13 name=__codelineno-2-13 href=#__codelineno-2-13></a>jdbc:h2:=org.h2.Driver   
+<a id=__codelineno-2-14 name=__codelineno-2-14 href=#__codelineno-2-14></a>jdbc:mckoi:=com.mckoi.JDBCDriver
+<a id=__codelineno-2-15 name=__codelineno-2-15 href=#__codelineno-2-15></a>jdbc:clickhouse:=ru.yandex.clickhouse.ClickHouseDriver
+<a id=__codelineno-2-16 name=__codelineno-2-16 href=#__codelineno-2-16></a>jdbc:highgo:=com.highgo.jdbc.Driver
+</code></pre></div> <p>如果未能自动探测 JDBC 驱动，则需指定驱动类：</p> <div class=highlight><pre><span></span><code><a id=__codelineno-3-1 name=__codelineno-3-1 href=#__codelineno-3-1></a>spring.datasource.druid.driver-class-name=com.mysql.cj.jdbc.Driver
+</code></pre></div> <h2 id=_2>连接池配置<a class=headerlink href=#_2 title="Permanent link">&para;</a></h2> <p>Druid Spring Boot Starter 配置属性的名称完全遵照 Druid，你可以通过 Spring Boot 配置文件来配置 Druid 数据库连接池和监控。</p> <ul> <li>JDBC 配置：</li> </ul> <div class=highlight><pre><span></span><code><a id=__codelineno-4-1 name=__codelineno-4-1 href=#__codelineno-4-1></a># 单数据源时，Druid 兼容 JDBC 的配置如下：
+<a id=__codelineno-4-2 name=__codelineno-4-2 href=#__codelineno-4-2></a>spring.datasource.druid.url= # 或spring.datasource.url= 
+<a id=__codelineno-4-3 name=__codelineno-4-3 href=#__codelineno-4-3></a>spring.datasource.druid.username= # 或spring.datasource.username=
+<a id=__codelineno-4-4 name=__codelineno-4-4 href=#__codelineno-4-4></a>spring.datasource.druid.password= # 或spring.datasource.password=
+<a id=__codelineno-4-5 name=__codelineno-4-5 href=#__codelineno-4-5></a>spring.datasource.druid.driver-class-name= #或 spring.datasource.driver-class-name=
+</code></pre></div> <ul> <li>连接池配置详解：</li> </ul> <div class=highlight><pre><span></span><code><a id=__codelineno-5-1 name=__codelineno-5-1 href=#__codelineno-5-1></a># 启动 Druid 连接池，默认开启
+<a id=__codelineno-5-2 name=__codelineno-5-2 href=#__codelineno-5-2></a># 多数据源配置时，该参数不生效
+<a id=__codelineno-5-3 name=__codelineno-5-3 href=#__codelineno-5-3></a>spring.datasource.druid.enable=true
+<a id=__codelineno-5-4 name=__codelineno-5-4 href=#__codelineno-5-4></a>
+<a id=__codelineno-5-5 name=__codelineno-5-5 href=#__codelineno-5-5></a># 指定驱动类名，默认从 URL 中自动探测
+<a id=__codelineno-5-6 name=__codelineno-5-6 href=#__codelineno-5-6></a>spring.datasource.druid.driver-class-name=com.mysql.cj.jdbc.Driver
+<a id=__codelineno-5-7 name=__codelineno-5-7 href=#__codelineno-5-7></a>
+<a id=__codelineno-5-8 name=__codelineno-5-8 href=#__codelineno-5-8></a># 设置数据库连接
+<a id=__codelineno-5-9 name=__codelineno-5-9 href=#__codelineno-5-9></a>spring.datasource.druid.url=jdbc:mysql://localhost:3306/dbname
+<a id=__codelineno-5-10 name=__codelineno-5-10 href=#__codelineno-5-10></a>
+<a id=__codelineno-5-11 name=__codelineno-5-11 href=#__codelineno-5-11></a># 设置数据库用户名
+<a id=__codelineno-5-12 name=__codelineno-5-12 href=#__codelineno-5-12></a>spring.datasource.druid.username=root
+<a id=__codelineno-5-13 name=__codelineno-5-13 href=#__codelineno-5-13></a>
+<a id=__codelineno-5-14 name=__codelineno-5-14 href=#__codelineno-5-14></a># 设置数据库密码
+<a id=__codelineno-5-15 name=__codelineno-5-15 href=#__codelineno-5-15></a>spring.datasource.druid.password=123456
+<a id=__codelineno-5-16 name=__codelineno-5-16 href=#__codelineno-5-16></a>
+<a id=__codelineno-5-17 name=__codelineno-5-17 href=#__codelineno-5-17></a># 允许访问底层连接，默认值：true
+<a id=__codelineno-5-18 name=__codelineno-5-18 href=#__codelineno-5-18></a>spring.datasource.druid.access-to-underlying-connection-allowed=true
+<a id=__codelineno-5-19 name=__codelineno-5-19 href=#__codelineno-5-19></a>
+<a id=__codelineno-5-20 name=__codelineno-5-20 href=#__codelineno-5-20></a># 启用异步关闭连接，默认值：false
+<a id=__codelineno-5-21 name=__codelineno-5-21 href=#__codelineno-5-21></a># 如果 removeAbandoned = true，则自动开启。
+<a id=__codelineno-5-22 name=__codelineno-5-22 href=#__codelineno-5-22></a>spring.datasource.druid.async-close-connection-enable=false
+<a id=__codelineno-5-23 name=__codelineno-5-23 href=#__codelineno-5-23></a>
+<a id=__codelineno-5-24 name=__codelineno-5-24 href=#__codelineno-5-24></a># 开启异步初始化，默认值：false
+<a id=__codelineno-5-25 name=__codelineno-5-25 href=#__codelineno-5-25></a>spring.datasource.druid.async-init=false
+<a id=__codelineno-5-26 name=__codelineno-5-26 href=#__codelineno-5-26></a>
+<a id=__codelineno-5-27 name=__codelineno-5-27 href=#__codelineno-5-27></a># 失败后跳过即用于失败重连，默认值：false
+<a id=__codelineno-5-28 name=__codelineno-5-28 href=#__codelineno-5-28></a># true 表示向数据库请求连接失败后，就算后端数据库恢复正常也不进行重连，因此一定要配置 false
+<a id=__codelineno-5-29 name=__codelineno-5-29 href=#__codelineno-5-29></a>spring.datasource.druid.break-after-acquire-failure=false
+<a id=__codelineno-5-30 name=__codelineno-5-30 href=#__codelineno-5-30></a>
+<a id=__codelineno-5-31 name=__codelineno-5-31 href=#__codelineno-5-31></a># 检查SQL执行时间，默认值：false
+<a id=__codelineno-5-32 name=__codelineno-5-32 href=#__codelineno-5-32></a>spring.datasource.druid.check-execute-time=false
+<a id=__codelineno-5-33 name=__codelineno-5-33 href=#__codelineno-5-33></a>
+<a id=__codelineno-5-34 name=__codelineno-5-34 href=#__codelineno-5-34></a># 启动清除过滤器，默认值：true
+<a id=__codelineno-5-35 name=__codelineno-5-35 href=#__codelineno-5-35></a>spring.datasource.druid.clear-filters-enable=true
+<a id=__codelineno-5-36 name=__codelineno-5-36 href=#__codelineno-5-36></a>
+<a id=__codelineno-5-37 name=__codelineno-5-37 href=#__codelineno-5-37></a># 连接属性配置，多个用英文分号隔开
+<a id=__codelineno-5-38 name=__codelineno-5-38 href=#__codelineno-5-38></a>spring.datasource.druid.connect-properties=
+<a id=__codelineno-5-39 name=__codelineno-5-39 href=#__codelineno-5-39></a>
+<a id=__codelineno-5-40 name=__codelineno-5-40 href=#__codelineno-5-40></a># 连接出错尝试几次重新连接，默认值：1
+<a id=__codelineno-5-41 name=__codelineno-5-41 href=#__codelineno-5-41></a>spring.datasource.druid.connection-error-retry-attempts=1
+<a id=__codelineno-5-42 name=__codelineno-5-42 href=#__codelineno-5-42></a>
+<a id=__codelineno-5-43 name=__codelineno-5-43 href=#__codelineno-5-43></a># 指定数据库类型，默认自动探测
+<a id=__codelineno-5-44 name=__codelineno-5-44 href=#__codelineno-5-44></a>spring.datasource.druid.db-type=
+<a id=__codelineno-5-45 name=__codelineno-5-45 href=#__codelineno-5-45></a>
+<a id=__codelineno-5-46 name=__codelineno-5-46 href=#__codelineno-5-46></a># 事务是否自动提交，默认值：true
+<a id=__codelineno-5-47 name=__codelineno-5-47 href=#__codelineno-5-47></a>spring.datasource.druid.default-auto-commit=true
+<a id=__codelineno-5-48 name=__codelineno-5-48 href=#__codelineno-5-48></a>
+<a id=__codelineno-5-49 name=__codelineno-5-49 href=#__codelineno-5-49></a># 指定连接默认的 catalog，默认未设置
+<a id=__codelineno-5-50 name=__codelineno-5-50 href=#__codelineno-5-50></a>spring.datasource.druid.default-catalog=
+<a id=__codelineno-5-51 name=__codelineno-5-51 href=#__codelineno-5-51></a>
+<a id=__codelineno-5-52 name=__codelineno-5-52 href=#__codelineno-5-52></a># 是否设置默认连接只读，默认未设置
+<a id=__codelineno-5-53 name=__codelineno-5-53 href=#__codelineno-5-53></a>spring.datasource.druid.default-read-only=true
+<a id=__codelineno-5-54 name=__codelineno-5-54 href=#__codelineno-5-54></a>
+<a id=__codelineno-5-55 name=__codelineno-5-55 href=#__codelineno-5-55></a># 指定连接的事务的默认隔离级别，默认未设置。
+<a id=__codelineno-5-56 name=__codelineno-5-56 href=#__codelineno-5-56></a># -1 数据库默认隔离级别
+<a id=__codelineno-5-57 name=__codelineno-5-57 href=#__codelineno-5-57></a># 1 未提交读
+<a id=__codelineno-5-58 name=__codelineno-5-58 href=#__codelineno-5-58></a># 2 读写提交
+<a id=__codelineno-5-59 name=__codelineno-5-59 href=#__codelineno-5-59></a># 4 可重复读
+<a id=__codelineno-5-60 name=__codelineno-5-60 href=#__codelineno-5-60></a># 8 串行化
+<a id=__codelineno-5-61 name=__codelineno-5-61 href=#__codelineno-5-61></a>spring.datasource.druid.default-transaction-isolation=
+<a id=__codelineno-5-62 name=__codelineno-5-62 href=#__codelineno-5-62></a>
+<a id=__codelineno-5-63 name=__codelineno-5-63 href=#__codelineno-5-63></a># 当创建连接池时，创建失败后是否立即抛异常，默认值：false
+<a id=__codelineno-5-64 name=__codelineno-5-64 href=#__codelineno-5-64></a>spring.datasource.druid.fail-fast=false
+<a id=__codelineno-5-65 name=__codelineno-5-65 href=#__codelineno-5-65></a>
+<a id=__codelineno-5-66 name=__codelineno-5-66 href=#__codelineno-5-66></a># 设置过滤器别名，多个使用英文逗号隔开，默认值：default
+<a id=__codelineno-5-67 name=__codelineno-5-67 href=#__codelineno-5-67></a># 生产环境不建议使用其他过滤器。
+<a id=__codelineno-5-68 name=__codelineno-5-68 href=#__codelineno-5-68></a>spring.datasource.druid.filters=stat
+<a id=__codelineno-5-69 name=__codelineno-5-69 href=#__codelineno-5-69></a>
+<a id=__codelineno-5-70 name=__codelineno-5-70 href=#__codelineno-5-70></a># 初始化异常则抛出异常，默认值：true
+<a id=__codelineno-5-71 name=__codelineno-5-71 href=#__codelineno-5-71></a>spring.datasource.druid.init-exception-throw=true
+<a id=__codelineno-5-72 name=__codelineno-5-72 href=#__codelineno-5-72></a>
+<a id=__codelineno-5-73 name=__codelineno-5-73 href=#__codelineno-5-73></a># 初始化全局变量，默认值：false
+<a id=__codelineno-5-74 name=__codelineno-5-74 href=#__codelineno-5-74></a>spring.datasource.druid.init-global-variants=false
+<a id=__codelineno-5-75 name=__codelineno-5-75 href=#__codelineno-5-75></a>
+<a id=__codelineno-5-76 name=__codelineno-5-76 href=#__codelineno-5-76></a># 初始化变量，默认值：false
+<a id=__codelineno-5-77 name=__codelineno-5-77 href=#__codelineno-5-77></a>spring.datasource.druid.init-variants=false
+<a id=__codelineno-5-78 name=__codelineno-5-78 href=#__codelineno-5-78></a>
+<a id=__codelineno-5-79 name=__codelineno-5-79 href=#__codelineno-5-79></a># 初始化连接池大小，默认值：0
+<a id=__codelineno-5-80 name=__codelineno-5-80 href=#__codelineno-5-80></a># 建议与 minIdle 大小保持一致
+<a id=__codelineno-5-81 name=__codelineno-5-81 href=#__codelineno-5-81></a>spring.datasource.druid.initial-size=10
+<a id=__codelineno-5-82 name=__codelineno-5-82 href=#__codelineno-5-82></a>
+<a id=__codelineno-5-83 name=__codelineno-5-83 href=#__codelineno-5-83></a># 开启 keepAlive 操作，默认值：false
+<a id=__codelineno-5-84 name=__codelineno-5-84 href=#__codelineno-5-84></a># 打开 keepAlive 之后的效果
+<a id=__codelineno-5-85 name=__codelineno-5-85 href=#__codelineno-5-85></a># 1、初始化连接池时会填充到 minIdle 数量。
+<a id=__codelineno-5-86 name=__codelineno-5-86 href=#__codelineno-5-86></a># 2、连接池中的 minIdle 数量以内的连接，空闲时间超过 minEvictableIdleTimeMillis，则会执行 keepAlive 操作。
+<a id=__codelineno-5-87 name=__codelineno-5-87 href=#__codelineno-5-87></a># 3、当网络断开等原因产生的由 ExceptionSorter 检测出来的死连接被清除后，自动补充连接到 minIdle 数量。
+<a id=__codelineno-5-88 name=__codelineno-5-88 href=#__codelineno-5-88></a>spring.datasource.druid.keep-alive=true
+<a id=__codelineno-5-89 name=__codelineno-5-89 href=#__codelineno-5-89></a>
+<a id=__codelineno-5-90 name=__codelineno-5-90 href=#__codelineno-5-90></a># 两次 keepAlive 操作的时间间隔，默认值：120000（单位毫秒）
+<a id=__codelineno-5-91 name=__codelineno-5-91 href=#__codelineno-5-91></a>spring.datasource.druid.keep-alive-between-time-millis=120000
+<a id=__codelineno-5-92 name=__codelineno-5-92 href=#__codelineno-5-92></a>
+<a id=__codelineno-5-93 name=__codelineno-5-93 href=#__codelineno-5-93></a># 指定连接数据库的超时时间，默认无限制（单位秒）
+<a id=__codelineno-5-94 name=__codelineno-5-94 href=#__codelineno-5-94></a>spring.datasource.druid.login-timeout=
+<a id=__codelineno-5-95 name=__codelineno-5-95 href=#__codelineno-5-95></a>
+<a id=__codelineno-5-96 name=__codelineno-5-96 href=#__codelineno-5-96></a># 设置最大连接数，默认值：8
+<a id=__codelineno-5-97 name=__codelineno-5-97 href=#__codelineno-5-97></a>spring.datasource.druid.max-active=100
+<a id=__codelineno-5-98 name=__codelineno-5-98 href=#__codelineno-5-98></a>
+<a id=__codelineno-5-99 name=__codelineno-5-99 href=#__codelineno-5-99></a># 最大创建任务数，默认值：3
+<a id=__codelineno-5-100 name=__codelineno-5-100 href=#__codelineno-5-100></a>spring.datasource.druid.max-create-task-count=3
+<a id=__codelineno-5-101 name=__codelineno-5-101 href=#__codelineno-5-101></a>
+<a id=__codelineno-5-102 name=__codelineno-5-102 href=#__codelineno-5-102></a># 连接保持空闲而不被驱逐的最大时间，默认值：1800000毫秒=30分钟
+<a id=__codelineno-5-103 name=__codelineno-5-103 href=#__codelineno-5-103></a>spring.datasource.druid.max-evictable-idle-time-millis=1800000
+<a id=__codelineno-5-104 name=__codelineno-5-104 href=#__codelineno-5-104></a>
+<a id=__codelineno-5-105 name=__codelineno-5-105 href=#__codelineno-5-105></a># 最大打开的 prepared-statement 数量，默认值：-1（无限制）
+<a id=__codelineno-5-106 name=__codelineno-5-106 href=#__codelineno-5-106></a>spring.datasource.druid.max-open-prepared-statements=-1
+<a id=__codelineno-5-107 name=__codelineno-5-107 href=#__codelineno-5-107></a>
+<a id=__codelineno-5-108 name=__codelineno-5-108 href=#__codelineno-5-108></a># 设置最大等待时间，默认值：-1（单位毫秒）
+<a id=__codelineno-5-109 name=__codelineno-5-109 href=#__codelineno-5-109></a>spring.datasource.druid.max-wait=6000
+<a id=__codelineno-5-110 name=__codelineno-5-110 href=#__codelineno-5-110></a>
+<a id=__codelineno-5-111 name=__codelineno-5-111 href=#__codelineno-5-111></a># 允许的最大线程等待数，默认值：-1（无限制）
+<a id=__codelineno-5-112 name=__codelineno-5-112 href=#__codelineno-5-112></a>spring.datasource.druid.max-wait-thread-count=-1
+<a id=__codelineno-5-113 name=__codelineno-5-113 href=#__codelineno-5-113></a>
+<a id=__codelineno-5-114 name=__codelineno-5-114 href=#__codelineno-5-114></a># 销毁线程时检测当前连接的最后活动时间和当前时间差大于该值时，关闭当前连接即一个连接在池中最小生存的时间。默认值：1800000毫秒=30分钟
+<a id=__codelineno-5-115 name=__codelineno-5-115 href=#__codelineno-5-115></a>spring.datasource.druid.min-evictable-idle-time-millis=1800000
+<a id=__codelineno-5-116 name=__codelineno-5-116 href=#__codelineno-5-116></a>
+<a id=__codelineno-5-117 name=__codelineno-5-117 href=#__codelineno-5-117></a># 设置最小连接数，默认值：0
+<a id=__codelineno-5-118 name=__codelineno-5-118 href=#__codelineno-5-118></a>spring.datasource.druid.min-idle=10
+<a id=__codelineno-5-119 name=__codelineno-5-119 href=#__codelineno-5-119></a>
+<a id=__codelineno-5-120 name=__codelineno-5-120 href=#__codelineno-5-120></a># 指定连接池名称，未设置则随机生成：`&quot;DataSource-&quot; + System.identityHashCode(this);`
+<a id=__codelineno-5-121 name=__codelineno-5-121 href=#__codelineno-5-121></a>spring.datasource.druid.name=DataSource-1
+<a id=__codelineno-5-122 name=__codelineno-5-122 href=#__codelineno-5-122></a>
+<a id=__codelineno-5-123 name=__codelineno-5-123 href=#__codelineno-5-123></a># 设置获取连接时的重试次数，默认值：0
+<a id=__codelineno-5-124 name=__codelineno-5-124 href=#__codelineno-5-124></a>spring.datasource.druid.not-full-timeout-retry-count=0
+<a id=__codelineno-5-125 name=__codelineno-5-125 href=#__codelineno-5-125></a>
+<a id=__codelineno-5-126 name=__codelineno-5-126 href=#__codelineno-5-126></a># 用于控制当 OnFatalError 发生时最大使用连接数量，用于控制异常发生时并发执行SQL的数量，减轻数据库恢复的压力。默认值：0
+<a id=__codelineno-5-127 name=__codelineno-5-127 href=#__codelineno-5-127></a>spring.datasource.druid.on-fatal-error-max-active=0
+<a id=__codelineno-5-128 name=__codelineno-5-128 href=#__codelineno-5-128></a>
+<a id=__codelineno-5-129 name=__codelineno-5-129 href=#__codelineno-5-129></a># 是否是 Oracle 数据库，默认值：false
+<a id=__codelineno-5-130 name=__codelineno-5-130 href=#__codelineno-5-130></a>spring.datasource.druid.oracle=false
+<a id=__codelineno-5-131 name=__codelineno-5-131 href=#__codelineno-5-131></a>
+<a id=__codelineno-5-132 name=__codelineno-5-132 href=#__codelineno-5-132></a># 物理最大连接数，默认值：-1（无限制）
+<a id=__codelineno-5-133 name=__codelineno-5-133 href=#__codelineno-5-133></a>spring.datasource.druid.phy-max-use-count=-1
+<a id=__codelineno-5-134 name=__codelineno-5-134 href=#__codelineno-5-134></a>
+<a id=__codelineno-5-135 name=__codelineno-5-135 href=#__codelineno-5-135></a># 物理超时时间，默认值：-1（无限制，单位毫秒）
+<a id=__codelineno-5-136 name=__codelineno-5-136 href=#__codelineno-5-136></a>spring.datasource.druid.phy-timeout-millis=-1
+<a id=__codelineno-5-137 name=__codelineno-5-137 href=#__codelineno-5-137></a>
+<a id=__codelineno-5-138 name=__codelineno-5-138 href=#__codelineno-5-138></a># oracle 设为 true，mysql 设为 false。分库分表较多推荐设置为 false，默认值：false
+<a id=__codelineno-5-139 name=__codelineno-5-139 href=#__codelineno-5-139></a>spring.datasource.druid.pool-prepared-statements=false
+<a id=__codelineno-5-140 name=__codelineno-5-140 href=#__codelineno-5-140></a>
+<a id=__codelineno-5-141 name=__codelineno-5-141 href=#__codelineno-5-141></a># 打开PSCache，并且指定每个连接上PSCache的大小，默认值：10
+<a id=__codelineno-5-142 name=__codelineno-5-142 href=#__codelineno-5-142></a># poolPreparedStatements 默认为 false，属性文件中将 poolPreparedStatements 设置为 true，则该值生效。
+<a id=__codelineno-5-143 name=__codelineno-5-143 href=#__codelineno-5-143></a># 若属性文件中设置该值且大于0时，poolPreparedStatements 会自动设置为 true。
+<a id=__codelineno-5-144 name=__codelineno-5-144 href=#__codelineno-5-144></a>spring.datasource.druid.max-pool-prepared-statement-per-connection-size=10
+<a id=__codelineno-5-145 name=__codelineno-5-145 href=#__codelineno-5-145></a>
+<a id=__codelineno-5-146 name=__codelineno-5-146 href=#__codelineno-5-146></a># 查询超时时间，默认值：0（无限制，单位秒）
+<a id=__codelineno-5-147 name=__codelineno-5-147 href=#__codelineno-5-147></a>spring.datasource.druid.query-timeout=0
+<a id=__codelineno-5-148 name=__codelineno-5-148 href=#__codelineno-5-148></a>
+<a id=__codelineno-5-149 name=__codelineno-5-149 href=#__codelineno-5-149></a># 指定当连接超过废弃超时时间时，是否立刻删除该连接，默认值：false
+<a id=__codelineno-5-150 name=__codelineno-5-150 href=#__codelineno-5-150></a>spring.datasource.druid.remove-abandoned=false
+<a id=__codelineno-5-151 name=__codelineno-5-151 href=#__codelineno-5-151></a>
+<a id=__codelineno-5-152 name=__codelineno-5-152 href=#__codelineno-5-152></a># 废弃连接超时指定时间的连接，默认值：5分钟
+<a id=__codelineno-5-153 name=__codelineno-5-153 href=#__codelineno-5-153></a>spring.datasource.druid.remove-abandoned-timeout-millis=300 * 1000
+<a id=__codelineno-5-154 name=__codelineno-5-154 href=#__codelineno-5-154></a>
+<a id=__codelineno-5-155 name=__codelineno-5-155 href=#__codelineno-5-155></a># 共享预处理语句，默认值：false
+<a id=__codelineno-5-156 name=__codelineno-5-156 href=#__codelineno-5-156></a>spring.datasource.druid.share-prepared-statements=false
+<a id=__codelineno-5-157 name=__codelineno-5-157 href=#__codelineno-5-157></a>
+<a id=__codelineno-5-158 name=__codelineno-5-158 href=#__codelineno-5-158></a># 从连接池借用连接时，是否测试该连接，默认值：false
+<a id=__codelineno-5-159 name=__codelineno-5-159 href=#__codelineno-5-159></a>spring.datasource.druid.test-on-borrow=false
+<a id=__codelineno-5-160 name=__codelineno-5-160 href=#__codelineno-5-160></a>
+<a id=__codelineno-5-161 name=__codelineno-5-161 href=#__codelineno-5-161></a># 申请连接时检测，如果空闲时间大于 timeBetweenEvictionRunsMillis，执行 validationQuery 检测连接是否有效。默认值：false
+<a id=__codelineno-5-162 name=__codelineno-5-162 href=#__codelineno-5-162></a>spring.datasource.druid.test-on-return=false
+<a id=__codelineno-5-163 name=__codelineno-5-163 href=#__codelineno-5-163></a>
+<a id=__codelineno-5-164 name=__codelineno-5-164 href=#__codelineno-5-164></a># 归还连接时会执行 validationQuery 检测连接是否有效，默认值：true
+<a id=__codelineno-5-165 name=__codelineno-5-165 href=#__codelineno-5-165></a>spring.datasource.druid.test-while-idle=true
+<a id=__codelineno-5-166 name=__codelineno-5-166 href=#__codelineno-5-166></a>
+<a id=__codelineno-5-167 name=__codelineno-5-167 href=#__codelineno-5-167></a># 指定两次错误连接的最大时间间隔，默认值：500毫秒
+<a id=__codelineno-5-168 name=__codelineno-5-168 href=#__codelineno-5-168></a>spring.datasource.druid.time-between-connect-error-millis=500
+<a id=__codelineno-5-169 name=__codelineno-5-169 href=#__codelineno-5-169></a>
+<a id=__codelineno-5-170 name=__codelineno-5-170 href=#__codelineno-5-170></a># 既作为检测的间隔时间又作为 testWhileIdel 执行的依据即此值决定是否空闲，因此此值一定要设置合理。
+<a id=__codelineno-5-171 name=__codelineno-5-171 href=#__codelineno-5-171></a># 即一个空闲线程，最大的生成时间，检测需要关闭的空闲连接。默认值：60000毫秒
+<a id=__codelineno-5-172 name=__codelineno-5-172 href=#__codelineno-5-172></a>spring.datasource.druid.time-between-eviction-runs-millis=30000
+<a id=__codelineno-5-173 name=__codelineno-5-173 href=#__codelineno-5-173></a>
+<a id=__codelineno-5-174 name=__codelineno-5-174 href=#__codelineno-5-174></a># 事务查询超时时间，默认值：0（小于或等于 0 时取 query-timeout 的值）
+<a id=__codelineno-5-175 name=__codelineno-5-175 href=#__codelineno-5-175></a>spring.datasource.druid.transaction-query-timeout=0
+<a id=__codelineno-5-176 name=__codelineno-5-176 href=#__codelineno-5-176></a>
+<a id=__codelineno-5-177 name=__codelineno-5-177 href=#__codelineno-5-177></a># 事务时间阈值，默认值：0（单位毫秒）
+<a id=__codelineno-5-178 name=__codelineno-5-178 href=#__codelineno-5-178></a>spring.datasource.druid.transaction-threshold-millis=0
+<a id=__codelineno-5-179 name=__codelineno-5-179 href=#__codelineno-5-179></a>
+<a id=__codelineno-5-180 name=__codelineno-5-180 href=#__codelineno-5-180></a># 使用非公平锁，默认未设置
+<a id=__codelineno-5-181 name=__codelineno-5-181 href=#__codelineno-5-181></a>spring.datasource.druid.use-unfair-lock=true
+<a id=__codelineno-5-182 name=__codelineno-5-182 href=#__codelineno-5-182></a>
+<a id=__codelineno-5-183 name=__codelineno-5-183 href=#__codelineno-5-183></a># 使用 Oracle 隐式缓存，默认值：true
+<a id=__codelineno-5-184 name=__codelineno-5-184 href=#__codelineno-5-184></a>spring.datasource.druid.use-oracle-implicit-cache=true
+<a id=__codelineno-5-185 name=__codelineno-5-185 href=#__codelineno-5-185></a>
+<a id=__codelineno-5-186 name=__codelineno-5-186 href=#__codelineno-5-186></a># 指定连接的有效检查类，默认未设置
+<a id=__codelineno-5-187 name=__codelineno-5-187 href=#__codelineno-5-187></a>spring.datasource.druid.valid-connection-checker=
+<a id=__codelineno-5-188 name=__codelineno-5-188 href=#__codelineno-5-188></a>
+<a id=__codelineno-5-189 name=__codelineno-5-189 href=#__codelineno-5-189></a># 用来检测连接是否有效的 SQL 必须是一个查询语句，默认未设
+<a id=__codelineno-5-190 name=__codelineno-5-190 href=#__codelineno-5-190></a>spring.datasource.druid.validation-query=select 1
+<a id=__codelineno-5-191 name=__codelineno-5-191 href=#__codelineno-5-191></a>
+<a id=__codelineno-5-192 name=__codelineno-5-192 href=#__codelineno-5-192></a># 检测连接是否有效的超时时间，默认值：-1（单位秒）
+<a id=__codelineno-5-193 name=__codelineno-5-193 href=#__codelineno-5-193></a>spring.datasource.druid.validation-query-timeout=-1
+</code></pre></div> <h2 id=_3>过滤器配置<a class=headerlink href=#_3 title="Permanent link">&para;</a></h2> <p>Druid 内置的过滤器类及别名，已在 <code>druid-xxx.jar/META-INF/druid-filter.properties</code> 属性文件中定义：</p> <div class=highlight><pre><span></span><code><a id=__codelineno-6-1 name=__codelineno-6-1 href=#__codelineno-6-1></a>druid.filters.default=com.alibaba.druid.filter.stat.StatFilter
+<a id=__codelineno-6-2 name=__codelineno-6-2 href=#__codelineno-6-2></a>druid.filters.stat=com.alibaba.druid.filter.stat.StatFilter
+<a id=__codelineno-6-3 name=__codelineno-6-3 href=#__codelineno-6-3></a>druid.filters.mergeStat=com.alibaba.druid.filter.stat.MergeStatFilter
+<a id=__codelineno-6-4 name=__codelineno-6-4 href=#__codelineno-6-4></a>druid.filters.counter=com.alibaba.druid.filter.stat.StatFilter
+<a id=__codelineno-6-5 name=__codelineno-6-5 href=#__codelineno-6-5></a>druid.filters.encoding=com.alibaba.druid.filter.encoding.EncodingConvertFilter
+<a id=__codelineno-6-6 name=__codelineno-6-6 href=#__codelineno-6-6></a>druid.filters.log4j=com.alibaba.druid.filter.logging.Log4jFilter
+<a id=__codelineno-6-7 name=__codelineno-6-7 href=#__codelineno-6-7></a>druid.filters.log4j2=com.alibaba.druid.filter.logging.Log4j2Filter
+<a id=__codelineno-6-8 name=__codelineno-6-8 href=#__codelineno-6-8></a>druid.filters.slf4j=com.alibaba.druid.filter.logging.Slf4jLogFilter
+<a id=__codelineno-6-9 name=__codelineno-6-9 href=#__codelineno-6-9></a>druid.filters.commonlogging=com.alibaba.druid.filter.logging.CommonsLogFilter
+<a id=__codelineno-6-10 name=__codelineno-6-10 href=#__codelineno-6-10></a>druid.filters.commonLogging=com.alibaba.druid.filter.logging.CommonsLogFilter
+<a id=__codelineno-6-11 name=__codelineno-6-11 href=#__codelineno-6-11></a>druid.filters.wall=com.alibaba.druid.wall.WallFilter
+<a id=__codelineno-6-12 name=__codelineno-6-12 href=#__codelineno-6-12></a>druid.filters.config=com.alibaba.druid.filter.config.ConfigFilter
+<a id=__codelineno-6-13 name=__codelineno-6-13 href=#__codelineno-6-13></a>druid.filters.haRandomValidator=com.alibaba.druid.pool.ha.selector.RandomDataSourceValidateFilter
+</code></pre></div> <p>除 StatFilter 作为默认过滤器外，其他都为关闭状态。配置过滤器的方法如下：</p> <div class=highlight><pre><span></span><code><a id=__codelineno-7-1 name=__codelineno-7-1 href=#__codelineno-7-1></a># 设置过滤器别名，多个使用英文逗号隔开，默认值：default
+<a id=__codelineno-7-2 name=__codelineno-7-2 href=#__codelineno-7-2></a># 生产环境不建议使用其他过滤器。
+<a id=__codelineno-7-3 name=__codelineno-7-3 href=#__codelineno-7-3></a>spring.datasource.druid.filters=stat
+</code></pre></div> <h3 id=statviewservlet>StatViewServlet<a class=headerlink href=#statviewservlet title="Permanent link">&para;</a></h3> <p>Druid 管控台配置，考虑到安全问题默认为关闭，如需开启，建议设置密码或白名单以保障安全。配置开启后，才能打开管控台页面查看监控信息。</p> <p>浏览器访问：<a href=http://127.0.0.1:8080/druid/index.html>http://127.0.0.1:8080/druid/index.html</a></p> <div class=highlight><pre><span></span><code><a id=__codelineno-8-1 name=__codelineno-8-1 href=#__codelineno-8-1></a>## DruidStatViewServletConfiguration
+<a id=__codelineno-8-2 name=__codelineno-8-2 href=#__codelineno-8-2></a># 是否开启管控台页面访问，默认值：false
+<a id=__codelineno-8-3 name=__codelineno-8-3 href=#__codelineno-8-3></a>spring.datasource.druid.stat-view-servlet.enabled=true
+<a id=__codelineno-8-4 name=__codelineno-8-4 href=#__codelineno-8-4></a># URL 映射路径，默认值：/druid/*
+<a id=__codelineno-8-5 name=__codelineno-8-5 href=#__codelineno-8-5></a>spring.datasource.druid.stat-view-servlet.url-pattern=/druid/*
+<a id=__codelineno-8-6 name=__codelineno-8-6 href=#__codelineno-8-6></a># 是否允许重置，默认允许
+<a id=__codelineno-8-7 name=__codelineno-8-7 href=#__codelineno-8-7></a># 注意：设置为 false 后，管控台的重置按钮并不会消失，但数据不会重置
+<a id=__codelineno-8-8 name=__codelineno-8-8 href=#__codelineno-8-8></a>spring.datasource.druid.stat-view-servlet.reset-enable=false
+<a id=__codelineno-8-9 name=__codelineno-8-9 href=#__codelineno-8-9></a># 管控台登录用户名，默认未设置
+<a id=__codelineno-8-10 name=__codelineno-8-10 href=#__codelineno-8-10></a>spring.datasource.druid.stat-view-servlet.login-username=admin
+<a id=__codelineno-8-11 name=__codelineno-8-11 href=#__codelineno-8-11></a># 管控台登录密码，默认未设置
+<a id=__codelineno-8-12 name=__codelineno-8-12 href=#__codelineno-8-12></a>spring.datasource.druid.stat-view-servlet.login-password=admin123
+<a id=__codelineno-8-13 name=__codelineno-8-13 href=#__codelineno-8-13></a># 管控台访问白名单，默认值：127.0.0.1
+<a id=__codelineno-8-14 name=__codelineno-8-14 href=#__codelineno-8-14></a>spring.datasource.druid.stat-view-servlet.allow=127.0.0.1,10.177.37.15
+<a id=__codelineno-8-15 name=__codelineno-8-15 href=#__codelineno-8-15></a># 管控台访问黑名单，默认未设置
+<a id=__codelineno-8-16 name=__codelineno-8-16 href=#__codelineno-8-16></a>spring.datasource.druid.stat-view-servlet.deny=10.177.37.14
+</code></pre></div> <h3 id=webstatfilter>WebStatFilter<a class=headerlink href=#webstatfilter title="Permanent link">&para;</a></h3> <p>开启 Web 请求监控，默认为关闭。配置开启后，可以在 Druid 管控台查看 Web 请求的监控信息。</p> <div class=highlight><pre><span></span><code><a id=__codelineno-9-1 name=__codelineno-9-1 href=#__codelineno-9-1></a>## DruidWebStatFilterConfiguration
+<a id=__codelineno-9-2 name=__codelineno-9-2 href=#__codelineno-9-2></a># 是否开启 Web 请求的统计，默认值：false
+<a id=__codelineno-9-3 name=__codelineno-9-3 href=#__codelineno-9-3></a>spring.datasource.druid.web-stat-filter.enabled=true
+<a id=__codelineno-9-4 name=__codelineno-9-4 href=#__codelineno-9-4></a># 以下参数保持默认配置即可，生产环境不建议启用
+<a id=__codelineno-9-5 name=__codelineno-9-5 href=#__codelineno-9-5></a># spring.datasource.druid.web-stat-filter.url-pattern=
+<a id=__codelineno-9-6 name=__codelineno-9-6 href=#__codelineno-9-6></a># spring.datasource.druid.web-stat-filter.exclusions=
+<a id=__codelineno-9-7 name=__codelineno-9-7 href=#__codelineno-9-7></a># spring.datasource.druid.web-stat-filter.session-stat-enable=
+<a id=__codelineno-9-8 name=__codelineno-9-8 href=#__codelineno-9-8></a># spring.datasource.druid.web-stat-filter.session-stat-max-count=
+<a id=__codelineno-9-9 name=__codelineno-9-9 href=#__codelineno-9-9></a># spring.datasource.druid.web-stat-filter.principal-session-name=
+<a id=__codelineno-9-10 name=__codelineno-9-10 href=#__codelineno-9-10></a># spring.datasource.druid.web-stat-filter.principal-cookie-name=
+<a id=__codelineno-9-11 name=__codelineno-9-11 href=#__codelineno-9-11></a># spring.datasource.druid.web-stat-filter.profile-enable=
+</code></pre></div> <h3 id=statfilter>StatFilter<a class=headerlink href=#statfilter title="Permanent link">&para;</a></h3> <p>用于统计监控信息，默认开启。</p> <div class=highlight><pre><span></span><code><a id=__codelineno-10-1 name=__codelineno-10-1 href=#__codelineno-10-1></a>## StatFilter
+<a id=__codelineno-10-2 name=__codelineno-10-2 href=#__codelineno-10-2></a># 是否开启统计，默认值：true
+<a id=__codelineno-10-3 name=__codelineno-10-3 href=#__codelineno-10-3></a>spring.datasource.druid.filter.stat.enabled=true
+<a id=__codelineno-10-4 name=__codelineno-10-4 href=#__codelineno-10-4></a># 启动连接堆跟踪，默认值：false
+<a id=__codelineno-10-5 name=__codelineno-10-5 href=#__codelineno-10-5></a>spring.datasource.druid.filter.stat.connection-stack-trace-enable=false
+<a id=__codelineno-10-6 name=__codelineno-10-6 href=#__codelineno-10-6></a># 是否在日志中打印慢SQL，默认值：false
+<a id=__codelineno-10-7 name=__codelineno-10-7 href=#__codelineno-10-7></a>spring.datasource.druid.filter.stat.log-slow-sql=true
+<a id=__codelineno-10-8 name=__codelineno-10-8 href=#__codelineno-10-8></a># 设置慢SQL的执行时长，默认值：3000毫秒
+<a id=__codelineno-10-9 name=__codelineno-10-9 href=#__codelineno-10-9></a>spring.datasource.druid.filter.stat.slow-sql-millis=3000
+<a id=__codelineno-10-10 name=__codelineno-10-10 href=#__codelineno-10-10></a># 设置慢SQL的日志级别，默认值：ERROR
+<a id=__codelineno-10-11 name=__codelineno-10-11 href=#__codelineno-10-11></a>spring.datasource.druid.filter.stat.slow-sql-log-level=ERROR
+<a id=__codelineno-10-12 name=__codelineno-10-12 href=#__codelineno-10-12></a># 是否合并SQL，默认值：false
+<a id=__codelineno-10-13 name=__codelineno-10-13 href=#__codelineno-10-13></a>spring.datasource.druid.filter.stat.merge-sql=false
+</code></pre></div> <h3 id=wallfilter>WallFilter<a class=headerlink href=#wallfilter title="Permanent link">&para;</a></h3> <p>这是一个特殊的过滤器，用于监控 SQL 安全，避免 SQL 注入，默认为关闭。在 Spring 中配置启用 WallFilter 时，需要先注入 StatFilter 开启监控、WallFilter 配置各种信息、WallConfig 配置拦截 SQL 的规则。</p> <p>WallConfig 配置参数较多，通常情况下保持默认配置即可。WallConfig 配置详情文档：<a href=https://www.cnblogs.com/soundcode/p/6483899.html>https://www.cnblogs.com/soundcode/p/6483899.html</a></p> <div class=highlight><pre><span></span><code><a id=__codelineno-11-1 name=__codelineno-11-1 href=#__codelineno-11-1></a>## WallFilter
+<a id=__codelineno-11-2 name=__codelineno-11-2 href=#__codelineno-11-2></a># 是否开启 SQL 监控，默认值：false
+<a id=__codelineno-11-3 name=__codelineno-11-3 href=#__codelineno-11-3></a>spring.datasource.druid.filter.wall.enabled=true
+</code></pre></div> <h3 id=logfilter>LogFilter<a class=headerlink href=#logfilter title="Permanent link">&para;</a></h3> <p>Druid 内置提供了四种 LogFilter（Log4jFilter、Log4j2Filter、CommonsLogFilter、Slf4jLogFilter），用于输出 JDBC 执行的日志。这些 Filter 都是 Filter-Chain 扩展机制中的 Filter，所以配置方式可以参考这里：<a href=https://github.com/alibaba/druid/wiki/Druid%E4%B8%AD%E4%BD%BF%E7%94%A8log4j2%E8%BF%9B%E8%A1%8C%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA>Druid 中使用 log4j2 进行日志输出</a></p> <p>尽管 Druid 支持日志过滤器，但在生产环境几乎是不可能开启日志配置的。所以，这里只作了解，实际应用比较复杂。</p> <div class=highlight><pre><span></span><code><a id=__codelineno-12-1 name=__codelineno-12-1 href=#__codelineno-12-1></a># 是否开启日志，默认值：false
+<a id=__codelineno-12-2 name=__codelineno-12-2 href=#__codelineno-12-2></a>spring.datasource.druid.filter.slf4j.enabled=false
+<a id=__codelineno-12-3 name=__codelineno-12-3 href=#__codelineno-12-3></a>spring.datasource.druid.filter.log4j.enabled=false
+<a id=__codelineno-12-4 name=__codelineno-12-4 href=#__codelineno-12-4></a>spring.datasource.druid.filter.log4j2.enabled=false
+<a id=__codelineno-12-5 name=__codelineno-12-5 href=#__codelineno-12-5></a>spring.datasource.druid.filter.commons-log.enabled=false
+</code></pre></div> <h3 id=encodingconvertfilter>EncodingConvertFilter<a class=headerlink href=#encodingconvertfilter title="Permanent link">&para;</a></h3> <p>由于历史原因，一些数据库保存数据的时候使用了错误编码，需要做编码转换。通过 connectionProperties 来配置客户端编码和服务器端编码。</p> <div class=highlight><pre><span></span><code><a id=__codelineno-13-1 name=__codelineno-13-1 href=#__codelineno-13-1></a># 是否开启字符编码转换，默认值：false
+<a id=__codelineno-13-2 name=__codelineno-13-2 href=#__codelineno-13-2></a>spring.datasource.druid.filter.encoding.enabled=true
+<a id=__codelineno-13-3 name=__codelineno-13-3 href=#__codelineno-13-3></a># 指定客户端和服务端的字符编码
+<a id=__codelineno-13-4 name=__codelineno-13-4 href=#__codelineno-13-4></a>spring.datasource.druid.connection-properties=clientEncoding=UTF-8;serverEncoding=ISO-8859-1
+</code></pre></div> <h3 id=configfilter>ConfigFilter<a class=headerlink href=#configfilter title="Permanent link">&para;</a></h3> <p>ConfigFilter的作用包括：</p> <ol> <li>从配置文件中读取配置</li> <li>从远程http文件中读取配置</li> <li>为数据库密码提供加密功能</li> </ol> <p>详情查看官方文档：<a href=https://github.com/alibaba/druid/wiki/%E4%BD%BF%E7%94%A8ConfigFilter>使用 ConfigFilter</a></p> <div class=highlight><pre><span></span><code><a id=__codelineno-14-1 name=__codelineno-14-1 href=#__codelineno-14-1></a># 是否开启配置，默认值：false
+<a id=__codelineno-14-2 name=__codelineno-14-2 href=#__codelineno-14-2></a>spring.datasource.druid.filter.config.enabled=true
+<a id=__codelineno-14-3 name=__codelineno-14-3 href=#__codelineno-14-3></a># 密码加密处理后，需要开启解密
+<a id=__codelineno-14-4 name=__codelineno-14-4 href=#__codelineno-14-4></a>spring.datasource.druid.connection-properties=config.decrypt=true
+</code></pre></div> <h2 id=_4>多数据源配置<a class=headerlink href=#_4 title="Permanent link">&para;</a></h2> <p>Spring Boot 2.X 版本不再支持配置继承，多数据源的话每个数据源的所有配置都需要单独配置，否则配置不会生效。</p> <p>1）添加多数据配置：</p> <div class=highlight><pre><span></span><code><a id=__codelineno-15-1 name=__codelineno-15-1 href=#__codelineno-15-1></a>## Spring DruidDataSource Configuration
+<a id=__codelineno-15-2 name=__codelineno-15-2 href=#__codelineno-15-2></a># spring.datasource.druid.one.name=DataSource-1
+<a id=__codelineno-15-3 name=__codelineno-15-3 href=#__codelineno-15-3></a># spring.datasource.druid.one.driver-class-name=com.mysql.cj.jdbc.Driver
+<a id=__codelineno-15-4 name=__codelineno-15-4 href=#__codelineno-15-4></a>spring.datasource.druid.one.url=jdbc:mysql://localhost:3306/dbname1?serverTimezone=Asia/Shanghai&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true&amp;autoReconnectForPools=true&amp;noAccessToProcedureBodies=true&amp;allowMultiQueries=true&amp;zeroDateTimeBehavior=convertToNull
+<a id=__codelineno-15-5 name=__codelineno-15-5 href=#__codelineno-15-5></a>spring.datasource.druid.one.username=root
+<a id=__codelineno-15-6 name=__codelineno-15-6 href=#__codelineno-15-6></a>spring.datasource.druid.one.password=123456
+<a id=__codelineno-15-7 name=__codelineno-15-7 href=#__codelineno-15-7></a>spring.datasource.druid.one.initial-size=10
+<a id=__codelineno-15-8 name=__codelineno-15-8 href=#__codelineno-15-8></a>spring.datasource.druid.one.min-idle=10
+<a id=__codelineno-15-9 name=__codelineno-15-9 href=#__codelineno-15-9></a>spring.datasource.druid.one.max-active=100
+<a id=__codelineno-15-10 name=__codelineno-15-10 href=#__codelineno-15-10></a>spring.datasource.druid.one.max-wait=6000
+<a id=__codelineno-15-11 name=__codelineno-15-11 href=#__codelineno-15-11></a>spring.datasource.druid.one.test-while-idle=true
+<a id=__codelineno-15-12 name=__codelineno-15-12 href=#__codelineno-15-12></a>spring.datasource.druid.one.test-on-borrow=false
+<a id=__codelineno-15-13 name=__codelineno-15-13 href=#__codelineno-15-13></a>spring.datasource.druid.one.test-on-return=false
+<a id=__codelineno-15-14 name=__codelineno-15-14 href=#__codelineno-15-14></a>spring.datasource.druid.one.validation-query=select 1
+<a id=__codelineno-15-15 name=__codelineno-15-15 href=#__codelineno-15-15></a>spring.datasource.druid.one.time-between-eviction-runs-millis=30000
+<a id=__codelineno-15-16 name=__codelineno-15-16 href=#__codelineno-15-16></a>spring.datasource.druid.one.min-evictable-idle-time-millis=600000
+<a id=__codelineno-15-17 name=__codelineno-15-17 href=#__codelineno-15-17></a>spring.datasource.druid.one.max-evictable-idle-time-millis=900000
+<a id=__codelineno-15-18 name=__codelineno-15-18 href=#__codelineno-15-18></a>spring.datasource.druid.one.keep-alive=true
+<a id=__codelineno-15-19 name=__codelineno-15-19 href=#__codelineno-15-19></a>
+<a id=__codelineno-15-20 name=__codelineno-15-20 href=#__codelineno-15-20></a>
+<a id=__codelineno-15-21 name=__codelineno-15-21 href=#__codelineno-15-21></a>## Spring DruidDataSource Configuration
+<a id=__codelineno-15-22 name=__codelineno-15-22 href=#__codelineno-15-22></a># spring.datasource.druid.two.name=DataSource-1
+<a id=__codelineno-15-23 name=__codelineno-15-23 href=#__codelineno-15-23></a># spring.datasource.druid.two.driver-class-name=com.mysql.cj.jdbc.Driver
+<a id=__codelineno-15-24 name=__codelineno-15-24 href=#__codelineno-15-24></a>spring.datasource.druid.two.url=jdbc:mysql://localhost:3306/dbname2?serverTimezone=Asia/Shanghai&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true&amp;autoReconnectForPools=true&amp;noAccessToProcedureBodies=true&amp;allowMultiQueries=true&amp;zeroDateTimeBehavior=convertToNull
+<a id=__codelineno-15-25 name=__codelineno-15-25 href=#__codelineno-15-25></a>spring.datasource.druid.two.username=root
+<a id=__codelineno-15-26 name=__codelineno-15-26 href=#__codelineno-15-26></a>spring.datasource.druid.two.password=123456
+<a id=__codelineno-15-27 name=__codelineno-15-27 href=#__codelineno-15-27></a>spring.datasource.druid.two.initial-size=10
+<a id=__codelineno-15-28 name=__codelineno-15-28 href=#__codelineno-15-28></a>spring.datasource.druid.two.min-idle=10
+<a id=__codelineno-15-29 name=__codelineno-15-29 href=#__codelineno-15-29></a>spring.datasource.druid.two.max-active=100
+<a id=__codelineno-15-30 name=__codelineno-15-30 href=#__codelineno-15-30></a>spring.datasource.druid.two.max-wait=6000
+<a id=__codelineno-15-31 name=__codelineno-15-31 href=#__codelineno-15-31></a>spring.datasource.druid.two.test-while-idle=true
+<a id=__codelineno-15-32 name=__codelineno-15-32 href=#__codelineno-15-32></a>spring.datasource.druid.two.test-on-borrow=false
+<a id=__codelineno-15-33 name=__codelineno-15-33 href=#__codelineno-15-33></a>spring.datasource.druid.two.test-on-return=false
+<a id=__codelineno-15-34 name=__codelineno-15-34 href=#__codelineno-15-34></a>spring.datasource.druid.two.validation-query=select 1
+<a id=__codelineno-15-35 name=__codelineno-15-35 href=#__codelineno-15-35></a>spring.datasource.druid.two.time-between-eviction-runs-millis=30000
+<a id=__codelineno-15-36 name=__codelineno-15-36 href=#__codelineno-15-36></a>spring.datasource.druid.two.min-evictable-idle-time-millis=600000
+<a id=__codelineno-15-37 name=__codelineno-15-37 href=#__codelineno-15-37></a>spring.datasource.druid.two.max-evictable-idle-time-millis=900000
+<a id=__codelineno-15-38 name=__codelineno-15-38 href=#__codelineno-15-38></a>spring.datasource.druid.two.keep-alive=true
+</code></pre></div> <p>2）创建多数据源：</p> <div class=highlight><pre><span></span><code><a id=__codelineno-16-1 name=__codelineno-16-1 href=#__codelineno-16-1></a>@Primary
+<a id=__codelineno-16-2 name=__codelineno-16-2 href=#__codelineno-16-2></a>@Bean
+<a id=__codelineno-16-3 name=__codelineno-16-3 href=#__codelineno-16-3></a>@ConfigurationProperties(&quot;spring.datasource.druid.one&quot;)
+<a id=__codelineno-16-4 name=__codelineno-16-4 href=#__codelineno-16-4></a>public DruidDataSource dataSourceOne() {
+<a id=__codelineno-16-5 name=__codelineno-16-5 href=#__codelineno-16-5></a>    return DruidDataSourceBuilder.create().build();
+<a id=__codelineno-16-6 name=__codelineno-16-6 href=#__codelineno-16-6></a>}
+<a id=__codelineno-16-7 name=__codelineno-16-7 href=#__codelineno-16-7></a>
+<a id=__codelineno-16-8 name=__codelineno-16-8 href=#__codelineno-16-8></a>@Bean
+<a id=__codelineno-16-9 name=__codelineno-16-9 href=#__codelineno-16-9></a>@ConfigurationProperties(&quot;spring.datasource.druid.two&quot;)
+<a id=__codelineno-16-10 name=__codelineno-16-10 href=#__codelineno-16-10></a>public DruidDataSource dataSourceTwo() {
+<a id=__codelineno-16-11 name=__codelineno-16-11 href=#__codelineno-16-11></a>    return DruidDataSourceBuilder.create().build();
+<a id=__codelineno-16-12 name=__codelineno-16-12 href=#__codelineno-16-12></a>}
+</code></pre></div> <p>3）使用多数据源：</p> <div class=highlight><pre><span></span><code><a id=__codelineno-17-1 name=__codelineno-17-1 href=#__codelineno-17-1></a>@Autowired
+<a id=__codelineno-17-2 name=__codelineno-17-2 href=#__codelineno-17-2></a>private DruidDataSource dataSourceOne;
+<a id=__codelineno-17-3 name=__codelineno-17-3 href=#__codelineno-17-3></a>
+<a id=__codelineno-17-4 name=__codelineno-17-4 href=#__codelineno-17-4></a>@Autowired
+<a id=__codelineno-17-5 name=__codelineno-17-5 href=#__codelineno-17-5></a>@Qualifier(&quot;dataSourceTwo&quot;)
+<a id=__codelineno-17-6 name=__codelineno-17-6 href=#__codelineno-17-6></a>private DruidDataSource dataSourceTwo;
+</code></pre></div> <p>配置多数据源的注意事项：</p> <ul> <li>配置多数据源时，最好通过 <a class="magiclink magiclink-github magiclink-mention" href=https://github.com/Primary title="GitHub User: Primary">@Primary</a> 指定默认数据源。</li> <li>Druid 创建数据源对象时，建议使用 DruidDataSource 代替 DataSource。</li> <li>Druid 创建数据源对象时，注意创建 Bean 的方法名，最好通过 <a class="magiclink magiclink-github magiclink-mention" href=https://github.com/Bean title="GitHub User: Bean">@Bean</a>("dataSourceOne") 来指定数据源对象的名称。</li> <li>多数据源通常结合 ORM 框架一起使用，具体可参考 Kaddo 框架的 ORM 配置。</li> </ul> </article> </div> </div> <a href=# class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg> Back to top </a> </main> <footer class=md-footer> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> Copyright &copy; 2022 Tsollu </div> Made with <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs </a> </div> <div class=md-social> <a href=https://github.com/tsollu target=_blank rel=noopener title=github.com class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> </a> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"base": "..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script> <script src=../assets/javascripts/bundle.6c7ad80a.min.js></script> </body> </html>
