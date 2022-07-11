@@ -8,6 +8,8 @@ site_description: >-
 # Repository
 repo_name: tsollu/tsollu-bom
 repo_url: https://github.com/tsollu/tsollu-bom
+edit_uri: edit/main/docs/
+
 
 # Copyright
 copyright: Copyright &copy; 2022 Tsollu
