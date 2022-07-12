@@ -3,14 +3,14 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>kaddo-dependencies</artifactId>
+    <artifactId>tsollu-dependencies</artifactId>
     <packaging>pom</packaging>
-    <name>kaddo-dependencies</name>
-    <description>Kaddo bill of materials</description>
+    <name>tsollu-dependencies</name>
+    <description>Tsollu bill of materials</description>
 
     <parent>
-        <groupId>com.kaddo</groupId>
-        <artifactId>kaddo-parent</artifactId>
+        <groupId>com.tsollu</groupId>
+        <artifactId>tsollu-parent</artifactId>
         <version>0.1.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>

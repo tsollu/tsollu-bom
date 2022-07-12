@@ -29,9 +29,9 @@ Kaddo BOM 是完全兼容 Spring Boot 和 Spring Cloud，致力于提供基础�
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-dependencies</artifactId>
-                <version>${kaddo-framework.version}</version>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-dependencies</artifactId>
+                <version>${tsollu-framework.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -58,9 +58,9 @@ Kaddo BOM 是完全兼容 Spring Boot 和 Spring Cloud，致力于提供基础�
     <version>1.0.0-SNAPSHOT</version>
 
     <parent>
-        <groupId>com.kaddo</groupId>
-        <artifactId>kaddo-dependencies</artifactId>
-        <version>${kaddo-framework.version}</version>
+        <groupId>com.tsollu</groupId>
+        <artifactId>tsollu-dependencies</artifactId>
+        <version>${tsollu-framework.version}</version>
         <relativePath/>
     </parent>
 

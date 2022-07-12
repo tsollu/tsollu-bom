@@ -10,10 +10,10 @@
     <url>https://square.github.io/retrofit/</url>
 
     <parent>
-        <groupId>com.kaddo</groupId>
-        <artifactId>kaddo-dependencies</artifactId>
+        <groupId>com.tsollu</groupId>
+        <artifactId>tsollu-dependencies</artifactId>
         <version>0.1.1-SNAPSHOT</version>
-        <relativePath>../kaddo-dependencies/pom.xml</relativePath>
+        <relativePath>../tsollu-dependencies/pom.xml</relativePath>
     </parent>
 
     <dependencies>

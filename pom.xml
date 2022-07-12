@@ -11,32 +11,32 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.kaddo</groupId>
-    <artifactId>kaddo-parent</artifactId>
+    <groupId>com.tsollu</groupId>
+    <artifactId>tsollu-parent</artifactId>
     <version>0.1.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>kaddo-parent</name>
-    <description>Kaddo BOM and server-side library</description>
-    <url>https://gitee.com/Kaddo/kaddo-bom/</url>
+    <name>tsollu-parent</name>
+    <description>Tsollu BOM and server-side library</description>
+    <url>https://github.com/tsollu/tsollu-bom/</url>
 
     <licenses>
         <license>
             <name>Apache License, version 2.0</name>
-            <url>https://gitee.com/Kaddo/kaddo-bom/blob/master/LICENSE.txt</url>
+            <url>https://github.com/tsollu/tsollu-bom/blob/main/LICENSE.txt</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
     <organization>
-        <name>Kaddo</name>
-        <url>https://gitee.com/Kaddo/</url>
+        <name>Tsollu</name>
+        <url>https://github.com/tsollu/</url>
     </organization>
     <developers>
         <developer>
             <id>zhycn</id>
             <name>Qi Zhao Hong</name>
             <url>https://github.com/zhycn</url>
-            <organization>Kaddo</organization>
-            <organizationUrl>https://gitee.com/Kaddo/</organizationUrl>
+            <organization>Tsollu</organization>
+            <organizationUrl>https://github.com/tsollu/</organizationUrl>
         </developer>
     </developers>
 
@@ -96,7 +96,7 @@
         <module>kaddo-components-task</module>
         <module>kaddo-components-verifycode</module>
         <module>kaddo-components-web</module>
-        <module>kaddo-dependencies</module>
+        <module>tsollu-dependencies</module>
     </modules>
 
     <dependencies>

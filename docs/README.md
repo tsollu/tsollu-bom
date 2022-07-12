@@ -29,9 +29,9 @@ Spring Boot 支持下列嵌入式容器：
 
 ```
 <parent>
-  <groupId>com.kaddo</groupId>
-  <artifactId>kaddo-dependencies</artifactId>
-  <version>${kaddo-framework.version}</version>
+  <groupId>com.tsollu</groupId>
+  <artifactId>tsollu-dependencies</artifactId>
+  <version>${tsollu-framework.version}</version>
   <relativePath/>
 </parent>
 ```
