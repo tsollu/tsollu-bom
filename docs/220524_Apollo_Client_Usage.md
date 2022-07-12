@@ -19,7 +19,7 @@ Java 客户端不依赖任何框架，能够运行于所有 Java 运行时环境
 <dependency>
   <groupId>com.kaddo</groupId>
   <artifactId>kaddo-components-apollo</artifactId>
-  <version>${kaddo.version}</version>
+  <version>${tsollu.version}</version>
 </dependency>
 ```
 

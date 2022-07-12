@@ -26,7 +26,7 @@ mvn versions:display-property-updates
 mvn versions:set -DnewVersion=1.0.1-SNAPSHOT -DgenerateBackupPoms=true
 
 # 设置属性版本号
-mvn versions:set-property -Dproperty=kaddo.version -DnewVersion=1.0.1-SNAPSHOT -DgenerateBackupPoms=true
+mvn versions:set-property -Dproperty=tsollu.version -DnewVersion=1.0.1-SNAPSHOT -DgenerateBackupPoms=true
 
 # 移除 pom.xml.versionsBackup 备份文件
 mvn versions:commit

@@ -24,7 +24,7 @@ https://mybatis.org/mybatis-3/zh/index.html
 <dependency> 
     <groupId>com.kaddo</groupId>
     <artifactId>kaddo-components-mybatis</artifactId> 
-    <version>${kaddo.version}</version>
+    <version>${tsollu.version}</version>
 </dependency>
 ```
 

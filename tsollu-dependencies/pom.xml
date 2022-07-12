@@ -61,107 +61,107 @@
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-apidoc</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-apollo</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-client</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-crypto</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-datasource</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-dubbo</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-jpa</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-kafka</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-mybatis</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-mybatis-plus</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-oss</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-pulsar</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-redis</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-retrofit</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-rocketmq</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-security</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-sentinel</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-sequence</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-task</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-verifycode</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kaddo</groupId>
                 <artifactId>kaddo-components-web</artifactId>
-                <version>${kaddo.version}</version>
+                <version>${tsollu.version}</version>
             </dependency>
 
             <!-- Alibaba Druid - https://github.com/alibaba/druid -->

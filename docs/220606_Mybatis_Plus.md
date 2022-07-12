@@ -12,7 +12,7 @@ kaddo-components-mybatis-plus 模块维护了一套较为常用的 MyBatis-Plus 
 <dependency> 
     <groupId>com.kaddo</groupId>
     <artifactId>kaddo-components-mybatis-plus</artifactId> 
-    <version>${kaddo.version}</version>
+    <version>${tsollu.version}</version>
 </dependency>
 ```
 

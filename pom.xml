@@ -41,8 +41,8 @@
     </developers>
 
     <properties>
-        <!-- The kaddo version should be the same as the artifact version above -->
-        <kaddo.version>0.1.1-SNAPSHOT</kaddo.version>
+        <!-- The tsollu version should be the same as the artifact version above -->
+        <tsollu.version>0.1.1-SNAPSHOT</tsollu.version>
         <!-- The spring-boot version should be the same as the parent version above -->
         <spring-boot.version>2.6.9</spring-boot.version>
         <!-- Spring Cloud - https://spring.io/projects/spring-cloud -->
