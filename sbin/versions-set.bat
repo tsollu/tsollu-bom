@@ -1,8 +1,8 @@
-::项目版本号变更命令
+::设置项目版本号的脚本
 
 @echo off
 echo.
-echo [INFO] VERSIONS set
+echo [INFO] mvnw versions:set
 echo.
 
 cd ..

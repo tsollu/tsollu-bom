@@ -1,5 +1,5 @@
 
-    Copyright 2021-NOW the original author or authors from the Kaddo project
+    Copyright 2022-NOW the original author or authors from the Tsollu project
 
                                  Apache License
                            Version 2.0, January 2004

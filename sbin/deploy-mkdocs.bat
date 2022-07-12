@@ -1,4 +1,4 @@
-::部署项目文档
+::部署项目文档的脚本（Github Pages）
 
 @echo off
 echo.
@@ -7,6 +7,7 @@ echo.
 
 cd ..
 call mkdocs gh-deploy --force
+call rd/s/q ./site/
 
 cd sbin
 pause

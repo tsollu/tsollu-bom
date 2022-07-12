@@ -4,6 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- Spring Boot - https://spring.io/projects/spring-boot -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -54,13 +55,13 @@
         <java.version>1.8</java.version>
         <maven.version>3.3.9</maven.version>
 
-        <!-- Plugin versions -->
+        <!-- Plugin versions (fixed) -->
         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
     </properties>
 
     <scm>
-        <connection>scm:git:https://gitee.com/Kaddo/kaddo-bom/</connection>
-        <url>https://gitee.com/Kaddo/kaddo-bom/</url>
+        <connection>scm:git:https://github.com/tsollu/tsollu-bom/</connection>
+        <url>https://github.com/tsollu/tsollu-bom/</url>
     </scm>
 
     <distributionManagement>

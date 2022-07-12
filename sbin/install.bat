@@ -1,8 +1,8 @@
-::本地安装命令
+::本地安装的脚本（用于测试）
 
 @echo off
 echo.
-echo [INFO] INSTALL
+echo [INFO] mvnw clean install
 echo.
 
 cd ..

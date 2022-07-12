@@ -1,8 +1,8 @@
-::本地打包命令
+::项目打包的脚本
 
 @echo off
 echo.
-echo [INFO] PACKAGE
+echo [INFO] mvnw clean package
 echo.
 
 cd ..
