@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.kaddo.components.kafka.KaddoKafkaAutoConfiguration
+  com.tsollu.kafka.TsolluKafkaAutoConfiguration

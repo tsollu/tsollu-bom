@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.kaddo.components.rocketmq.KaddoRocketmqAutoConfiguration
+  com.tsollu.rocketmq.TsolluRocketmqAutoConfiguration

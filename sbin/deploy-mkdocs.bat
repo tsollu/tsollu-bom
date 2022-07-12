@@ -7,7 +7,7 @@ echo.
 
 cd ..
 call mkdocs gh-deploy --force
-call rd/s/q ./site/
+call rmdir /Q /S site
 
 cd sbin
 pause

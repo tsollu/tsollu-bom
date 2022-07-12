@@ -6,7 +6,8 @@
     <artifactId>tsollu-starter-security</artifactId>
     <packaging>jar</packaging>
     <name>tsollu-starter-security</name>
-    <description>a powerful and highly customizable authentication and access-control framework.
+    <description>
+        a powerful and highly customizable authentication and access-control framework.
     </description>
     <url>https://spring.io/projects/spring-security</url>
 

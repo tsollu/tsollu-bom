@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.kaddo.components.crypto.KaddoCryptoAutoConfiguration
+  com.tsollu.crypto.TsolluCryptoAutoConfiguration

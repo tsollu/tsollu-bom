@@ -1,4 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.kaddo.framework.config.KaddoAutoConfiguration,\
-  com.kaddo.framework.aspectj.AspectJAutoConfiguration,\
-  com.kaddo.framework.task.KaddoTaskAutoConfiguration
+  com.tsollu.KaddoAutoConfiguration,\
+  com.tsollu.AspectJAutoConfiguration,\
+  com.tsollu.KaddoTaskAutoConfiguration

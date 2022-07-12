@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.kaddo.components.dubbo.KaddoDubboAutoConfiguration
+  com.tsollu.dubbo.TsolluDubboAutoConfiguration
