@@ -8,7 +8,7 @@ Java 客户端不依赖任何框架，能够运行于所有 Java 运行时环境
 
 更多产品介绍请查看官方文档：https://www.apolloconfig.com/
 
-**`kaddo-components-apollo` 模块是基于 Spring Boot 和 Apollo Client 开发的快速集成方案。重点解决了在 Spring Boot 中使用 @ConfigurationProperties 注解时配置参数不更新的问题。**
+**`tsollu-starter-apollo` 模块是基于 Spring Boot 和 Apollo Client 开发的快速集成方案。重点解决了在 Spring Boot 中使用 @ConfigurationProperties 注解时配置参数不更新的问题。**
 
 ## 快速使用
 
@@ -17,8 +17,8 @@ Java 客户端不依赖任何框架，能够运行于所有 Java 运行时环境
 ```
 <!-- Apollo Client >=2.0.0 -->
 <dependency>
-  <groupId>com.kaddo</groupId>
-  <artifactId>kaddo-components-apollo</artifactId>
+  <groupId>com.tsollu</groupId>
+  <artifactId>tsollu-starter-apollo</artifactId>
   <version>${tsollu.version}</version>
 </dependency>
 ```

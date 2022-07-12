@@ -2,7 +2,7 @@
 
 [MyBatis-Plus](https://baomidou.com/) 是一个 MyBatis 的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。
 
-kaddo-components-mybatis-plus 模块维护了一套较为常用的 MyBatis-Plus 配置，支持在项目开发中快速构建和使用。
+tsollu-starter-mybatis-plus 模块维护了一套较为常用的 MyBatis-Plus 配置，支持在项目开发中快速构建和使用。
 
 ## 快速开始
 
@@ -10,8 +10,8 @@ kaddo-components-mybatis-plus 模块维护了一套较为常用的 MyBatis-Plus 
 
 ```
 <dependency> 
-    <groupId>com.kaddo</groupId>
-    <artifactId>kaddo-components-mybatis-plus</artifactId> 
+    <groupId>com.tsollu</groupId>
+    <artifactId>tsollu-starter-mybatis-plus</artifactId> 
     <version>${tsollu.version}</version>
 </dependency>
 ```
@@ -227,7 +227,7 @@ public class YourEntity {
 
 MyBatis-Plus 提供了多个插件，可查看官方文档：https://baomidou.com/pages/2976a3/
 
-kaddo-components-mybatis-plus 模块提供了一个插件的默认配置：
+tsollu-starter-mybatis-plus 模块提供了一个插件的默认配置：
 
 ```
 @Configuration(proxyBeanMethods = false)

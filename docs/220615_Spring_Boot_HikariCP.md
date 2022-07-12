@@ -10,8 +10,8 @@ Spring Boot 2.x 将其作为默认的连接池组件，项目中添加 `spring-b
 
 ```
 <dependency>
-    <groupId>com.kaddo</groupId>
-    <artifactId>kaddo-components-datasource</artifactId>
+    <groupId>com.tsollu</groupId>
+    <artifactId>tsollu-starter-datasource</artifactId>
     <version>${tsollu.version}</version>
 </dependency>
 ```

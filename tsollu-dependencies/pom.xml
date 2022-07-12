@@ -59,108 +59,108 @@
         <dependencies>
             <!-- Kaddo Components built on Spring Boot -->
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-apidoc</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-apidoc</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-apollo</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-apollo</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-client</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-client</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-crypto</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-crypto</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-datasource</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-datasource</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-dubbo</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-dubbo</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-jpa</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-jpa</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-kafka</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-kafka</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-mybatis</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-mybatis</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-mybatis-plus</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-mybatis-plus</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-oss</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-oss</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-pulsar</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-pulsar</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-redis</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-redis</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-retrofit</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-retrofit</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-rocketmq</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-rocketmq</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-security</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-security</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-sentinel</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-sentinel</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-sequence</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-sequence</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-task</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-task</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-verifycode</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-verifycode</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kaddo</groupId>
-                <artifactId>kaddo-components-web</artifactId>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-web</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
 

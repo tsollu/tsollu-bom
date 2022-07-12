@@ -75,28 +75,28 @@
     </distributionManagement>
 
     <modules>
-        <module>kaddo-components-apidoc</module>
-        <module>kaddo-components-apollo</module>
-        <module>kaddo-components-client</module>
-        <module>kaddo-components-crypto</module>
-        <module>kaddo-components-datasource</module>
-        <module>kaddo-components-dubbo</module>
-        <module>kaddo-components-jpa</module>
-        <module>kaddo-components-kafka</module>
-        <module>kaddo-components-mybatis</module>
-        <module>kaddo-components-mybatis-plus</module>
-        <module>kaddo-components-oss</module>
-        <module>kaddo-components-pulsar</module>
-        <module>kaddo-components-redis</module>
-        <module>kaddo-components-retrofit</module>
-        <module>kaddo-components-rocketmq</module>
-        <module>kaddo-components-security</module>
-        <module>kaddo-components-sentinel</module>
-        <module>kaddo-components-sequence</module>
-        <module>kaddo-components-task</module>
-        <module>kaddo-components-verifycode</module>
-        <module>kaddo-components-web</module>
         <module>tsollu-dependencies</module>
+        <module>tsollu-starter-apidoc</module>
+        <module>tsollu-starter-apollo</module>
+        <module>tsollu-starter-client</module>
+        <module>tsollu-starter-crypto</module>
+        <module>tsollu-starter-datasource</module>
+        <module>tsollu-starter-dubbo</module>
+        <module>tsollu-starter-jpa</module>
+        <module>tsollu-starter-kafka</module>
+        <module>tsollu-starter-mybatis</module>
+        <module>tsollu-starter-mybatis-plus</module>
+        <module>tsollu-starter-oss</module>
+        <module>tsollu-starter-pulsar</module>
+        <module>tsollu-starter-redis</module>
+        <module>tsollu-starter-retrofit</module>
+        <module>tsollu-starter-rocketmq</module>
+        <module>tsollu-starter-security</module>
+        <module>tsollu-starter-sentinel</module>
+        <module>tsollu-starter-sequence</module>
+        <module>tsollu-starter-task</module>
+        <module>tsollu-starter-verifycode</module>
+        <module>tsollu-starter-web</module>
     </modules>
 
     <dependencies>
