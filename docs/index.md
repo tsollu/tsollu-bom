@@ -1,4 +1,4 @@
-﻿# Tsollu
+﻿# Tsollu BOM and server-side library
 
 **Tsollu 是一个基于 Spring Boot 和 Spring Cloud 的快速开发框架！它的目标是为企业级项目构建提供一套完善的开发框架和管理体系，使项目开发更加简单、高效。**
 
@@ -43,7 +43,7 @@ Tsollu 项目完全兼容 Spring Boot 和 Spring Cloud，致力于提供基础�
 </dependencyManagement>
 ```
 
-!!! tip "提示"
+!!! tip "Tips"
 
     Spring Boot 项目想要生成可执行 JAR 文件，需要在启动程序的 pom.xml 中要添加 Spring Boot Maven 插件：
 

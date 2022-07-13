@@ -34,7 +34,7 @@ Lombok 是一个 Java 库，能自动插入编辑器和构建工具中，简化 
 
 1）在你的 Spring Boot 项目的中添加依赖配置：
 
-```
+```xml
 <dependency>
     <groupId>org.projectlombok</groupId>
     <artifactId>lombok</artifactId>
