@@ -2,77 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://tsollu.github.io/tsollu-bom/</loc>
-         <lastmod>2022-07-12</lastmod>
+         <lastmod>2022-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tsollu.github.io/tsollu-bom/220524_Apollo_Client_Usage/</loc>
-         <lastmod>2022-07-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://tsollu.github.io/tsollu-bom/220528_lombok/</loc>
-         <lastmod>2022-07-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://tsollu.github.io/tsollu-bom/220606_Mybatis_Plus/</loc>
-         <lastmod>2022-07-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://tsollu.github.io/tsollu-bom/220615_Alibaba_Druid/</loc>
-         <lastmod>2022-07-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://tsollu.github.io/tsollu-bom/220615_Mysql_Url_Params/</loc>
-         <lastmod>2022-07-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://tsollu.github.io/tsollu-bom/220615_Spring_Boot_HikariCP/</loc>
-         <lastmod>2022-07-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://tsollu.github.io/tsollu-bom/220627_MyBatis_Usage/</loc>
-         <lastmod>2022-07-12</lastmod>
+         <loc>https://tsollu.github.io/tsollu-bom/dependency-versions/</loc>
+         <lastmod>2022-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tsollu.github.io/tsollu-bom/tags/</loc>
-         <lastmod>2022-07-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://tsollu.github.io/tsollu-bom/maven/220622_EditorConfig_Maven_Plugin/</loc>
-         <lastmod>2022-07-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://tsollu.github.io/tsollu-bom/maven/220622_Versions_Maven_Plugin/</loc>
-         <lastmod>2022-07-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://tsollu.github.io/tsollu-bom/spring/</loc>
-         <lastmod>2022-07-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://tsollu.github.io/tsollu-bom/spring/220616_Spring_Framework_Documentationon/</loc>
-         <lastmod>2022-07-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://tsollu.github.io/tsollu-bom/spring/220620_Spring_Boot_Documentation/</loc>
-         <lastmod>2022-07-12</lastmod>
+         <lastmod>2022-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tsollu.github.io/tsollu-bom/tags/</loc>
-         <lastmod>2022-07-12</lastmod>
+         <lastmod>2022-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
