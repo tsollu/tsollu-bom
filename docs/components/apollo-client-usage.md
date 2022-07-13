@@ -1,3 +1,8 @@
+---
+tags:
+    - apollo
+---
+
 # Apollo Client 使用指南
 
 Apollo（阿波罗）是一款可靠的分布式配置管理中心，诞生于携程框架研发部，能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。
@@ -17,7 +22,7 @@ Java 客户端不依赖任何框架，能够运行于所有 Java 运行时环境
 
 1）在你的 Spring Boot 项目中添加依赖配置：
 
-```xml
+```xml title="Maven Dependency"
 <!-- Apollo Client >=2.0.0 -->
 <dependency>
   <groupId>com.tsollu</groupId>
@@ -28,7 +33,7 @@ Java 客户端不依赖任何框架，能够运行于所有 Java 运行时环境
 
 2）添加配置参数（**以下是推荐配置**）：
 
-```properties
+```properties title="推荐配置"
 ## Apollo Configuration
 # 多环境时，需要通过启动参数来指定配置环境：-Denv=DEV
 app.id=YOUR-APP-ID
@@ -50,7 +55,7 @@ apollo.cluster=default
 
 以下是 Apollo Client 配置参数的详细说明，查看官方文档可了解更多参数配置信息：https://www.apolloconfig.com/#/zh/usage/java-sdk-user-guide
 
-```properties
+```properties title="配置参数详解"
 # [必选] 开启 Apollo 配置
 # [注意] 如果配置中使用了 @EnableApolloConfig 注解，该配置将不会生效。
 apollo.bootstrap.enabled=true
@@ -137,7 +142,7 @@ Apollo 客户端会把从服务端获取到的配置在本地文件系统缓存�
 
 **或者，指定配置文件路径（推荐）：**
 
-```
+```properties
 apollo.cache-dir=./config-cache
 ```
 
@@ -164,7 +169,7 @@ __建议在实际使用时尽量给出默认值，以免由于 key 没有定义�
 
 **1）假设有一个 TestJavaConfigBean，通过 Java Config 的方式可以使用 `@Value` 的方式注入：**
 
-```
+```java
 public class TestJavaConfigBean {
 
   @Value("${timeout:100}")
@@ -188,7 +193,7 @@ public class TestJavaConfigBean {
 
 在 Configuration 类中按照下面的方式使用（假设应用默认的 application namespace 中有 timeout 和 batch 的配置项）：
 
-```
+```java
 @Configuration
 @EnableApolloConfig
 public class AppConfig {
@@ -209,7 +214,7 @@ public class AppConfig {
 
 Apollo 也支持这种方式，下面的例子会把 redis.cache.expireSeconds 和 redis.cache.commandTimeout 分别注入到 SampleRedisConfig 的 expireSeconds 和 commandTimeout 字段中。
 
-```
+```java
 @ConfigurationProperties(prefix = "redis.cache")
 public class SampleRedisConfig {
 
@@ -228,7 +233,7 @@ public class SampleRedisConfig {
 
 在 Configuration 类中按照下面的方式使用（假设应用默认的 application namespace 中有 redis.cache.expireSeconds 和 redis.cache.commandTimeout 的配置项）：
 
-```
+```java
 @Configuration
 @EnableApolloConfig
 public class AppConfig {

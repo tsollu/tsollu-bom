@@ -142,6 +142,7 @@ nav:
             -   标签: tags.md
             -   依赖版本: dependency-versions.md
     -   组件:
+            - components/index.md
             -   配置中心:
                     -   Apollo Client 使用指南: components/apollo-client-usage.md
     -   开发工具:
