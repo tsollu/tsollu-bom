@@ -16,7 +16,7 @@ Tsollu 项目完全兼容 Spring Boot 和 Spring Cloud，致力于提供基础�
 
 ## 快速开始
 
-1）在你的 Spring Boot 项目中将其作为父模块引入（推荐）：
+1）在你的 Spring Boot 项目中将其作为父模块引入（**推荐**）：
 
 ```xml
 <parent>
@@ -27,7 +27,7 @@ Tsollu 项目完全兼容 Spring Boot 和 Spring Cloud，致力于提供基础�
 </parent>
 ```
 
-2）或者，在你的 Maven 项目中添加 Tsollu 依赖管理：
+2）或者，在你的 Maven 项目中添加 Tsollu 提供的依赖管理：
 
 ```xml
 <dependencyManagement>
@@ -42,18 +42,3 @@ Tsollu 项目完全兼容 Spring Boot 和 Spring Cloud，致力于提供基础�
     </dependencies>
 </dependencyManagement>
 ```
-
-!!! tip "Tips"
-
-    Spring Boot 项目想要生成可执行 JAR 文件，需要在启动程序的 pom.xml 中要添加 Spring Boot Maven 插件：
-
-    ```xml
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-    ```
