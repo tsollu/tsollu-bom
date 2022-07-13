@@ -139,6 +139,8 @@ markdown_extensions:
 nav:
     -   首页:
             - index.md
+            -   异常处理:
+                    -   错误码: getting-started/error-code.md
             -   标签: tags.md
             -   依赖版本: dependency-versions.md
     -   组件:

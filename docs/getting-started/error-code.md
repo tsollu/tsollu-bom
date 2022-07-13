@@ -1,11 +1,36 @@
+# 错误码
+
+调用 API 出现错误时，可以根据错误码信息来定位问题并尝试解决。
+
+## 错误码接口
+
+Tsollu 框架提供了一个标准的错误码接口，所有自定义错误码均需实现该接口，以便统一异常处理。
+
+```java title="错误码接口"
 package com.tsollu.exception;
 
-/**
- * 公共错误码是基于阿里巴巴 Java 开发手册(黄山版)实现的，在此基础上增加了部分常见的 HTTP 状态码的错误描述信息。
- *
- * @author larry.qi
- * @date 2022-07-02
- */
+public interface ErrorCode {
+
+    /**
+     * 接口返回码字段，请求成功时返回[00000]，请求失败时返回错误码。
+     */
+    String getCode();
+
+    /**
+     * 接口返回信息字段，请求成功返回[成功]，请求失败返回错误原因。
+     */
+    String getMessage();
+
+}
+```
+
+## 公共错误码
+
+公共错误码是基于阿里巴巴 Java 开发手册(黄山版)实现的，在此基础上增加了部分常见的 HTTP 状态码的错误描述信息。
+
+```java title="公共错误码"
+package com.tsollu.exception;
+
 public enum ErrorCodeDefault implements ErrorCode {
 
     // 正确执行后的返回
@@ -27,7 +52,7 @@ public enum ErrorCodeDefault implements ErrorCode {
     S0503("S0503", "服务不可用"),
     S0504("S0504", "请求网关超时"),
 
-    // 错误码列表（黄山版）
+    // 错误码列表 - 阿里巴巴 Java 开发手册(黄山版)
     A0001("A0001", "用户端错误"),
     A0100("A0100", "用户注册错误"),
     A0101("A0101", "用户未同意隐私协议"),
@@ -224,3 +249,162 @@ public enum ErrorCodeDefault implements ErrorCode {
     }
 
 }
+```
+
+## 自定义错误码
+
+业务系统根据需要自定义错误码，实现 ErrorCode 接口即可。
+
+```java title="自定义错误码"
+public enum ErrorCodeBusiness implements ErrorCode {
+
+    // 自定义错误码
+    E0001("E0001", "业务处理异常"),
+
+    ;
+
+    private final String code;
+    private final String message;
+
+    ErrorCodeBusiness(String code, String message) {
+        this.code = code;
+        this.message = message;
+    }
+
+    @Override
+    public String getCode() {
+        return code;
+    }
+
+    @Override
+    public String getMessage() {
+        return message;
+    }
+
+}
+```
+
+## 错误码构建类
+
+如果你不想自定义错误码枚举类，也可以使用错误码构建类来创建错误码。
+
+```java title="错误码构建类"
+package com.tsollu.exception;
+
+import java.util.Map;
+import cn.hutool.core.util.StrUtil;
+
+public class ErrorCodeBuilder implements ErrorCode {
+
+    private final String code;
+    private final String message;
+
+    private ErrorCodeBuilder(String code, String message) {
+        this.code = code;
+        this.message = message;
+    }
+
+    /**
+     * 构建错误码和错误信息，针对已定义并使用占位符的错误信息进行格式化填充, {key} 表示占位符
+     *
+     * @param errorCode 错误码
+     * @param map       对象集合
+     * @return 错误码
+     */
+    public static ErrorCode of(ErrorCode errorCode, Map<?, ?> map) {
+        return of(errorCode.getCode(), StrUtil.format(errorCode.getMessage(), map));
+    }
+
+    /**
+     * 构建错误码和错误信息，针对已定义并使用占位符的错误信息进行格式化填充, {} 表示占位符
+     *
+     * @param errorCode 错误码
+     * @param params    可变数组
+     * @return 错误码
+     */
+    public static ErrorCode of(ErrorCode errorCode, Object... params) {
+        return of(errorCode.getCode(), StrUtil.format(errorCode.getMessage(), params));
+    }
+
+    /**
+     * 构建错误码和错误信息，针对已定义的错误码，重写错误信息
+     *
+     * @param errorCode 错误码
+     * @param message   错误信息
+     * @return 错误码
+     */
+    public static ErrorCode of(ErrorCode errorCode, String message) {
+        return of(errorCode.getCode(), message);
+    }
+
+    /**
+     * 构建错误码和错误信息，针对已定义的错误码，重写错误信息
+     *
+     * @param errorCode 错误码
+     * @param message   错误信息 - 格式化文本, {key} 表示占位符
+     * @param map       对象集合
+     * @return 错误码
+     */
+    public static ErrorCode of(ErrorCode errorCode, String message, Map<?, ?> map) {
+        return of(errorCode.getCode(), StrUtil.format(message, map));
+    }
+
+    /**
+     * 构建错误码和错误信息，针对已定义的错误码，重写错误信息
+     *
+     * @param errorCode 错误码
+     * @param message   错误信息 - 格式化文本, {} 表示占位符
+     * @param params    可变数组
+     * @return 错误码
+     */
+    public static ErrorCode of(ErrorCode errorCode, String message, Object... params) {
+        return of(errorCode.getCode(), StrUtil.format(message, params));
+    }
+
+    /**
+     * 构建错误码和错误信息
+     *
+     * @param code    错误码
+     * @param message 错误信息
+     * @return 错误码
+     */
+    public static ErrorCode of(String code, String message) {
+        return new ErrorCodeBuilder(code, message);
+    }
+
+    /**
+     * 构建错误码和错误信息，支持使用占位符的错误信息进行格式化填充, {key} 表示占位符
+     *
+     * @param code    错误码
+     * @param message 错误信息 - 格式化文本, {key} 表示占位符
+     * @param map     对象集合
+     * @return 错误码
+     */
+    public static ErrorCode of(String code, String message, Map<?, ?> map) {
+        return new ErrorCodeBuilder(code, StrUtil.format(message, map));
+    }
+
+    /**
+     * 构建错误码和错误信息，支持使用占位符的错误信息进行格式化填充, {} 表示占位符
+     *
+     * @param code    错误码
+     * @param message 错误信息 - 格式化文本, {} 表示占位符
+     * @param params  可变数组
+     * @return 错误码
+     */
+    public static ErrorCode of(String code, String message, Object... params) {
+        return new ErrorCodeBuilder(code, StrUtil.format(message, params));
+    }
+
+    @Override
+    public String getCode() {
+        return code;
+    }
+
+    @Override
+    public String getMessage() {
+        return message;
+    }
+
+}
+```

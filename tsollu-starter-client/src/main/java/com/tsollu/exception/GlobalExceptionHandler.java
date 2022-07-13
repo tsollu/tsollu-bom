@@ -80,7 +80,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Throwable.class)
     public Response handleException(Throwable e, HttpServletResponse response) {
         log.error(Throwables.getStackTraceAsString(e));
-        return Response.buildFailure(ErrorCodeDefault.E0500);
+        return Response.buildFailure(ErrorCodeDefault.S0500);
     }
 
 }

@@ -13,7 +13,7 @@ public class ValidationException extends BusinessException {
      * 请求参数校验异常
      */
     public ValidationException() {
-        super(ErrorCodeDefault.E0400);
+        super(ErrorCodeDefault.S0400);
     }
 
     /**
@@ -22,7 +22,7 @@ public class ValidationException extends BusinessException {
      * @param reason 错误原因
      */
     public ValidationException(String reason) {
-        super(ErrorCodeDefault.E0400, reason);
+        super(ErrorCodeDefault.S0400, reason);
     }
 
     /**
@@ -31,7 +31,7 @@ public class ValidationException extends BusinessException {
      * @param cause 异常
      */
     public ValidationException(Throwable cause) {
-        super(ErrorCodeDefault.E0400, cause);
+        super(ErrorCodeDefault.S0400, cause);
     }
 
     /**
@@ -41,7 +41,7 @@ public class ValidationException extends BusinessException {
      * @param cause  异常
      */
     public ValidationException(String reason, Throwable cause) {
-        super(ErrorCodeDefault.E0400, reason, cause);
+        super(ErrorCodeDefault.S0400, reason, cause);
     }
 
 }

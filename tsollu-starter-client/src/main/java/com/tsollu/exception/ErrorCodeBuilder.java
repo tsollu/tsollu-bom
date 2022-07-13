@@ -5,7 +5,7 @@ import java.util.Map;
 import cn.hutool.core.util.StrUtil;
 
 /**
- * 自定义错误码构建类，增强错误码构建和描述信息重写。
+ * 自定义错误码构建类，增强错误码构建和错误信息重写。
  *
  * @author larry.qi
  * @date 2022-07-02

@@ -26,7 +26,7 @@ import java.util.Optional;
 public class GlobalResponseBodyAdvice implements ResponseBodyAdvice<Object> {
 
     private static ErrorCode convert(final String statusCode, final String defaultMsg) {
-        String code = "E0" + statusCode;
+        String code = "S0" + statusCode;
         final ErrorCodeDefault[] list = ErrorCodeDefault.values();
         for (final ErrorCodeDefault errorCodeDefault : list) {
             if (StringUtils.equals(errorCodeDefault.getCode(), code)) {
