@@ -16,6 +16,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://tsollu.github.io/tsollu-bom/components/</loc>
+         <lastmod>2022-07-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tsollu.github.io/tsollu-bom/components/apollo-client-usage/</loc>
+         <lastmod>2022-07-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tsollu.github.io/tsollu-bom/devtools/lombok/</loc>
+         <lastmod>2022-07-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://tsollu.github.io/tsollu-bom/tags/</loc>
          <lastmod>2022-07-13</lastmod>
          <changefreq>daily</changefreq>
