@@ -13,6 +13,10 @@ import org.springframework.lang.NonNull;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @author larry.qi
+ * @date 2022-07-13
+ */
 @Slf4j
 @Configuration(proxyBeanMethods = false)
 public class TsolluApolloAutoConfiguration implements ApplicationContextAware, ConfigChangeListener {
