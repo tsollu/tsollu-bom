@@ -33,86 +33,86 @@ import static java.util.concurrent.TimeUnit.MINUTES;
 @EnableConfigurationProperties({RetrofitProperties.class})
 public class TsolluRetrofitAutoConfiguration {
 
-  private final List<Converter.Factory> converterFactories;
-  private final OkHttpClient okHttpClient;
-  private final RetrofitProperties retrofitProperties;
+    private final List<Converter.Factory> converterFactories;
+    private final OkHttpClient okHttpClient;
+    private final RetrofitProperties retrofitProperties;
 
-  public TsolluRetrofitAutoConfiguration(List<Converter.Factory> converterFactories,
-                                         OkHttpClient okHttpClient, RetrofitProperties retrofitProperties) {
-    this.converterFactories = converterFactories;
-    this.okHttpClient = okHttpClient;
-    this.retrofitProperties = retrofitProperties;
-    this.checkConfiguredUrl(retrofitProperties);
-  }
-
-  @Bean
-  @ConditionalOnMissingBean
-  public RetrofitContext retrofitContext() {
-    Retrofit.Builder builder = new Retrofit.Builder().validateEagerly(true);
-    converterFactories.forEach(builder::addConverterFactory);
-
-    if (okHttpClient != null) {
-      builder.client(okHttpClient);
-    }
-
-    RetrofitContext context = new DefaultRetrofitContext();
-    Map<String, String> endpoints = retrofitProperties.getEndpoints();
-
-    endpoints.keySet().forEach(identity -> {
-      context.register(identity, builder.baseUrl(endpoints.get(identity)).build());
-    });
-
-    return context;
-  }
-
-  private void checkConfiguredUrl(RetrofitProperties properties) {
-    Map<String, String> endpoints = properties.getEndpoints();
-    endpoints.keySet().forEach(identity -> {
-      String url = endpoints.get(identity);
-      Assert.isTrue(ResourceUtils.isUrl(url), url + " is not a valid url");
-    });
-  }
-
-  @Configuration
-  @ConditionalOnClass(OkHttpClient.class)
-  public static class OkHttpClientConfiguration {
-
-    @Bean
-    @ConditionalOnMissingBean
-    public ConnectionPool connectionPool() {
-      return new ConnectionPool(10, 60, MINUTES);
+    public TsolluRetrofitAutoConfiguration(List<Converter.Factory> converterFactories,
+                                           OkHttpClient okHttpClient, RetrofitProperties retrofitProperties) {
+        this.converterFactories = converterFactories;
+        this.okHttpClient = okHttpClient;
+        this.retrofitProperties = retrofitProperties;
+        this.checkConfiguredUrl(retrofitProperties);
     }
 
     @Bean
     @ConditionalOnMissingBean
-    public OkHttpClient okHttpClient(ConnectionPool connectionPool) {
-      OkHttpClient.Builder builder =
-          new OkHttpClient.Builder().readTimeout(60, MINUTES)
-              .writeTimeout(60, MINUTES)
-              .connectTimeout(10, MINUTES)
-              .connectionPool(connectionPool);
-      return builder.build();
-    }
-  }
+    public RetrofitContext retrofitContext() {
+        Retrofit.Builder builder = new Retrofit.Builder().validateEagerly(true);
+        converterFactories.forEach(builder::addConverterFactory);
 
-  @Configuration
-  @ConditionalOnClass(JacksonConverterFactory.class)
-  public static class JacksonConverterFactoryConfiguration {
+        if (okHttpClient != null) {
+            builder.client(okHttpClient);
+        }
 
-    @Bean
-    @ConditionalOnMissingBean
-    public ObjectMapper objectMapper() {
-      ObjectMapper objectMapper = new ObjectMapper();
-      objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
-      objectMapper.configure(WRITE_DATES_AS_TIMESTAMPS, false);
-      return objectMapper;
+        RetrofitContext context = new DefaultRetrofitContext();
+        Map<String, String> endpoints = retrofitProperties.getEndpoints();
+
+        endpoints.keySet().forEach(identity -> {
+            context.register(identity, builder.baseUrl(endpoints.get(identity)).build());
+        });
+
+        return context;
     }
 
-    @Bean
-    @ConditionalOnMissingBean
-    public JacksonConverterFactory jacksonConverterFactory(ObjectMapper objectMapper) {
-      return JacksonConverterFactory.create(objectMapper);
+    private void checkConfiguredUrl(RetrofitProperties properties) {
+        Map<String, String> endpoints = properties.getEndpoints();
+        endpoints.keySet().forEach(identity -> {
+            String url = endpoints.get(identity);
+            Assert.isTrue(ResourceUtils.isUrl(url), url + " is not a valid url");
+        });
     }
-  }
+
+    @Configuration
+    @ConditionalOnClass(OkHttpClient.class)
+    public static class OkHttpClientConfiguration {
+
+        @Bean
+        @ConditionalOnMissingBean
+        public ConnectionPool connectionPool() {
+            return new ConnectionPool(10, 60, MINUTES);
+        }
+
+        @Bean
+        @ConditionalOnMissingBean
+        public OkHttpClient okHttpClient(ConnectionPool connectionPool) {
+            OkHttpClient.Builder builder =
+                new OkHttpClient.Builder().readTimeout(60, MINUTES)
+                    .writeTimeout(60, MINUTES)
+                    .connectTimeout(10, MINUTES)
+                    .connectionPool(connectionPool);
+            return builder.build();
+        }
+    }
+
+    @Configuration
+    @ConditionalOnClass(JacksonConverterFactory.class)
+    public static class JacksonConverterFactoryConfiguration {
+
+        @Bean
+        @ConditionalOnMissingBean
+        public ObjectMapper objectMapper() {
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+            objectMapper.configure(WRITE_DATES_AS_TIMESTAMPS, false);
+            return objectMapper;
+        }
+
+        @Bean
+        @ConditionalOnMissingBean
+        public JacksonConverterFactory jacksonConverterFactory(ObjectMapper objectMapper) {
+            return JacksonConverterFactory.create(objectMapper);
+        }
+    }
 
 }
