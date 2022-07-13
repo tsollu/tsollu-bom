@@ -3,7 +3,7 @@ site_name: Welcome to Tsollu
 site_url: https://tsollu.github.io/tsollu-bom/
 site_author: Tsollu
 site_description: >-
-  Tsollu 是一个基于 Spring Boot 和 Spring Cloud 的快速开发框架！它的目标是为企业级项目构建提供一套完善的开发框架和工作流程，使项目开发更加简单、高效。
+  Tsollu 是一个基于 Spring Boot 和 Spring Cloud 的快速开发框架！
 
 # Repository
 repo_name: tsollu/tsollu-bom
@@ -136,3 +136,4 @@ markdown_extensions:
 nav:
   - 首页:
     - index.md
+    - 标签: tags.md
