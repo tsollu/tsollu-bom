@@ -16,7 +16,7 @@ Tsollu 项目完全兼容 Spring Boot 和 Spring Cloud，致力于提供基础�
 
 ## 快速开始
 
-1）在你的 Spring Boot 项目中将其作为父模块引入（推荐）：
+1）在你的 Spring Boot 项目中将其作为父模块引入（**推荐**）：
 
 ```
 <parent>
@@ -27,7 +27,7 @@ Tsollu 项目完全兼容 Spring Boot 和 Spring Cloud，致力于提供基础�
 </parent>
 ```
 
-2）或者，在你的 Maven 项目中添加 Tsollu 依赖管理：
+2）或者，在你的 Maven 项目中添加 Tsollu 提供的依赖管理：
 
 ```
 <dependencyManagement>
