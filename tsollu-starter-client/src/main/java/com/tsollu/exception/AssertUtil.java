@@ -13,7 +13,8 @@ import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 
 /**
- * 异常工具类，支持参数校验异常（validate）、业务处理异常（business）、已知的系统异常（system）、对象校验（validateObject）。
+ * 异常工具类（AssertUtil）的提供了一些静态方法，支持参数校验异常（validate）、业务处理异常（business）、已知的系统异常（system）、对象校验（validateObject）、Spring
+ * Web 参数校验（BindingResult）。
  *
  * @author larry.qi
  * @date 2022-07-02

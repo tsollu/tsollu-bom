@@ -2,6 +2,26 @@
 
 调用 API 出现错误时，可以根据错误码信息来定位问题并尝试解决。
 
+```mermaid
+classDiagram
+ErrorCode <|-- ErrorCodeDefault : implements
+ErrorCode <|-- ErrorCodeBuilder : implements
+ErrorCode <|-- ErrorCodeBusiness : implements
+
+<<enumeration>> ErrorCodeDefault
+<<enumeration>> ErrorCodeBusiness
+
+class ErrorCode {
+    <<interface>>
+    +getCode() String
+    +getMessage() String
+}
+
+class ErrorCodeBuilder {
+    +of(code, message) ErrorCode
+}
+```
+
 ## 错误码接口
 
 Tsollu 框架提供了一个标准的错误码接口，所有自定义错误码均需实现该接口，以便统一异常处理。

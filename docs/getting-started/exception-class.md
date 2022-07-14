@@ -8,12 +8,46 @@
 | **BusinessException** | 业务处理异常，有明确的业务语义，不需要记录错误（Error） 日志，不需要重试（Retry）。 | 
 | **SystemException** | 已知的系统异常，需要记录错误（Error）日志，可以重试（Retry）。 | 
 | **ValidationException** | 请求参数校验异常，有明确的错误语义，不需要记录错误（Error）日志，不需要重试（Retry）。 | 
-| **AssertUtil** | 异常工具类。 | 
+| **AssertUtil** | 异常工具类，支持参数校验异常（validate）、业务处理异常（business）、已知的系统异常（system）、对象校验（validateObject）、Spring Web 参数校验（BindingResult）。 | 
 | __Exception__ | 未知的系统异常，需要记录完整的错误（Error Stack）日志，可以重试（Retry）。 | 
+
+```mermaid
+classDiagram
+RuntimeException <|-- BaseException : Inheritance
+BaseException <|-- BusinessException : Inheritance
+BaseException <|-- SystemException : Inheritance
+BusinessException <|-- ValidationException : Inheritance
+BusinessException <.. AssertUtil : Dependency
+SystemException <.. AssertUtil : Dependency
+ValidationException <.. AssertUtil : Dependency
+
+class BaseException{
+    <<abstract>>
+    +String errorReason
+    +ErrorCode errorCode
+    +int httpStatus
+    +getMessage() String
+    +rewrite(message) BaseException
+    +rewrite(message, params) BaseException
+    +rewrite(message, map) BaseException
+    +setHttpStatus(httpStatus) BaseException
+    +assertThrow() void
+    +assertThrow(expression) void
+    +assertThrow(booleanSupplier) void
+}
+
+class AssertUtil{
+    +business() BusinessException
+    +system() SystemException
+    +validate() ValidationException
+    +validateObject() void
+    +validateBindingResult() void
+}
+```
 
 **示例. 业务处理异常**
 
-```
+``` title="示例"
 // 1. throw 显示抛出异常
 throw AssertUtil.business(ErrorCodeDefault.A0111);
 
@@ -47,11 +81,12 @@ AssertUtil.validateObject(user);
 AssertUtil.validateBindingResult(bindingResult);
 ```
 
-## 异常工具类及使用
+## 异常工具类
 
-异常工具类（AssertUtil）的提供了一些静态方法，支持参数校验异常（validate）、业务处理异常（business）、已知的系统异常（system）、对象校验（validateObject）。
+异常工具类（AssertUtil）的提供了一些静态方法，支持参数校验异常（validate）、业务处理异常（business）、已知的系统异常（system）、对象校验（validateObject）、Spring
+Web 参数校验（BindingResult）。
 
-```
+``` title="AssertUtil.java"
 /**
  * 业务异常
  *
