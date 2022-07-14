@@ -2,42 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://tsollu.github.io/tsollu-bom/</loc>
-         <lastmod>2022-07-13</lastmod>
+         <lastmod>2022-07-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tsollu.github.io/tsollu-bom/dependency-versions/</loc>
-         <lastmod>2022-07-13</lastmod>
+         <lastmod>2022-07-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tsollu.github.io/tsollu-bom/tags/</loc>
-         <lastmod>2022-07-13</lastmod>
+         <lastmod>2022-07-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tsollu.github.io/tsollu-bom/components/</loc>
-         <lastmod>2022-07-13</lastmod>
+         <lastmod>2022-07-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tsollu.github.io/tsollu-bom/components/apollo-client-usage/</loc>
-         <lastmod>2022-07-13</lastmod>
+         <lastmod>2022-07-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tsollu.github.io/tsollu-bom/devtools/lombok/</loc>
-         <lastmod>2022-07-13</lastmod>
+         <lastmod>2022-07-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tsollu.github.io/tsollu-bom/getting-started/error-code/</loc>
-         <lastmod>2022-07-13</lastmod>
+         <lastmod>2022-07-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tsollu.github.io/tsollu-bom/getting-started/exception-class/</loc>
+         <lastmod>2022-07-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tsollu.github.io/tsollu-bom/getting-started/exception-handler/</loc>
+         <lastmod>2022-07-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tsollu.github.io/tsollu-bom/help/reference-documents/</loc>
+         <lastmod>2022-07-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tsollu.github.io/tsollu-bom/tags/</loc>
-         <lastmod>2022-07-13</lastmod>
+         <lastmod>2022-07-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
