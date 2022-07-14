@@ -1,7 +1,7 @@
 package com.tsollu.exception;
 
 /**
- * 请求参数校验异常，有明确的错误语义，不需要记录 Error 日志，不需要 Retry
+ * 请求参数校验异常，有明确的错误语义，不需要记录错误（Error）日志，不需要重试（Retry）。
  *
  * @author larry.qi
  * @date 2022-07-02

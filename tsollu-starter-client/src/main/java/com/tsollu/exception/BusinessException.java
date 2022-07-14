@@ -3,7 +3,7 @@ package com.tsollu.exception;
 import org.springframework.lang.NonNull;
 
 /**
- * 业务异常，有明确的业务语义，不需要记录 Error 日志，不需要 Retry
+ * 业务处理异常，有明确的业务语义，不需要记录错误（Error） 日志，不需要重试（Retry）。
  *
  * @author larry.qi
  * @date 2022-07-02

@@ -15,7 +15,7 @@ import java.util.Objects;
 import cn.hutool.core.util.StrUtil;
 
 /**
- * 异常基类 - 所有自定义异常都要继承该类，以便统一异常处理
+ * 异常基类（抽象类），自定义异常继承该类，便于全局异常处理。
  *
  * @author larry.qi
  * @date 2022-07-02

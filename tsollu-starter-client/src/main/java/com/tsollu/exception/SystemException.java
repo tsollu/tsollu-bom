@@ -3,7 +3,7 @@ package com.tsollu.exception;
 import org.springframework.lang.NonNull;
 
 /**
- * 已知的系统异常，需要记录 Error 日志，可以 Retry
+ * 已知的系统异常，需要记录错误（Error）日志，可以重试（Retry）。
  *
  * @author larry.qi
  * @date 2022-07-02
