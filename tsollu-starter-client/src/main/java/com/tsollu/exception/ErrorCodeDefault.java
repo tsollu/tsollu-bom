@@ -1,5 +1,7 @@
 package com.tsollu.exception;
 
+import org.apache.commons.lang3.StringUtils;
+
 /**
  * 公共错误码是基于阿里巴巴 Java 开发手册(黄山版)实现的，在此基础上增加了部分常见的 HTTP 状态码的错误描述信息。
  *
@@ -221,6 +223,10 @@ public enum ErrorCodeDefault implements ErrorCode {
     @Override
     public String getMessage() {
         return message;
+    }
+
+    public static boolean isSuccess(String code) {
+        return StringUtils.equals(SUCCESS.getCode(), code);
     }
 
 }

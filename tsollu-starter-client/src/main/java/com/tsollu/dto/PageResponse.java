@@ -51,8 +51,8 @@ public class PageResponse<T> extends Response {
      * @param errorCode 错误码
      * @return 结果
      */
-    public static PageResponse buildFailure(@NonNull ErrorCode errorCode) {
-        return buildFailure(errorCode, null);
+    public static PageResponse of(@NonNull ErrorCode errorCode) {
+        return of(errorCode, null);
     }
 
     /**
@@ -62,7 +62,7 @@ public class PageResponse<T> extends Response {
      * @param data      泛型集合
      * @return 结果
      */
-    public static <T> PageResponse<T> buildFailure(@NonNull ErrorCode errorCode, @Nullable Collection<T> data) {
+    public static <T> PageResponse<T> of(@NonNull ErrorCode errorCode, @Nullable Collection<T> data) {
         return new PageResponse<>(errorCode, data);
     }
 
@@ -72,8 +72,8 @@ public class PageResponse<T> extends Response {
      * @param data 泛型集合
      * @return 结果
      */
-    public static <T> PageResponse<T> buildSuccess(@Nullable Collection<T> data) {
-        return buildFailure(ErrorCodeDefault.SUCCESS, data);
+    public static <T> PageResponse<T> of(@Nullable Collection<T> data) {
+        return of(ErrorCodeDefault.SUCCESS, data);
     }
 
     /**
@@ -83,8 +83,8 @@ public class PageResponse<T> extends Response {
      * @param totalCount 总记录数
      * @return 结果
      */
-    public static <T> PageResponse<T> buildSuccess(@Nullable Collection<T> data, long totalCount) {
-        return buildFailure(ErrorCodeDefault.SUCCESS, data).setTotalCount(totalCount);
+    public static <T> PageResponse<T> of(@Nullable Collection<T> data, long totalCount) {
+        return of(ErrorCodeDefault.SUCCESS, data).setTotalCount(totalCount);
     }
 
     /**
@@ -92,8 +92,8 @@ public class PageResponse<T> extends Response {
      *
      * @return 结果
      */
-    public static PageResponse buildSuccess() {
-        return buildSuccess(null);
+    public static PageResponse of() {
+        return of(ErrorCodeDefault.SUCCESS, null);
     }
 
     /**
@@ -143,18 +143,6 @@ public class PageResponse<T> extends Response {
     @Override
     public PageResponse setHeaders(@Nullable HttpHeaders headers) {
         super.setHeaders(headers);
-        return this;
-    }
-
-    /**
-     * 设置错误原因（可选）
-     *
-     * @param reason 错误原因
-     * @return 结果
-     */
-    @Override
-    public PageResponse setReason(String reason) {
-        super.setReason(reason);
         return this;
     }
 

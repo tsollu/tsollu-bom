@@ -35,11 +35,6 @@ public class Response extends DTO {
     private String message;
 
     /**
-     * 响应错误原因
-     */
-    private String reason;
-
-    /**
      * 响应头信息
      */
     @JsonIgnore
@@ -56,12 +51,12 @@ public class Response extends DTO {
     }
 
     /**
-     * 返回一个失败的结果
+     * 返回一个自定义错误码的结果
      *
      * @param errorCode 错误码
      * @return 结果
      */
-    public static Response buildFailure(@NonNull ErrorCode errorCode) {
+    public static Response of(@NonNull ErrorCode errorCode) {
         return new Response(errorCode);
     }
 
@@ -70,12 +65,12 @@ public class Response extends DTO {
      *
      * @return 结果
      */
-    public static Response buildSuccess() {
-        return buildFailure(ErrorCodeDefault.SUCCESS);
+    public static Response of() {
+        return of(ErrorCodeDefault.SUCCESS);
     }
 
     /**
-     * 重写错误信息 - 支持已定义的错误代码，重写错误信息
+     * 重写错误码的错误信息
      *
      * @param message 错误信息
      * @return 结果
@@ -86,7 +81,7 @@ public class Response extends DTO {
     }
 
     /**
-     * 重写错误信息 - 支持已定义的错误代码，重写错误信息
+     * 重写错误码的错误信息
      *
      * @param message 错误信息 - 格式化文本, {} 表示占位符
      * @param params  可变数组
@@ -98,7 +93,7 @@ public class Response extends DTO {
     }
 
     /**
-     * 重写错误信息 - 支持已定义的错误代码，重写错误信息
+     * 重写错误码的错误信息
      *
      * @param message 错误信息 - 格式化文本, {key} 表示占位符
      * @param map     对象集合
@@ -115,21 +110,6 @@ public class Response extends DTO {
 
     public String getMessage() {
         return Strings.nullToEmpty(message);
-    }
-
-    public String getReason() {
-        return Strings.nullToEmpty(reason);
-    }
-
-    /**
-     * 设置错误原因（可选）
-     *
-     * @param reason 错误原因
-     * @return 结果
-     */
-    public Response setReason(@Nullable String reason) {
-        this.reason = reason;
-        return this;
     }
 
     public HttpHeaders getHeaders() {
@@ -152,7 +132,7 @@ public class Response extends DTO {
     }
 
     public boolean isSuccess() {
-        return ErrorCodeDefault.SUCCESS.getCode().equals(getCode());
+        return ErrorCodeDefault.isSuccess(getCode());
     }
 
 }

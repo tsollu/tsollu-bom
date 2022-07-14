@@ -41,8 +41,8 @@ public class SingleResponse<T> extends Response {
      * @param errorCode 错误码
      * @return 结果
      */
-    public static SingleResponse buildFailure(@NonNull ErrorCode errorCode) {
-        return buildFailure(errorCode, null);
+    public static SingleResponse of(@NonNull ErrorCode errorCode) {
+        return of(errorCode, null);
     }
 
     /**
@@ -52,7 +52,7 @@ public class SingleResponse<T> extends Response {
      * @param data      泛型对象
      * @return 结果
      */
-    public static <T> SingleResponse<T> buildFailure(@NonNull ErrorCode errorCode, @Nullable T data) {
+    public static <T> SingleResponse<T> of(@NonNull ErrorCode errorCode, @Nullable T data) {
         return new SingleResponse<>(errorCode, data);
     }
 
@@ -62,8 +62,8 @@ public class SingleResponse<T> extends Response {
      * @param data 泛型对象
      * @return 结果
      */
-    public static <T> SingleResponse<T> buildSuccess(@Nullable T data) {
-        return buildFailure(ErrorCodeDefault.SUCCESS, data);
+    public static <T> SingleResponse<T> of(@Nullable T data) {
+        return of(ErrorCodeDefault.SUCCESS, data);
     }
 
     /**
@@ -71,8 +71,8 @@ public class SingleResponse<T> extends Response {
      *
      * @return 结果
      */
-    public static SingleResponse buildSuccess() {
-        return buildSuccess(null);
+    public static SingleResponse of() {
+        return of(null);
     }
 
     /**
@@ -122,18 +122,6 @@ public class SingleResponse<T> extends Response {
     @Override
     public SingleResponse setHeaders(@Nullable HttpHeaders headers) {
         super.setHeaders(headers);
-        return this;
-    }
-
-    /**
-     * 设置错误原因（可选）
-     *
-     * @param reason 错误原因
-     * @return 结果
-     */
-    @Override
-    public SingleResponse setReason(@Nullable String reason) {
-        super.setReason(reason);
         return this;
     }
 

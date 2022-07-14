@@ -46,8 +46,8 @@ public class MultiResponse<T> extends Response {
      * @param errorCode 错误码
      * @return 结果
      */
-    public static MultiResponse buildFailure(@NonNull ErrorCode errorCode) {
-        return buildFailure(errorCode, null);
+    public static MultiResponse of(@NonNull ErrorCode errorCode) {
+        return of(errorCode, null);
     }
 
     /**
@@ -57,7 +57,7 @@ public class MultiResponse<T> extends Response {
      * @param data      泛型集合
      * @return 结果
      */
-    public static <T> MultiResponse<T> buildFailure(@NonNull ErrorCode errorCode, @Nullable Collection<T> data) {
+    public static <T> MultiResponse<T> of(@NonNull ErrorCode errorCode, @Nullable Collection<T> data) {
         return new MultiResponse<>(errorCode, data);
     }
 
@@ -67,8 +67,8 @@ public class MultiResponse<T> extends Response {
      * @param data 泛型集合
      * @return 结果
      */
-    public static <T> MultiResponse<T> buildSuccess(@Nullable Collection<T> data) {
-        return buildFailure(ErrorCodeDefault.SUCCESS, data);
+    public static <T> MultiResponse<T> of(@Nullable Collection<T> data) {
+        return of(ErrorCodeDefault.SUCCESS, data);
     }
 
     /**
@@ -76,8 +76,8 @@ public class MultiResponse<T> extends Response {
      *
      * @return 结果
      */
-    public static MultiResponse buildSuccess() {
-        return buildSuccess(null);
+    public static MultiResponse of() {
+        return of(ErrorCodeDefault.SUCCESS, null);
     }
 
     /**
@@ -127,18 +127,6 @@ public class MultiResponse<T> extends Response {
     @Override
     public MultiResponse setHeaders(@Nullable HttpHeaders headers) {
         super.setHeaders(headers);
-        return this;
-    }
-
-    /**
-     * 设置错误原因（可选）
-     *
-     * @param reason 错误原因
-     * @return 结果
-     */
-    @Override
-    public MultiResponse setReason(@Nullable String reason) {
-        super.setReason(reason);
         return this;
     }
 

@@ -38,7 +38,7 @@ public class GlobalExceptionHandler {
     public Response handleException(ValidationException e, HttpServletResponse response) {
         log.info(e.getMessage());
         response.setStatus(e.getHttpStatus());
-        return Response.buildFailure(e.getErrorCode()).setReason(e.getErrorReason());
+        return Response.of(e.getErrorCode());
     }
 
     /**
@@ -52,7 +52,7 @@ public class GlobalExceptionHandler {
     public Response handleException(BusinessException e, HttpServletResponse response) {
         log.info(e.getMessage());
         response.setStatus(e.getHttpStatus());
-        return Response.buildFailure(e.getErrorCode()).setReason(e.getErrorReason());
+        return Response.of(e.getErrorCode());
     }
 
     /**
@@ -66,7 +66,7 @@ public class GlobalExceptionHandler {
     public Response handleException(SystemException e, HttpServletResponse response) {
         log.error(e.getMessage());
         response.setStatus(e.getHttpStatus());
-        return Response.buildFailure(e.getErrorCode()).setReason(e.getErrorReason());
+        return Response.of(e.getErrorCode());
     }
 
     /**
@@ -80,7 +80,7 @@ public class GlobalExceptionHandler {
     public Response handleException(Throwable e, HttpServletResponse response) {
         log.error(Throwables.getStackTraceAsString(e));
         response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
-        return Response.buildFailure(ErrorCodeDefault.S0500);
+        return Response.of(ErrorCodeDefault.S0500);
     }
 
 }

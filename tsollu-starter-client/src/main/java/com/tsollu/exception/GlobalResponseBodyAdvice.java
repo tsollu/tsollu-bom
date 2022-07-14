@@ -51,7 +51,7 @@ public class GlobalResponseBodyAdvice implements ResponseBodyAdvice<Object> {
         if (body instanceof Problem) {
             final Problem problem = (Problem) body;
             final String statusCode = String.valueOf(problem.getStatus().getStatusCode());
-            return Response.buildFailure(convert(statusCode, problem.getTitle())).setReason(problem.getDetail());
+            return Response.of(convert(statusCode, problem.getTitle()));
         }
 
         // Handle Response headers
