@@ -23,11 +23,11 @@ public class SystemException extends BaseException {
     /**
      * 已知的系统异常
      *
-     * @param errorCode 错误码
-     * @param reason    错误原因
+     * @param errorCode   错误码
+     * @param errorReason 错误原因
      */
-    public SystemException(@NonNull ErrorCode errorCode, String reason) {
-        super(errorCode, reason);
+    public SystemException(@NonNull ErrorCode errorCode, String errorReason) {
+        super(errorCode, errorReason);
     }
 
     /**
@@ -43,12 +43,12 @@ public class SystemException extends BaseException {
     /**
      * 已知的系统异常
      *
-     * @param errorCode 错误码
-     * @param reason    错误原因
-     * @param cause     异常
+     * @param errorCode   错误码
+     * @param errorReason 错误原因
+     * @param cause       异常
      */
-    public SystemException(@NonNull ErrorCode errorCode, String reason, Throwable cause) {
-        super(errorCode, reason, cause);
+    public SystemException(@NonNull ErrorCode errorCode, String errorReason, Throwable cause) {
+        super(errorCode, errorReason, cause);
     }
 
 }

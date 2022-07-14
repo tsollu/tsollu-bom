@@ -19,10 +19,10 @@ public class ValidationException extends BusinessException {
     /**
      * 请求参数校验异常
      *
-     * @param reason 错误原因
+     * @param errorReason 错误原因
      */
-    public ValidationException(String reason) {
-        super(ErrorCodeDefault.S0400, reason);
+    public ValidationException(String errorReason) {
+        super(ErrorCodeDefault.S0400, errorReason);
     }
 
     /**
@@ -37,11 +37,11 @@ public class ValidationException extends BusinessException {
     /**
      * 请求参数校验异常
      *
-     * @param reason 错误原因
-     * @param cause  异常
+     * @param errorReason 错误原因
+     * @param cause       异常
      */
-    public ValidationException(String reason, Throwable cause) {
-        super(ErrorCodeDefault.S0400, reason, cause);
+    public ValidationException(String errorReason, Throwable cause) {
+        super(ErrorCodeDefault.S0400, errorReason, cause);
     }
 
 }
