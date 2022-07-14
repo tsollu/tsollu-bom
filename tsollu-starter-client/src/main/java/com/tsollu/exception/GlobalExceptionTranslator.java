@@ -1,7 +1,6 @@
 package com.tsollu.exception;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.zalando.problem.spring.web.advice.ProblemHandling;
@@ -14,7 +13,6 @@ import org.zalando.problem.spring.web.advice.ProblemHandling;
  * @date 2022-07-02
  */
 @Configuration(proxyBeanMethods = false)
-@ConditionalOnWebApplication
 @ConditionalOnMissingBean(ProblemHandling.class)
 @RestControllerAdvice
 public class GlobalExceptionTranslator implements ProblemHandling {

@@ -3,7 +3,6 @@ package com.tsollu.exception;
 import com.tsollu.dto.Response;
 
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
@@ -17,11 +16,12 @@ import org.zalando.problem.Problem;
 import java.util.Optional;
 
 /**
+ * 全局拦截器，对响应报文进行处理。
+ *
  * @author larry.qi
  * @date 2022-07-05
  */
-@Configuration
-@ConditionalOnWebApplication
+@Configuration(proxyBeanMethods = false)
 @RestControllerAdvice
 public class GlobalResponseBodyAdvice implements ResponseBodyAdvice<Object> {
 
@@ -54,7 +54,7 @@ public class GlobalResponseBodyAdvice implements ResponseBodyAdvice<Object> {
             return Response.buildFailure(convert(statusCode, problem.getTitle())).setReason(problem.getDetail());
         }
 
-        // Handle REST Response headers
+        // Handle Response headers
         if (body instanceof Response) {
             final Response result = (Response) body;
             Optional.ofNullable(result.getHeaders()).ifPresent(headers -> response.getHeaders().addAll(headers));

@@ -4,10 +4,10 @@ import com.google.common.base.Throwables;
 
 import com.tsollu.dto.Response;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -16,14 +16,13 @@ import javax.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * 统一异常处理
+ * 全局异常处理
  *
  * @author larry.qi
  * @date 2022-07-02
  */
 @Slf4j
 @Configuration(proxyBeanMethods = false)
-@ConditionalOnWebApplication
 @RestControllerAdvice
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class GlobalExceptionHandler {
@@ -65,7 +64,7 @@ public class GlobalExceptionHandler {
      */
     @ExceptionHandler(SystemException.class)
     public Response handleException(SystemException e, HttpServletResponse response) {
-        log.error(Throwables.getStackTraceAsString(e));
+        log.error(e.getMessage());
         response.setStatus(e.getHttpStatus());
         return Response.buildFailure(e.getErrorCode()).setReason(e.getErrorReason());
     }
@@ -80,6 +79,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Throwable.class)
     public Response handleException(Throwable e, HttpServletResponse response) {
         log.error(Throwables.getStackTraceAsString(e));
+        response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
         return Response.buildFailure(ErrorCodeDefault.S0500);
     }
 
