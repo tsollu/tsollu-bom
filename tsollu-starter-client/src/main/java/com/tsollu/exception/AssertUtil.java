@@ -3,6 +3,7 @@ package com.tsollu.exception;
 import org.hibernate.validator.HibernateValidator;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
+import org.springframework.validation.BindingResult;
 
 import java.util.Set;
 
@@ -12,7 +13,8 @@ import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 
 /**
- * 异常工具类 - 支持参数校验异常（ValidationException）、业务处理异常（BusinessException）和已知的系统异常（SystemException）。
+ * 异常工具类，支持参数校验异常（ValidationException）、业务处理异常（BusinessException）、已知的系统异常（SystemException）、对象校验（Hibernate
+ * Validator）。
  *
  * @author larry.qi
  * @date 2022-07-02
@@ -32,12 +34,12 @@ public final class AssertUtil {
     /**
      * 业务异常
      *
-     * @param errorCode 错误码
-     * @param reason    错误原因
+     * @param errorCode   错误码
+     * @param errorReason 错误原因
      * @return BusinessException 业务异常
      */
-    public static BusinessException business(@NonNull ErrorCode errorCode, String reason) {
-        return new BusinessException(errorCode, reason);
+    public static BusinessException business(@NonNull ErrorCode errorCode, String errorReason) {
+        return new BusinessException(errorCode, errorReason);
     }
 
     /**
@@ -54,13 +56,13 @@ public final class AssertUtil {
     /**
      * 业务异常
      *
-     * @param errorCode 错误码
-     * @param reason    错误原因
-     * @param cause     异常信息
+     * @param errorCode   错误码
+     * @param errorReason 错误原因
+     * @param cause       异常信息
      * @return BusinessException 业务异常
      */
-    public static BusinessException business(@NonNull ErrorCode errorCode, String reason, Throwable cause) {
-        return new BusinessException(errorCode, reason, cause);
+    public static BusinessException business(@NonNull ErrorCode errorCode, String errorReason, Throwable cause) {
+        return new BusinessException(errorCode, errorReason, cause);
     }
 
     /**
@@ -76,12 +78,12 @@ public final class AssertUtil {
     /**
      * 已知的系统异常
      *
-     * @param errorCode 错误码
-     * @param reason    错误原因
+     * @param errorCode   错误码
+     * @param errorReason 错误原因
      * @return SystemException 已知的系统异常
      */
-    public static SystemException system(@NonNull ErrorCode errorCode, String reason) {
-        return new SystemException(errorCode, reason);
+    public static SystemException system(@NonNull ErrorCode errorCode, String errorReason) {
+        return new SystemException(errorCode, errorReason);
     }
 
     /**
@@ -98,13 +100,13 @@ public final class AssertUtil {
     /**
      * 已知的系统异常
      *
-     * @param errorCode 错误码
-     * @param reason    错误原因
-     * @param cause     异常信息
+     * @param errorCode   错误码
+     * @param errorReason 错误原因
+     * @param cause       异常信息
      * @return SystemException 已知的系统异常
      */
-    public static SystemException system(@NonNull ErrorCode errorCode, String reason, Throwable cause) {
-        return new SystemException(errorCode, reason, cause);
+    public static SystemException system(@NonNull ErrorCode errorCode, String errorReason, Throwable cause) {
+        return new SystemException(errorCode, errorReason, cause);
     }
 
     /**
@@ -119,11 +121,11 @@ public final class AssertUtil {
     /**
      * 请求参数校验异常
      *
-     * @param reason 错误原因
+     * @param errorReason 错误原因
      * @return ValidationException 请求参数校验异常
      */
-    public static ValidationException validate(String reason) {
-        return new ValidationException(reason);
+    public static ValidationException validate(String errorReason) {
+        return new ValidationException(errorReason);
     }
 
     /**
@@ -139,12 +141,12 @@ public final class AssertUtil {
     /**
      * 请求参数校验异常
      *
-     * @param reason 错误原因
-     * @param cause  异常信息
+     * @param errorReason 错误原因
+     * @param cause       异常信息
      * @return ValidationException 请求参数校验异常
      */
-    public static ValidationException validate(String reason, Throwable cause) {
-        return new ValidationException(reason, cause);
+    public static ValidationException validate(String errorReason, Throwable cause) {
+        return new ValidationException(errorReason, cause);
     }
 
     /**
@@ -153,6 +155,7 @@ public final class AssertUtil {
      * @param errorCode 错误码
      * @param object    校验对象
      * @param groups    分组校验
+     * @throws BusinessException 业务异常
      */
     public static void validateObject(@NonNull ErrorCode errorCode, @Nullable Object object, Class<?>... groups) {
         ValidatorFactory validatorFactory = Validation.byProvider(HibernateValidator.class).configure()
@@ -169,6 +172,7 @@ public final class AssertUtil {
      *
      * @param errorCode 错误码
      * @param object    校验对象
+     * @throws BusinessException 业务异常
      */
     public static void validateObject(@NonNull ErrorCode errorCode, @Nullable Object object) {
         ValidatorFactory validatorFactory = Validation.byProvider(HibernateValidator.class).configure()
@@ -185,6 +189,7 @@ public final class AssertUtil {
      *
      * @param object 校验对象
      * @param groups 分组校验
+     * @throws ValidationException 请求参数校验异常
      */
     public static void validateObject(@Nullable Object object, Class<?>... groups) {
         ValidatorFactory validatorFactory = Validation.byProvider(HibernateValidator.class).configure()
@@ -200,6 +205,7 @@ public final class AssertUtil {
      * 基于注解的对象校验，抛出请求参数异常
      *
      * @param object 校验对象
+     * @throws ValidationException 请求参数校验异常
      */
     public static void validateObject(@Nullable Object object) {
         ValidatorFactory validatorFactory = Validation.byProvider(HibernateValidator.class).configure()
@@ -209,6 +215,16 @@ public final class AssertUtil {
         for (ConstraintViolation<Object> o : sets) {
             AssertUtil.validate(o.getMessage()).assertThrow();
         }
+    }
+
+    /**
+     * 前端请求参数校验，抛出请求参数异常
+     *
+     * @param bindingResult 前端请求参数校验
+     * @throws ValidationException 请求参数校验异常
+     */
+    public static void validateBindingResult(BindingResult bindingResult) {
+        AssertUtil.validate(bindingResult.getFieldError().getDefaultMessage()).assertThrow(bindingResult.hasErrors());
     }
 
 }

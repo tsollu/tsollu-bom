@@ -140,18 +140,19 @@ public abstract class BaseException extends RuntimeException {
      * @return BaseException 异常基类
      */
     public BaseException setHttpStatus(HttpStatus httpStatus) {
-        return setHttpStatus(httpStatus.value());
+        Optional.ofNullable(httpStatus).ifPresent(s -> setHttpStatus(s.value()));
+        return this;
     }
 
     /**
-     * 直接抛出异常
+     * 抛出异常
      */
     public void assertThrow() {
-        assertThrow(true);
+        throw this;
     }
 
     /**
-     * 断言一个表达式，true 则抛出异常。
+     * 断言一个表达式，true 则抛出异常
      *
      * @param expression 表达式
      */
