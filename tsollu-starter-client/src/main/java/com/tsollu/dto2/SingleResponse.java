@@ -1,4 +1,4 @@
-package com.tsollu.dto;
+package com.tsollu.dto2;
 
 import com.tsollu.exception.ErrorCode;
 import com.tsollu.exception.ErrorCodeDefault;
@@ -7,35 +7,30 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 /**
- * API Response with batch record to return, usually use in conditional query.
+ * API Response with single record to return.
  *
  * @author larry.qi
  * @date 2022-07-02
  */
-public class MultiResponse<T> extends Response {
+public class SingleResponse<T> extends Response {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 返回结果集
+     * 返回结果对象（泛型对象）
      */
-    private Collection<T> data;
+    private T data;
 
     /**
      * 构造函数
      *
      * @param errorCode 错误码
-     * @param data      泛型集合
+     * @param data      泛型对象
      */
-    public MultiResponse(@NonNull ErrorCode errorCode, @Nullable Collection<T> data) {
+    public SingleResponse(@NonNull ErrorCode errorCode, @Nullable T data) {
         super(errorCode);
         this.data = data;
     }
@@ -46,7 +41,7 @@ public class MultiResponse<T> extends Response {
      * @param errorCode 错误码
      * @return 结果
      */
-    public static MultiResponse of(@NonNull ErrorCode errorCode) {
+    public static SingleResponse of(@NonNull ErrorCode errorCode) {
         return of(errorCode, null);
     }
 
@@ -54,20 +49,20 @@ public class MultiResponse<T> extends Response {
      * 返回一个失败的结果
      *
      * @param errorCode 错误码
-     * @param data      泛型集合
+     * @param data      泛型对象
      * @return 结果
      */
-    public static <T> MultiResponse<T> of(@NonNull ErrorCode errorCode, @Nullable Collection<T> data) {
-        return new MultiResponse<>(errorCode, data);
+    public static <T> SingleResponse<T> of(@NonNull ErrorCode errorCode, @Nullable T data) {
+        return new SingleResponse<>(errorCode, data);
     }
 
     /**
      * 返回一个成功的结果
      *
-     * @param data 泛型集合
+     * @param data 泛型对象
      * @return 结果
      */
-    public static <T> MultiResponse<T> of(@Nullable Collection<T> data) {
+    public static <T> SingleResponse<T> of(@Nullable T data) {
         return of(ErrorCodeDefault.SUCCESS, data);
     }
 
@@ -76,7 +71,7 @@ public class MultiResponse<T> extends Response {
      *
      * @return 结果
      */
-    public static MultiResponse of() {
+    public static SingleResponse of() {
         return of(ErrorCodeDefault.SUCCESS, null);
     }
 
@@ -87,7 +82,7 @@ public class MultiResponse<T> extends Response {
      * @return 结果
      */
     @Override
-    public MultiResponse rewrite(String message) {
+    public SingleResponse rewrite(String message) {
         super.rewrite(message);
         return this;
     }
@@ -100,7 +95,7 @@ public class MultiResponse<T> extends Response {
      * @return 结果
      */
     @Override
-    public MultiResponse rewrite(String message, Object... params) {
+    public SingleResponse rewrite(String message, Object... params) {
         super.rewrite(message, params);
         return this;
     }
@@ -113,7 +108,7 @@ public class MultiResponse<T> extends Response {
      * @return 结果
      */
     @Override
-    public MultiResponse rewrite(String message, Map<?, ?> map) {
+    public SingleResponse rewrite(String message, Map<?, ?> map) {
         super.rewrite(message, map);
         return this;
     }
@@ -125,13 +120,13 @@ public class MultiResponse<T> extends Response {
      * @return 结果
      */
     @Override
-    public MultiResponse setHeaders(@Nullable HttpHeaders headers) {
+    public SingleResponse setHeaders(@Nullable HttpHeaders headers) {
         super.setHeaders(headers);
         return this;
     }
 
-    public List<T> getData() {
-        return Objects.isNull(data) ? Collections.emptyList() : new ArrayList<>(data);
+    public T getData() {
+        return data;
     }
 
 }

@@ -1,8 +1,9 @@
-package com.tsollu.dto;
+package com.tsollu.dto2;
 
 import com.google.common.base.Strings;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.tsollu.dto.DTO;
 import com.tsollu.exception.ErrorCode;
 import com.tsollu.exception.ErrorCodeDefault;
 

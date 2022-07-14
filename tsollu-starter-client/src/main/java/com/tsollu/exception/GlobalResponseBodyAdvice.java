@@ -1,6 +1,6 @@
 package com.tsollu.exception;
 
-import com.tsollu.dto.Response;
+import com.tsollu.dto2.Response;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.context.annotation.Configuration;

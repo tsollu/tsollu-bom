@@ -1,4 +1,4 @@
-package com.tsollu.dto;
+package com.tsollu.dto2;
 
 import com.tsollu.exception.AssertUtil;
 import com.tsollu.exception.ValidationException;

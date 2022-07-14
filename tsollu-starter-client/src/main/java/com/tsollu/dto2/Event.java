@@ -1,4 +1,6 @@
-package com.tsollu.dto;
+package com.tsollu.dto2;
+
+import com.tsollu.dto.DTO;
 
 /**
  * Event - 消息事件对象

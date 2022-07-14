@@ -1,6 +1,8 @@
-package com.tsollu.dto;
+package com.tsollu.dto2;
 
 import com.google.common.collect.Maps;
+
+import com.tsollu.dto.DTO;
 
 import java.util.Map;
 import java.util.Objects;

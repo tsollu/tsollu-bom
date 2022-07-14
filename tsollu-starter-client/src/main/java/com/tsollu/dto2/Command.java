@@ -1,4 +1,6 @@
-package com.tsollu.dto;
+package com.tsollu.dto2;
+
+import com.tsollu.dto.DTO;
 
 /**
  * Cmd (Command) - 指令对象，用于处理增删改操作。

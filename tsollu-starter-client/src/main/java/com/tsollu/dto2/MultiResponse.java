@@ -1,4 +1,4 @@
-package com.tsollu.dto;
+package com.tsollu.dto2;
 
 import com.tsollu.exception.ErrorCode;
 import com.tsollu.exception.ErrorCodeDefault;
@@ -15,19 +15,14 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * API Response with batch page record to return, usually use in page query.
+ * API Response with batch record to return, usually use in conditional query.
  *
  * @author larry.qi
  * @date 2022-07-02
  */
-public class PageResponse<T> extends Response {
+public class MultiResponse<T> extends Response {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * 总记录数
-     */
-    private long totalCount;
 
     /**
      * 返回结果集
@@ -40,7 +35,7 @@ public class PageResponse<T> extends Response {
      * @param errorCode 错误码
      * @param data      泛型集合
      */
-    private PageResponse(@NonNull ErrorCode errorCode, @Nullable Collection<T> data) {
+    public MultiResponse(@NonNull ErrorCode errorCode, @Nullable Collection<T> data) {
         super(errorCode);
         this.data = data;
     }
@@ -51,7 +46,7 @@ public class PageResponse<T> extends Response {
      * @param errorCode 错误码
      * @return 结果
      */
-    public static PageResponse of(@NonNull ErrorCode errorCode) {
+    public static MultiResponse of(@NonNull ErrorCode errorCode) {
         return of(errorCode, null);
     }
 
@@ -62,8 +57,8 @@ public class PageResponse<T> extends Response {
      * @param data      泛型集合
      * @return 结果
      */
-    public static <T> PageResponse<T> of(@NonNull ErrorCode errorCode, @Nullable Collection<T> data) {
-        return new PageResponse<>(errorCode, data);
+    public static <T> MultiResponse<T> of(@NonNull ErrorCode errorCode, @Nullable Collection<T> data) {
+        return new MultiResponse<>(errorCode, data);
     }
 
     /**
@@ -72,27 +67,16 @@ public class PageResponse<T> extends Response {
      * @param data 泛型集合
      * @return 结果
      */
-    public static <T> PageResponse<T> of(@Nullable Collection<T> data) {
+    public static <T> MultiResponse<T> of(@Nullable Collection<T> data) {
         return of(ErrorCodeDefault.SUCCESS, data);
     }
 
     /**
      * 返回一个成功的结果
      *
-     * @param data       泛型集合
-     * @param totalCount 总记录数
      * @return 结果
      */
-    public static <T> PageResponse<T> of(@Nullable Collection<T> data, long totalCount) {
-        return of(ErrorCodeDefault.SUCCESS, data).setTotalCount(totalCount);
-    }
-
-    /**
-     * 返回一个成功的结果
-     *
-     * @return 结果
-     */
-    public static PageResponse of() {
+    public static MultiResponse of() {
         return of(ErrorCodeDefault.SUCCESS, null);
     }
 
@@ -103,7 +87,7 @@ public class PageResponse<T> extends Response {
      * @return 结果
      */
     @Override
-    public PageResponse rewrite(String message) {
+    public MultiResponse rewrite(String message) {
         super.rewrite(message);
         return this;
     }
@@ -116,7 +100,7 @@ public class PageResponse<T> extends Response {
      * @return 结果
      */
     @Override
-    public PageResponse rewrite(String message, Object... params) {
+    public MultiResponse rewrite(String message, Object... params) {
         super.rewrite(message, params);
         return this;
     }
@@ -129,7 +113,7 @@ public class PageResponse<T> extends Response {
      * @return 结果
      */
     @Override
-    public PageResponse rewrite(String message, Map<?, ?> map) {
+    public MultiResponse rewrite(String message, Map<?, ?> map) {
         super.rewrite(message, map);
         return this;
     }
@@ -141,23 +125,8 @@ public class PageResponse<T> extends Response {
      * @return 结果
      */
     @Override
-    public PageResponse setHeaders(@Nullable HttpHeaders headers) {
+    public MultiResponse setHeaders(@Nullable HttpHeaders headers) {
         super.setHeaders(headers);
-        return this;
-    }
-
-    public long getTotalCount() {
-        return (totalCount >= 0) ? totalCount : 0L;
-    }
-
-    /**
-     * 设置总记录数（可选）
-     *
-     * @param totalCount 总记录数
-     * @return 结果
-     */
-    public PageResponse setTotalCount(long totalCount) {
-        this.totalCount = totalCount;
         return this;
     }
 

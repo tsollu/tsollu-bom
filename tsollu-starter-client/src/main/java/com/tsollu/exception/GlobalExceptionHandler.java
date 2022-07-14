@@ -2,7 +2,7 @@ package com.tsollu.exception;
 
 import com.google.common.base.Throwables;
 
-import com.tsollu.dto.Response;
+import com.tsollu.dto2.Response;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;

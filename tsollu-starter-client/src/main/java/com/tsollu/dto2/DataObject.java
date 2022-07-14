@@ -1,4 +1,6 @@
-package com.tsollu.dto;
+package com.tsollu.dto2;
+
+import com.tsollu.dto.DTO;
 
 /**
  * DO (Data Object) - 此对象与数据库表结构一一对应，通过 DAO 层向上传输数据源对象。
