@@ -5,6 +5,7 @@ import org.springframework.lang.NonNull;
 
 import java.util.Map;
 import java.util.Optional;
+import java.util.function.BooleanSupplier;
 
 import lombok.Getter;
 
@@ -160,6 +161,15 @@ public abstract class BaseException extends RuntimeException {
         if (expression) {
             throw this;
         }
+    }
+
+    /**
+     * 断言一个函数返回结果，true 则抛出异常
+     *
+     * @param booleanSupplier 函数返回结果
+     */
+    public void assertThrow(BooleanSupplier booleanSupplier) {
+        assertThrow(booleanSupplier.getAsBoolean());
     }
 
 }

@@ -13,8 +13,7 @@ import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 
 /**
- * 异常工具类，支持参数校验异常（ValidationException）、业务处理异常（BusinessException）、已知的系统异常（SystemException）、对象校验（Hibernate
- * Validator）。
+ * 异常工具类，支持参数校验异常（validate）、业务处理异常（business）、已知的系统异常（system）、对象校验（validateObject）。
  *
  * @author larry.qi
  * @date 2022-07-02
