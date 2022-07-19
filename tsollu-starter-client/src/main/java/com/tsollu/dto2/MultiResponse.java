@@ -131,7 +131,13 @@ public class MultiResponse<T> extends Response {
     }
 
     public List<T> getData() {
-        return Objects.isNull(data) ? Collections.emptyList() : new ArrayList<>(data);
+        if (null == data) {
+            return Collections.emptyList();
+        }
+        if (data instanceof List) {
+            return (List<T>) data;
+        }
+        return new ArrayList<>(data);
     }
 
 }

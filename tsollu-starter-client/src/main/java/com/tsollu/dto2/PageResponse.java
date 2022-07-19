@@ -12,7 +12,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 /**
  * API Response with batch page record to return, usually use in page query.
@@ -162,7 +161,13 @@ public class PageResponse<T> extends Response {
     }
 
     public List<T> getData() {
-        return Objects.isNull(data) ? Collections.emptyList() : new ArrayList<>(data);
+        if (null == data) {
+            return Collections.emptyList();
+        }
+        if (data instanceof List) {
+            return (List<T>) data;
+        }
+        return new ArrayList<>(data);
     }
 
 }

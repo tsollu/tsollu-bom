@@ -139,6 +139,8 @@ markdown_extensions:
 nav:
     -   首页:
             - index.md
+            - API 参考:
+                  - getting-started/api-reference.md
             -   异常处理:
                     -   错误码: getting-started/error-code.md
                     -   异常类: getting-started/exception-class.md
