@@ -60,6 +60,11 @@
             <!-- Tsollu Starters built on Spring Boot -->
             <dependency>
                 <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-activiti</artifactId>
+                <version>${tsollu.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tsollu</groupId>
                 <artifactId>tsollu-starter-apidoc</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
