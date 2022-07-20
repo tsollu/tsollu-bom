@@ -1,2 +1,3 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.tsollu.mybatis.TsolluMybatisAutoConfiguration
+  com.tsollu.mybatis.TsolluMybatisAutoConfiguration,\
+  com.tsollu.mybatis.TsolluMybatisPlusAutoConfiguration

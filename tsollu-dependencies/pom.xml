@@ -110,11 +110,6 @@
             </dependency>
             <dependency>
                 <groupId>com.tsollu</groupId>
-                <artifactId>tsollu-starter-mybatis-plus</artifactId>
-                <version>${tsollu.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.tsollu</groupId>
                 <artifactId>tsollu-starter-oss</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>

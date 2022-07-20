@@ -87,7 +87,6 @@
         <module>tsollu-starter-jpa</module>
         <module>tsollu-starter-kafka</module>
         <module>tsollu-starter-mybatis</module>
-        <module>tsollu-starter-mybatis-plus</module>
         <module>tsollu-starter-oss</module>
         <module>tsollu-starter-pulsar</module>
         <module>tsollu-starter-redis</module>

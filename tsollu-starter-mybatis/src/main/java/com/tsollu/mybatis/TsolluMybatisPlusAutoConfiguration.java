@@ -1,5 +1,6 @@
-package com.tsollu.mybatis.plus;
+package com.tsollu.mybatis;
 
+import com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.BlockAttackInnerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInterceptor;
@@ -12,8 +13,11 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * @author larry.qi
+ */
 @Configuration(proxyBeanMethods = false)
-@ConditionalOnClass({SqlSessionFactory.class, SqlSessionFactoryBean.class})
+@ConditionalOnClass({SqlSessionFactory.class, SqlSessionFactoryBean.class, MybatisPlusAutoConfiguration.class})
 public class TsolluMybatisPlusAutoConfiguration {
 
     /**
