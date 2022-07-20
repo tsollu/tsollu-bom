@@ -6,8 +6,8 @@ echo [INFO] mvnw versions:set
 echo.
 
 cd ..
-call mvnw versions:set          -DnewVersion=0.1.1-SNAPSHOT -DgenerateBackupPoms=false
-call mvnw versions:set-property -DnewVersion=0.1.1-SNAPSHOT -DgenerateBackupPoms=false -Dproperty=tsollu.version
+call mvnw versions:set          -DnewVersion=2022.7.20-SNAPSHOT -DgenerateBackupPoms=false
+call mvnw versions:set-property -DnewVersion=2022.7.20-SNAPSHOT -DgenerateBackupPoms=false -Dproperty=tsollu.version
 
 cd sbin
 pause

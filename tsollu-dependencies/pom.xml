@@ -11,7 +11,7 @@
     <parent>
         <groupId>com.tsollu</groupId>
         <artifactId>tsollu-parent</artifactId>
-        <version>0.1.1-SNAPSHOT</version>
+        <version>2022.7.20-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
