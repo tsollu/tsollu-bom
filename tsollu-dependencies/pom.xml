@@ -93,17 +93,7 @@
             </dependency>
             <dependency>
                 <groupId>com.tsollu</groupId>
-                <artifactId>tsollu-starter-datasource</artifactId>
-                <version>${tsollu.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.tsollu</groupId>
                 <artifactId>tsollu-starter-dubbo</artifactId>
-                <version>${tsollu.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.tsollu</groupId>
-                <artifactId>tsollu-starter-jpa</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
