@@ -29,6 +29,9 @@
         <!-- Bouncy Castle Crypto APIs - https://github.com/open-keychain/bouncycastle -->
         <bouncycastle.version>1.70</bouncycastle.version>
 
+        <!-- Dynamic DataSource - https://github.com/baomidou/dynamic-datasource-spring-boot-starter -->
+        <dynamic-datasource.version>3.5.1</dynamic-datasource.version>
+
         <!-- Google Guava - https://github.com/google/guava -->
         <guava.version>31.1-jre</guava.version>
 
@@ -223,6 +226,13 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!-- Dynamic DataSource - https://github.com/baomidou/dynamic-datasource-spring-boot-starter -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+                <version>${dynamic-datasource.version}</version>
             </dependency>
 
             <!-- PageHelper Spring-Boot-Starter - https://github.com/pagehelper/pagehelper-spring-boot -->
