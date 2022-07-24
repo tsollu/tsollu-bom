@@ -12,24 +12,45 @@
     <parent>
         <groupId>com.tsollu</groupId>
         <artifactId>tsollu-dependencies</artifactId>
-        <version>0.1.1-SNAPSHOT</version>
+        <version>2022.7.24-SNAPSHOT</version>
         <relativePath>../tsollu-dependencies/pom.xml</relativePath>
     </parent>
 
     <dependencies>
+        <!-- MyBatis-Plus is a powerful enhanced toolkit of MyBatis for simplify development. -->
         <dependency>
-            <groupId>com.tsollu</groupId>
-            <artifactId>tsollu-starter-datasource</artifactId>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
         <!-- MyBatis Spring-Boot-Starter will help you to use MyBatis with Spring Boot -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
+            <optional>true</optional>
         </dependency>
         <!-- PageHelper Spring-Boot-Starter will help you use PageHelper with Spring Boot. -->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!-- Dynamic DataSource - https://github.com/baomidou/dynamic-datasource-spring-boot-starter -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!-- Starter for using JDBC with the HikariCP connection pool  -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!-- Druid Spring Boot Starter -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 </project>

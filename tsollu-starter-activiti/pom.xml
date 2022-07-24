@@ -3,11 +3,13 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>tsollu-starter-rocketmq</artifactId>
+    <artifactId>tsollu-starter-activiti</artifactId>
     <packaging>jar</packaging>
-    <name>tsollu-starter-rocketmq</name>
-    <description></description>
-    <url></url>
+    <name>tsollu-starter-activiti</name>
+    <description>Helping businesses solve automation challenges in distributed, highly-scalable and
+        cost effective infrastructures.
+    </description>
+    <url>https://www.activiti.org/</url>
 
     <parent>
         <groupId>com.tsollu</groupId>

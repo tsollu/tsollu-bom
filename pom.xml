@@ -14,7 +14,7 @@
 
     <groupId>com.tsollu</groupId>
     <artifactId>tsollu-parent</artifactId>
-    <version>0.1.1-SNAPSHOT</version>
+    <version>2022.7.24-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>tsollu-parent</name>
     <description>Tsollu BOM and server-side library</description>
@@ -43,7 +43,7 @@
 
     <properties>
         <!-- The tsollu version should be the same as the artifact version above -->
-        <tsollu.version>0.1.1-SNAPSHOT</tsollu.version>
+        <tsollu.version>2022.7.24-SNAPSHOT</tsollu.version>
         <!-- The spring-boot version should be the same as the parent version above -->
         <spring-boot.version>2.6.9</spring-boot.version>
         <!-- Spring Cloud - https://spring.io/projects/spring-cloud -->
@@ -77,17 +77,15 @@
 
     <modules>
         <module>tsollu-dependencies</module>
+		<module>tsollu-starter-activiti</module>
+        <module>tsollu-starter-aliyun</module>
         <module>tsollu-starter-apidoc</module>
         <module>tsollu-starter-apollo</module>
         <module>tsollu-starter-client</module>
         <module>tsollu-starter-crypto</module>
-        <module>tsollu-starter-datasource</module>
         <module>tsollu-starter-dubbo</module>
-        <module>tsollu-starter-jpa</module>
         <module>tsollu-starter-kafka</module>
         <module>tsollu-starter-mybatis</module>
-        <module>tsollu-starter-mybatis-plus</module>
-        <module>tsollu-starter-oss</module>
         <module>tsollu-starter-pulsar</module>
         <module>tsollu-starter-redis</module>
         <module>tsollu-starter-retrofit</module>

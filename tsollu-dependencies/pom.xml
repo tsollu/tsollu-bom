@@ -11,7 +11,7 @@
     <parent>
         <groupId>com.tsollu</groupId>
         <artifactId>tsollu-parent</artifactId>
-        <version>0.1.1-SNAPSHOT</version>
+        <version>2022.7.24-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -29,11 +29,14 @@
         <!-- Bouncy Castle Crypto APIs - https://github.com/open-keychain/bouncycastle -->
         <bouncycastle.version>1.70</bouncycastle.version>
 
+        <!-- Dynamic DataSource - https://github.com/baomidou/dynamic-datasource-spring-boot-starter -->
+        <dynamic-datasource.version>3.5.1</dynamic-datasource.version>
+
         <!-- Google Guava - https://github.com/google/guava -->
         <guava.version>31.1-jre</guava.version>
 
         <!-- Hutool - https://hutool.cn/ -->
-        <hutool.version>5.8.3</hutool.version>
+        <hutool.version>5.8.4</hutool.version>
 
         <!-- MyBatis Spring-Boot-Starter - https://github.com/mybatis/spring-boot-starter -->
         <mybatis-springboot.version>2.2.2</mybatis-springboot.version>
@@ -60,6 +63,16 @@
             <!-- Tsollu Starters built on Spring Boot -->
             <dependency>
                 <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-activiti</artifactId>
+                <version>${tsollu.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tsollu</groupId>
+                <artifactId>tsollu-starter-aliyun</artifactId>
+                <version>${tsollu.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tsollu</groupId>
                 <artifactId>tsollu-starter-apidoc</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
@@ -80,17 +93,7 @@
             </dependency>
             <dependency>
                 <groupId>com.tsollu</groupId>
-                <artifactId>tsollu-starter-datasource</artifactId>
-                <version>${tsollu.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.tsollu</groupId>
                 <artifactId>tsollu-starter-dubbo</artifactId>
-                <version>${tsollu.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.tsollu</groupId>
-                <artifactId>tsollu-starter-jpa</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
@@ -101,16 +104,6 @@
             <dependency>
                 <groupId>com.tsollu</groupId>
                 <artifactId>tsollu-starter-mybatis</artifactId>
-                <version>${tsollu.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.tsollu</groupId>
-                <artifactId>tsollu-starter-mybatis-plus</artifactId>
-                <version>${tsollu.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.tsollu</groupId>
-                <artifactId>tsollu-starter-oss</artifactId>
                 <version>${tsollu.version}</version>
             </dependency>
             <dependency>
@@ -223,6 +216,13 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!-- Dynamic DataSource - https://github.com/baomidou/dynamic-datasource-spring-boot-starter -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+                <version>${dynamic-datasource.version}</version>
             </dependency>
 
             <!-- PageHelper Spring-Boot-Starter - https://github.com/pagehelper/pagehelper-spring-boot -->

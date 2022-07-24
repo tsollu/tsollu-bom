@@ -11,7 +11,7 @@ Spring Boot 2.x 将其作为默认的连接池组件，项目中添加 `spring-b
 ```
 <dependency>
     <groupId>com.tsollu</groupId>
-    <artifactId>tsollu-starter-datasource</artifactId>
+    <artifactId>tsollu-starter-mybatis</artifactId>
     <version>${tsollu.version}</version>
 </dependency>
 ```
