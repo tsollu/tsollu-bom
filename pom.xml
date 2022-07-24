@@ -14,7 +14,7 @@
 
     <groupId>com.tsollu</groupId>
     <artifactId>tsollu-parent</artifactId>
-    <version>2022.7.20-SNAPSHOT</version>
+    <version>2022.7.24-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>tsollu-parent</name>
     <description>Tsollu BOM and server-side library</description>
@@ -43,7 +43,7 @@
 
     <properties>
         <!-- The tsollu version should be the same as the artifact version above -->
-        <tsollu.version>2022.7.20-SNAPSHOT</tsollu.version>
+        <tsollu.version>2022.7.24-SNAPSHOT</tsollu.version>
         <!-- The spring-boot version should be the same as the parent version above -->
         <spring-boot.version>2.6.9</spring-boot.version>
         <!-- Spring Cloud - https://spring.io/projects/spring-cloud -->

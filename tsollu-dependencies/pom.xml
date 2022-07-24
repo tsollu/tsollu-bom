@@ -11,14 +11,14 @@
     <parent>
         <groupId>com.tsollu</groupId>
         <artifactId>tsollu-parent</artifactId>
-        <version>2022.7.20-SNAPSHOT</version>
+        <version>2022.7.24-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <!-- Dependency versions -->
     <properties>
         <!-- Alibaba Druid - https://github.com/alibaba/druid -->
-        <alibaba-druid.version>1.2.11</alibaba-druid.version>
+        <alibaba-druid.version>1.2.9</alibaba-druid.version>
 
         <!-- Alibaba Fastjson - https://github.com/alibaba/fastjson -->
         <alibaba-fastjson.version>1.2.83</alibaba-fastjson.version>
