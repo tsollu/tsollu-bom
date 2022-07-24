@@ -78,6 +78,7 @@
     <modules>
         <module>tsollu-dependencies</module>
 		<module>tsollu-starter-activiti</module>
+        <module>tsollu-starter-aliyun</module>
         <module>tsollu-starter-apidoc</module>
         <module>tsollu-starter-apollo</module>
         <module>tsollu-starter-client</module>
@@ -87,7 +88,6 @@
         <module>tsollu-starter-jpa</module>
         <module>tsollu-starter-kafka</module>
         <module>tsollu-starter-mybatis</module>
-        <module>tsollu-starter-oss</module>
         <module>tsollu-starter-pulsar</module>
         <module>tsollu-starter-redis</module>
         <module>tsollu-starter-retrofit</module>

@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.tsollu.oss.TsolluOSSAutoConfiguration
+  com.tsollu.aliyun.TsolluAliyunAutoConfiguration

@@ -3,11 +3,11 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>tsollu-starter-oss</artifactId>
+    <artifactId>tsollu-starter-aliyun</artifactId>
     <packaging>jar</packaging>
-    <name>tsollu-starter-oss</name>
-    <description></description>
-    <url></url>
+    <name>tsollu-starter-aliyun</name>
+    <description>Spring Boot Starters for Aliyun services</description>
+    <url>https://github.com/alibaba/aliyun-spring-boot</url>
 
     <parent>
         <groupId>com.tsollu</groupId>
