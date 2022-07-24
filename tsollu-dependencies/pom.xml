@@ -18,7 +18,7 @@
     <!-- Dependency versions -->
     <properties>
         <!-- Alibaba Druid - https://github.com/alibaba/druid -->
-        <alibaba-druid.version>1.2.9</alibaba-druid.version>
+        <alibaba-druid.version>1.2.11</alibaba-druid.version>
 
         <!-- Alibaba Fastjson - https://github.com/alibaba/fastjson -->
         <alibaba-fastjson.version>1.2.83</alibaba-fastjson.version>
@@ -33,7 +33,7 @@
         <guava.version>31.1-jre</guava.version>
 
         <!-- Hutool - https://hutool.cn/ -->
-        <hutool.version>5.8.3</hutool.version>
+        <hutool.version>5.8.4</hutool.version>
 
         <!-- MyBatis Spring-Boot-Starter - https://github.com/mybatis/spring-boot-starter -->
         <mybatis-springboot.version>2.2.2</mybatis-springboot.version>
