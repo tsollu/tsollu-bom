@@ -6,8 +6,8 @@
     <artifactId>tsollu-starter-sentinel</artifactId>
     <packaging>jar</packaging>
     <name>tsollu-starter-sentinel</name>
-    <description></description>
-    <url></url>
+    <description>面向分布式、多语言异构化服务架构的流量治理组件</description>
+    <url>https://sentinelguard.io/zh-cn/</url>
 
     <parent>
         <groupId>com.tsollu</groupId>
@@ -20,6 +20,14 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-transport-simple-http</artifactId>
         </dependency>
     </dependencies>
 </project>

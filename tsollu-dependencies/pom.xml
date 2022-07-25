@@ -23,6 +23,9 @@
         <!-- Alibaba Fastjson - https://github.com/alibaba/fastjson -->
         <alibaba-fastjson.version>1.2.83</alibaba-fastjson.version>
 
+        <!-- Alibaba Sentinel - https://sentinelguard.io/zh-cn/index.html -->
+        <alibaba-sentinel.version>1.8.4</alibaba-sentinel.version>
+
         <!-- Apollo Config - https://www.apolloconfig.com/ -->
         <apollo-client.version>2.0.1</apollo-client.version>
 
@@ -172,6 +175,18 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${alibaba-fastjson.version}</version>
+            </dependency>
+
+            <!-- Alibaba Sentinel - https://sentinelguard.io/zh-cn/index.html -->
+            <dependency>
+                <groupId>com.alibaba.csp</groupId>
+                <artifactId>sentinel-core</artifactId>
+                <version>${alibaba-sentinel.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.csp</groupId>
+                <artifactId>sentinel-transport-simple-http</artifactId>
+                <version>${alibaba-sentinel.version}</version>
             </dependency>
 
             <!-- Apollo Config - https://www.apolloconfig.com/ -->
