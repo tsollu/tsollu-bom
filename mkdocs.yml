@@ -153,5 +153,7 @@ nav:
                     -   Apollo Client 使用指南: components/apollo-client-usage.md
     -   开发工具:
             -   Lombok 使用指南: devtools/lombok.md
+    -   Spring:
+            -   Spring Boot: spring/spring-boot-documentation.md
     -   帮助中心:
             -   参考文档: help/reference-documents.md

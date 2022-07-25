@@ -1,8 +1,12 @@
 ﻿# Spring Boot Documentation
 
-https://spring.io/projects/spring-boot
+**Spring Boot 文档目录及摘要，通过该文档来深入学习 Spring Boot 的使用和配置。**
+
+- https://spring.io/projects/spring-boot
 
 ## [Overview](https://docs.spring.io/spring-boot/docs/current/reference/html/documentation.html)
+
+**本节内容简要概述 Spring Boot 参考文档，类似于网站地图。**
 
 About the Documentation, First Steps, and more.
 
@@ -19,19 +23,36 @@ About the Documentation, First Steps, and more.
 
 ## [Getting Started](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html)
 
-Introducing Spring Boot, System Requirements, Servlet Containers, Installing Spring Boot, and Developing Your First Spring Boot Application.
+**本节内容主要介绍了 Spring Boot，系统要求，Servlet 容器，安装 Spring Boot 和开发你的第一个 Spring Boot 应用程序。**
+
+Introducing Spring Boot, System Requirements, Servlet Containers, Installing Spring Boot, and
+Developing Your First Spring Boot Application.
 
 - [System Requirements](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started.system-requirements)
+    - Spring Boot 2.7.2 requires Java 8 and is compatible up to and including Java 18.
 - [Installing Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started.installing)
 - [Developing Your First Spring Boot Application](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started.first-application)
 
 ## [Upgrading Spring Boot Applications](https://docs.spring.io/spring-boot/docs/current/reference/html/upgrading.html)
 
+**本节内容提供了有关如何从早期版本的 Spring Boot 升级的说明。**
+
 Upgrading from 1.x, Upgrading to a new feature release, and Upgrading the Spring Boot CLI.
+
+升级到新版本时，某些属性可能已重命名或删除。Spring Boot 提供了一种在启动时分析应用程序环境和打印诊断信息的方法，还可以在运行时为您临时迁移属性。要启用该功能，请将以下依赖项添加到您的项目中：
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-properties-migrator</artifactId>
+    <scope>runtime</scope>
+</dependency>
+```
 
 ## [Using Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html)
 
-Build Systems, Structuring Your Code, Configuration, Spring Beans and Dependency Injection, DevTools, and more.
+Build Systems, Structuring Your Code, Configuration, Spring Beans and Dependency Injection,
+DevTools, and more.
 
 - [Build Systems](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.build-systems)
 - [Spring Boot application starters](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.build-systems.starters)
@@ -104,7 +125,8 @@ JMS, AMQP, Apache Kafka, RSocket, WebSocket, and Spring Integration.
 
 ## [Container Images](https://docs.spring.io/spring-boot/docs/current/reference/html/container-images.html)
 
-Efficient container images and Building container images with Dockerfiles and Cloud Native Buildpacks.
+Efficient container images and Building container images with Dockerfiles and Cloud Native
+Buildpacks.
 
 - [Efficient container images](https://docs.spring.io/spring-boot/docs/current/reference/html/container-images.html#container-images.efficient-images)
 - [Dockerfiles](https://docs.spring.io/spring-boot/docs/current/reference/html/container-images.html#container-images.dockerfiles)
@@ -163,9 +185,15 @@ Application Development, Configuration, Embedded Servers, Data Access, and many 
 
 ## Appendix
 
-- [Application Properties](https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html) - Common application properties that you can use to configure your application.
-- [Configuration Metadata](https://docs.spring.io/spring-boot/docs/current/reference/html/configuration-metadata.html) - Metadata that you can use to describe configuration properties.
-- [Auto-configuration Classes](https://docs.spring.io/spring-boot/docs/current/reference/html/auto-configuration-classes.html) - Auto-configuration classes provided by Spring Boot.
-- [Test Auto-configuration Annotations](https://docs.spring.io/spring-boot/docs/current/reference/html/test-auto-configuration.html) - Test auto-configuration annotations that you can use to test slices of your application.
-- [Executable Jars](https://docs.spring.io/spring-boot/docs/current/reference/html/test-auto-configuration.html) - Spring Boot’s executable jars, their launchers, and their format.
-- [Dependency Versions](https://docs.spring.io/spring-boot/docs/current/reference/html/dependency-versions.html) - Details of the dependencies that are managed by Spring Boot.
+- [Application Properties](https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html)
+    - Common application properties that you can use to configure your application.
+- [Configuration Metadata](https://docs.spring.io/spring-boot/docs/current/reference/html/configuration-metadata.html)
+    - Metadata that you can use to describe configuration properties.
+- [Auto-configuration Classes](https://docs.spring.io/spring-boot/docs/current/reference/html/auto-configuration-classes.html)
+    - Auto-configuration classes provided by Spring Boot.
+- [Test Auto-configuration Annotations](https://docs.spring.io/spring-boot/docs/current/reference/html/test-auto-configuration.html)
+    - Test auto-configuration annotations that you can use to test slices of your application.
+- [Executable Jars](https://docs.spring.io/spring-boot/docs/current/reference/html/test-auto-configuration.html)
+    - Spring Boot’s executable jars, their launchers, and their format.
+- [Dependency Versions](https://docs.spring.io/spring-boot/docs/current/reference/html/dependency-versions.html)
+    - Details of the dependencies that are managed by Spring Boot.

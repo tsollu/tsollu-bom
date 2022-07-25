@@ -8,7 +8,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.9</version>
+        <version>2.7.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -45,7 +45,7 @@
         <!-- The tsollu version should be the same as the artifact version above -->
         <tsollu.version>2022.7.24-SNAPSHOT</tsollu.version>
         <!-- The spring-boot version should be the same as the parent version above -->
-        <spring-boot.version>2.6.9</spring-boot.version>
+        <spring-boot.version>2.7.2</spring-boot.version>
         <!-- Spring Cloud - https://spring.io/projects/spring-cloud -->
         <spring-cloud.version>2021.0.3</spring-cloud.version>
         <!-- Redisson - https://github.com/redisson/redisson -->
