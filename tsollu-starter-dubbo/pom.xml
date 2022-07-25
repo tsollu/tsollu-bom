@@ -6,8 +6,10 @@
     <artifactId>tsollu-starter-dubbo</artifactId>
     <packaging>jar</packaging>
     <name>tsollu-starter-dubbo</name>
-    <description></description>
-    <url></url>
+    <description>
+        Apache Dubbo is a high-performance, java based open source RPC framework.
+    </description>
+    <url>https://dubbo.apache.org/en/</url>
 
     <parent>
         <groupId>com.tsollu</groupId>
@@ -20,6 +22,20 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <!-- Apache Dubbo - https://dubbo.apache.org/zh/ -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-dependencies-zookeeper</artifactId>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
 </project>

@@ -29,6 +29,9 @@
         <!-- Bouncy Castle Crypto APIs - https://github.com/open-keychain/bouncycastle -->
         <bouncycastle.version>1.70</bouncycastle.version>
 
+        <!-- Apache Dubbo - https://dubbo.apache.org/zh/ -->
+        <dubbo.version>3.0.10</dubbo.version>
+
         <!-- Dynamic DataSource - https://github.com/baomidou/dynamic-datasource-spring-boot-starter -->
         <dynamic-datasource.version>3.5.1</dynamic-datasource.version>
 
@@ -188,6 +191,30 @@
                 <groupId>org.bouncycastle</groupId>
                 <artifactId>bcprov-jdk15to18</artifactId>
                 <version>${bouncycastle.version}</version>
+            </dependency>
+
+            <!-- Apache Dubbo - https://dubbo.apache.org/zh/ -->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-bom</artifactId>
+                <version>${dubbo.version}</version>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-dependencies-zookeeper</artifactId>
+                <version>${dubbo.version}</version>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
             </dependency>
 
             <!-- Google Guava - https://github.com/google/guava -->
