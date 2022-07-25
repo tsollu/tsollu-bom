@@ -9,7 +9,7 @@
     <description>
         Apache Dubbo is a high-performance, java based open source RPC framework.
     </description>
-    <url>https://dubbo.apache.org/en/</url>
+    <url>https://dubbo.apache.org/zh/</url>
 
     <parent>
         <groupId>com.tsollu</groupId>
