@@ -1,12 +1,11 @@
 ﻿# Spring Boot Documentation
 
-**Spring Boot 文档目录及摘要，通过该文档来深入学习 Spring Boot 的使用和配置。**
-
-- https://spring.io/projects/spring-boot
+!!! info "Spring Boot 文档目录及摘要，通过该文档来深入学习 Spring Boot 的配置和使用。"
+    - https://spring.io/projects/spring-boot
 
 ## [Overview](https://docs.spring.io/spring-boot/docs/current/reference/html/documentation.html)
 
-**本节内容简要概述 Spring Boot 参考文档，类似于网站地图。**
+!!! info "本节内容简要概述 Spring Boot 参考文档，类似于网站地图。"
 
 About the Documentation, First Steps, and more.
 
@@ -23,25 +22,26 @@ About the Documentation, First Steps, and more.
 
 ## [Getting Started](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html)
 
-**本节内容主要介绍了 Spring Boot，系统要求，Servlet 容器，安装 Spring Boot 和开发你的第一个 Spring Boot 应用程序。**
+!!! info "本节内容主要介绍了 Spring Boot，系统要求，Servlet 容器，安装 Spring Boot 和开发你的第一个 Spring Boot 应用程序。"
 
 Introducing Spring Boot, System Requirements, Servlet Containers, Installing Spring Boot, and
 Developing Your First Spring Boot Application.
 
 - [System Requirements](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started.system-requirements)
-    - Spring Boot 2.7.2 requires Java 8 and is compatible up to and including Java 18.
+    - Spring Boot 2.7.x requires Java 8 and is compatible up to and including Java 18.
 - [Installing Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started.installing)
 - [Developing Your First Spring Boot Application](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started.first-application)
 
 ## [Upgrading Spring Boot Applications](https://docs.spring.io/spring-boot/docs/current/reference/html/upgrading.html)
 
-**本节内容提供了有关如何从早期版本的 Spring Boot 升级的说明。**
+!!! info "本节内容提供了有关如何从早期版本的 Spring Boot 升级的说明。"
 
 Upgrading from 1.x, Upgrading to a new feature release, and Upgrading the Spring Boot CLI.
 
-升级到新版本时，某些属性可能已重命名或删除。Spring Boot 提供了一种在启动时分析应用程序环境和打印诊断信息的方法，还可以在运行时为您临时迁移属性。要启用该功能，请将以下依赖项添加到您的项目中：
+升级到新版本时，某些属性可能已重命名或删除。Spring Boot
+提供了一种在启动时分析应用程序环境和打印诊断信息的方法，还可以在运行时为您临时迁移属性。要启用该功能，请将以下依赖项添加到您的项目中：
 
-```xml
+```xml title="Maven Dependency"
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-properties-migrator</artifactId>
@@ -51,17 +51,55 @@ Upgrading from 1.x, Upgrading to a new feature release, and Upgrading the Spring
 
 ## [Using Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html)
 
+!!! info "本节内容详细地介绍了如何使用 Spring Boot。它涵盖了构建系统、自动配置以及如何运行应用程序等功能。"
+
 Build Systems, Structuring Your Code, Configuration, Spring Beans and Dependency Injection,
 DevTools, and more.
 
 - [Build Systems](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.build-systems)
+    - Spring Boot 建议使用 Maven 或 Gradle 构建项目。
+    - Spring Boot 的每个版本都提供了它支持的依赖管理，你不需要在构建时为这些依赖提供版本。如有需要，你仍然可以指定版本并覆盖 Spring Boot 提供的版本。
 - [Spring Boot application starters](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.build-systems.starters)
+    - 查找 Spring Boot 提供的 Starters，以及了解 Starters 的命名规范。
 - [Structuring Your Code](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.structuring-your-code)
 - [Configuration Classes](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.configuration-classes)
+    - 使用 `@Configuration` 注解声明配置类。
+    - 使用 `@Import` 注解导入其他配置类，或者使用 `@ComponentScan` 自动获取所有 Spring 组件，包括 `@Configuration` 类。
+    - 使用 `@ImportResource` 注解导入基于 XML 的配置。（不推荐）
 - [Auto-configuration](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.auto-configuration)
+    - 使用 `@SpringBootApplication` 或 `@EnableAutoConfiguration` 注释来开启自动配置，通常用于启动类。
+    - 使用 `@SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })` 禁用特定的自动配置类。
+    - 使用 `spring.autoconfigure.exclude` 属性来禁用特定的自动配置类。
 - [Spring Beans and Dependency Injection](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.spring-beans-and-dependency-injection)
+    - 使用任何标准的 Spring Framework 技术来定义 bean 及其依赖注入，然后通过 `@ComponentScan` 来加载到 Spring 容器管理。
+    - 所有应用程序组件（`@Component`、`@Service`、`@Repository`、`@Controller`、`@RestController`等）都会自动注册为 Spring Bean。
 - [Using the @SpringBootApplication Annotation](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.using-the-springbootapplication-annotation)
+
+!!! info "使用 `@SpringBootApplication` 注解"
+
+    在应用程序启动类上使用 `@SpringBootApplication` 注解来启用这三个功能：
+
+    - `@EnableAutoConfiguration`: 启用 Spring Boot 的自动配置机制。
+    - `@ComponentScan` 和 `@Component`: 对应用程序所在的包启用扫描。
+    - `@SpringBootConfiguration`: 允许在上下文中注册额外的 bean 或导入额外的配置类。Spring 标准的替代方案 `@Configuration`，可帮助您在集成测试中进行配置检测。
+
+    ```java
+        // Same as @SpringBootConfiguration @EnableAutoConfiguration @ComponentScan
+        @SpringBootApplication
+        public class MyApplication {
+        
+            public static void main(String[] args) {
+                SpringApplication.run(MyApplication.class, args);
+            }
+        
+        }
+    ```
+
 - [Running Your Application](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.running-your-application)
+    - 从 IDE 将 Spring Boot 应用程序作为 Java 应用程序运行。
+    - 作为打包应用程序运行。`java -jar target/myapplication-0.0.1-SNAPSHOT.jar`
+    - 使用 Maven 插件。`mvn spring-boot:run`
+    - 使用 Gradle 插件。`gradle bootRun`
 - [Developer Tools](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.devtools)
 
 ## [Core Features](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html)
