@@ -2,7 +2,7 @@
 
 !!! info "Spring Boot 文档目录及摘要，通过该文档来深入学习 Spring Boot 的配置和使用。"
 
-- https://spring.io/projects/spring-boot
+    https://spring.io/projects/spring-boot
 
 ## [Overview](https://docs.spring.io/spring-boot/docs/current/reference/html/documentation.html)
 
@@ -42,7 +42,7 @@ Upgrading from 1.x, Upgrading to a new feature release, and Upgrading the Spring
 升级到新版本时，某些属性可能已重命名或删除。Spring Boot
 提供了一种在启动时分析应用程序环境和打印诊断信息的方法，还可以在运行时为你临时迁移属性。要启用该功能，请将以下依赖项添加到你的项目中：
 
-```xml title="Maven Dependency"
+```xml title="Maven"
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-properties-migrator</artifactId>
@@ -50,7 +50,7 @@ Upgrading from 1.x, Upgrading to a new feature release, and Upgrading the Spring
 </dependency>
 ```
 
-## [Using Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html)
+## [# Using Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html)
 
 !!! info "本节内容详细地介绍了如何使用 Spring Boot。它涵盖了构建系统、自动配置以及如何运行应用程序等功能。"
 
@@ -104,7 +104,7 @@ DevTools, and more.
     - 使用 Gradle 插件。`gradle bootRun`
 - [Developer Tools](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.devtools)
 
-## [Core Features](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html)
+## [# Core Features](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html)
 
 Profiles, Logging, Security, Caching, Spring Integration, Testing, and more.
 
@@ -120,7 +120,7 @@ Profiles, Logging, Security, Caching, Spring Integration, Testing, and more.
 - [Creating Your Own Auto-configuration](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.developing-auto-configuration)
 - [Kotlin support](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.kotlin)
 
-## [Web](https://docs.spring.io/spring-boot/docs/current/reference/html/web.html)
+## [# Web](https://docs.spring.io/spring-boot/docs/current/reference/html/web.html)
 
 Servlet Web, Reactive Web, GraphQL, Embedded Container Support, Graceful Shutdown, and more.
 
@@ -132,14 +132,14 @@ Servlet Web, Reactive Web, GraphQL, Embedded Container Support, Graceful Shutdow
 - [Spring for GraphQL](https://docs.spring.io/spring-boot/docs/current/reference/html/web.html#web.graphql)
 - [Spring HATEOAS](https://docs.spring.io/spring-boot/docs/current/reference/html/web.html#web.spring-hateoas)
 
-## [Data](https://docs.spring.io/spring-boot/docs/current/reference/html/data.html)
+## [# Data](https://docs.spring.io/spring-boot/docs/current/reference/html/data.html)
 
 SQL and NOSQL data access.
 
 - [SQL Databases](https://docs.spring.io/spring-boot/docs/current/reference/html/data.html#data.sql)
 - [Working with NoSQL Technologies](https://docs.spring.io/spring-boot/docs/current/reference/html/data.html#data.nosql)
 
-## [IO](https://docs.spring.io/spring-boot/docs/current/reference/html/io.html)
+## [# IO](https://docs.spring.io/spring-boot/docs/current/reference/html/io.html)
 
 Caching, Quartz Scheduler, REST clients, Sending email, Spring Web Services, and more.
 
@@ -152,7 +152,7 @@ Caching, Quartz Scheduler, REST clients, Sending email, Spring Web Services, and
 - [Web Services](https://docs.spring.io/spring-boot/docs/current/reference/html/io.html#io.webservices)
 - [Distributed Transactions with JTA](https://docs.spring.io/spring-boot/docs/current/reference/html/io.html#io.jta)
 
-## [Messaging](https://docs.spring.io/spring-boot/docs/current/reference/html/messaging.html)
+## [# Messaging](https://docs.spring.io/spring-boot/docs/current/reference/html/messaging.html)
 
 JMS, AMQP, Apache Kafka, RSocket, WebSocket, and Spring Integration.
 
@@ -175,11 +175,12 @@ Buildpacks.
 
 ## [Production-ready Features](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html)
 
-!!! info "Spring Boot 包含许多附加功能，可帮助你在将应用程序推送到生产环境时对其进行监控和管理。你可以选择使用 HTTP 端点或 JMX 来管理和监视你的应用程序。审计、健康和指标收集也可以自动应用于你的应用程序。"
+???+ info "Spring Boot 包含许多附加功能，可帮助你在将应用程序推送到生产环境时对其进行监控和管理。"
 
-    `spring-boot-actuator` 模块提供了 Spring Boot 的所有生产就绪功能。
+    `spring-boot-actuator` 模块提供了 Spring Boot 的所有生产就绪功能，可帮助你在将应用程序推送到生产环境时对其进行监控和管理。
+    你可以选择使用 HTTP 端点或 JMX来管理和监视你的应用程序。审计、健康和指标收集也可以自动应用于你的应用程序。
 
-    ```xml title="Maven Dependency"
+    ```xml title="Maven"
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
