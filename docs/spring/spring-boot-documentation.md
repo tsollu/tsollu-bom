@@ -1,7 +1,8 @@
 ﻿# Spring Boot Documentation
 
 !!! info "Spring Boot 文档目录及摘要，通过该文档来深入学习 Spring Boot 的配置和使用。"
-    - https://spring.io/projects/spring-boot
+
+- https://spring.io/projects/spring-boot
 
 ## [Overview](https://docs.spring.io/spring-boot/docs/current/reference/html/documentation.html)
 
@@ -39,7 +40,7 @@ Developing Your First Spring Boot Application.
 Upgrading from 1.x, Upgrading to a new feature release, and Upgrading the Spring Boot CLI.
 
 升级到新版本时，某些属性可能已重命名或删除。Spring Boot
-提供了一种在启动时分析应用程序环境和打印诊断信息的方法，还可以在运行时为您临时迁移属性。要启用该功能，请将以下依赖项添加到您的项目中：
+提供了一种在启动时分析应用程序环境和打印诊断信息的方法，还可以在运行时为你临时迁移属性。要启用该功能，请将以下依赖项添加到你的项目中：
 
 ```xml title="Maven Dependency"
 <dependency>
@@ -72,7 +73,8 @@ DevTools, and more.
     - 使用 `spring.autoconfigure.exclude` 属性来禁用特定的自动配置类。
 - [Spring Beans and Dependency Injection](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.spring-beans-and-dependency-injection)
     - 使用任何标准的 Spring Framework 技术来定义 bean 及其依赖注入，然后通过 `@ComponentScan` 来加载到 Spring 容器管理。
-    - 所有应用程序组件（`@Component`、`@Service`、`@Repository`、`@Controller`、`@RestController`等）都会自动注册为 Spring Bean。
+    - 所有应用程序组件（`@Component`、`@Service`、`@Repository`、`@Controller`、`@RestController`等）都会自动注册为 Spring
+      Bean。
 - [Using the @SpringBootApplication Annotation](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.using-the-springbootapplication-annotation)
 
 !!! info "使用 `@SpringBootApplication` 注解"
@@ -81,7 +83,7 @@ DevTools, and more.
 
     - `@EnableAutoConfiguration`: 启用 Spring Boot 的自动配置机制。
     - `@ComponentScan` 和 `@Component`: 对应用程序所在的包启用扫描。
-    - `@SpringBootConfiguration`: 允许在上下文中注册额外的 bean 或导入额外的配置类。Spring 标准的替代方案 `@Configuration`，可帮助您在集成测试中进行配置检测。
+    - `@SpringBootConfiguration`: 允许在上下文中注册额外的 bean 或导入额外的配置类。Spring 标准的替代方案 `@Configuration`，可帮助你在集成测试中进行配置检测。
 
     ```java
         // Same as @SpringBootConfiguration @EnableAutoConfiguration @ComponentScan
@@ -163,6 +165,8 @@ JMS, AMQP, Apache Kafka, RSocket, WebSocket, and Spring Integration.
 
 ## [Container Images](https://docs.spring.io/spring-boot/docs/current/reference/html/container-images.html)
 
+!!! info "Spring Boot 应用程序可以使用 Dockerfiles 进行容器化，可以在任何地方运行。"
+
 Efficient container images and Building container images with Dockerfiles and Cloud Native
 Buildpacks.
 
@@ -170,6 +174,51 @@ Buildpacks.
 - [Dockerfiles](https://docs.spring.io/spring-boot/docs/current/reference/html/container-images.html#container-images.dockerfiles)
 
 ## [Production-ready Features](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html)
+
+!!! info "Spring Boot 包含许多附加功能，可帮助你在将应用程序推送到生产环境时对其进行监控和管理。你可以选择使用 HTTP 端点或 JMX 来管理和监视你的应用程序。审计、健康和指标收集也可以自动应用于你的应用程序。"
+
+    `spring-boot-actuator` 模块提供了 Spring Boot 的所有生产就绪功能。
+
+    ```xml title="Maven Dependency"
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+    </dependencies>
+    ```
+
+    启动应用程序，浏览器访问：http://localhost:8080/actuator
+
+    ```json
+    {
+        "_links":{
+            "self":{
+                "href":"http://localhost:8080/actuator",
+                "templated":false
+            },
+            "health":{
+                "href":"http://localhost:8080/actuator/health",
+                "templated":false
+            },
+            "health-path":{
+                "href":"http://localhost:8080/actuator/health/{*path}",
+                "templated":true
+            }
+        }
+    }
+    ```
+
+    默认情况下，只有 `health` 端点对外暴露。要更改公开的端点，请使用以下技术特定 include 和 exclude 属性：
+
+    ```properties
+    management.endpoints.jmx.exposure.exclude=
+    management.endpoints.jmx.exposure.include=*
+    management.endpoints.web.exposure.exclude=
+    management.endpoints.web.exposure.include=health
+    ```
+
+    **有关 actuator 的更多配置可查看官方文档，如无必要保持默认配置即可。**
 
 Monitoring, Metrics, Auditing, and more.
 
@@ -186,6 +235,11 @@ Monitoring, Metrics, Auditing, and more.
 
 ## [Deploying Spring Boot Applications](https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html)
 
+!!! info "部署 Spring Boot 应用程序"
+
+    在部署应用程序时，Spring Boot 的灵活打包选项提供了大量选择。
+    你可以将 Spring Boot 应用程序部署到各种云平台、虚拟机/真实机上，或者 Unix 系统。
+
 Deploying to the Cloud, and Installing as a Unix application.
 
 - [Deploying to the Cloud](https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html#deployment.cloud)
@@ -193,13 +247,26 @@ Deploying to the Cloud, and Installing as a Unix application.
 
 ## [Spring Boot CLI](https://docs.spring.io/spring-boot/docs/current/reference/html/cli.html)
 
+!!! info "Spring Boot CLI"
+
+    Spring Boot CLI 是一个命令行工具，如果你想快速开发 Spring 应用程序，可以使用它。
+    它允许你运行 Groovy 脚本，这意味着你拥有熟悉的类似 Java 的语法，而无需太多样板代码。
+    你还可以引导一个新项目或为其编写自己的命令。
+
 Installing the CLI, Using the CLI, Configuring the CLI, and more.
 
 ## [Build Tool Plugins](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins.html)
 
+!!! info "Spring Boot 为 Maven 和 Gradle 提供了构建工具插件，这些插件提供了多种功能，包括可执行 jar 的打包。"
+
 Maven Plugin, Gradle Plugin, Antlib, and more.
 
+- [Spring Boot Maven 插件](https://docs.spring.io/spring-boot/docs/current/maven-plugin/reference/htmlsingle/)
+- [Spring Boot Gradle 插件](https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/htmlsingle/)
+
 ## [“How-to” Guides](https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html)
+
+!!! info "本节内容提供了使用 Spring Boot 时经常出现的一些常见问题的答案。它的覆盖范围并不详尽，但确实涵盖了很多方面。"
 
 Application Development, Configuration, Embedded Servers, Data Access, and many more.
 
@@ -223,15 +290,17 @@ Application Development, Configuration, Embedded Servers, Data Access, and many 
 
 ## Appendix
 
-- [Application Properties](https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html)
+!!! info "附录"
+
+- [Application Properties - 应用属性配置参数](https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html)
     - Common application properties that you can use to configure your application.
-- [Configuration Metadata](https://docs.spring.io/spring-boot/docs/current/reference/html/configuration-metadata.html)
+- [Configuration Metadata - 配置元数据](https://docs.spring.io/spring-boot/docs/current/reference/html/configuration-metadata.html)
     - Metadata that you can use to describe configuration properties.
-- [Auto-configuration Classes](https://docs.spring.io/spring-boot/docs/current/reference/html/auto-configuration-classes.html)
+- [Auto-configuration Classes - 自动配置类](https://docs.spring.io/spring-boot/docs/current/reference/html/auto-configuration-classes.html)
     - Auto-configuration classes provided by Spring Boot.
-- [Test Auto-configuration Annotations](https://docs.spring.io/spring-boot/docs/current/reference/html/test-auto-configuration.html)
+- [Test Auto-configuration Annotations - 测试自动配置注解](https://docs.spring.io/spring-boot/docs/current/reference/html/test-auto-configuration.html)
     - Test auto-configuration annotations that you can use to test slices of your application.
-- [Executable Jars](https://docs.spring.io/spring-boot/docs/current/reference/html/test-auto-configuration.html)
+- [Executable Jars - 可执行的 Jar 文件](https://docs.spring.io/spring-boot/docs/current/reference/html/executable-jar.html)
     - Spring Boot’s executable jars, their launchers, and their format.
-- [Dependency Versions](https://docs.spring.io/spring-boot/docs/current/reference/html/dependency-versions.html)
+- [Dependency Versions - 依赖版本](https://docs.spring.io/spring-boot/docs/current/reference/html/dependency-versions.html)
     - Details of the dependencies that are managed by Spring Boot.
